@@ -18,9 +18,10 @@ Author URL: http://w3layouts.com
         rel="stylesheet">
     <!-- //google-fonts -->
     <!-- Font-Awesome-Icons-CSS -->
-    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="{{ asset('css/fontawesome-all.min.css') }}">
     <!-- Template CSS Style link -->
-    <link rel="stylesheet" href="assets/css/style-liberty.css">
+    <link rel="stylesheet" href="{{ asset('css/style-liberty.css') }}">
+
 </head>
 
 <body>
@@ -60,7 +61,7 @@ if(typeof _bsa !== 'undefined' && _bsa) {
 </script>
 
 <meta name="robots" content="noindex">
-<body><link rel="stylesheet" href="../../../../../../assests/css/font-awesome.min.css">
+<body><link rel="stylesheet" href={{asset('css/font-awesome.min.css')}}>
 <!-- New toolbar-->
 <style>
 * {
@@ -260,12 +261,12 @@ RIGHT SIDEBAR TOGGLE SECTION
         <div class="container">
             <nav class="navbar navbar-expand-lg stroke">
                 <h1>
-                    <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
                         <span class="lostyle-1">E</span>
                         xecution
                     </a>
                 </h1>
-                <!-- if logo is image enable this   
+                <!-- if logo is image enable this
     <a class="navbar-brand" href="#index.html">
         <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
     </a> -->
@@ -279,13 +280,13 @@ RIGHT SIDEBAR TOGGLE SECTION
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                     <ul class="navbar-nav ml-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="{{ url('/') }}">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
+                            <a class="nav-link" href="{{ url('/about') }}">About</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="services.html">Services</a>
+                            <a class="nav-link" href="{{ url('/services') }}">Services</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -293,12 +294,12 @@ RIGHT SIDEBAR TOGGLE SECTION
                                 Pages <span class="fa fa-angle-down"></span>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="blog.html">Blog Posts</a>
-                                <a class="dropdown-item" href="blog-single.html">Blog Single</a>
-                                <a class="dropdown-item" href="error.html">404 Page</a>
-                                <a class="dropdown-item" href="email-template.html">Email Template</a>
-                                <a class="dropdown-item" href="landing-single.html">Landing Page</a>
-                                <a class="dropdown-item" href="shortcodes.html">Shortcodes</a>
+                                <a class="dropdown-item" href="{{ url('/blog') }}">Blog Posts</a>
+                                <a class="dropdown-item" href="{{ url('/blog-single') }}">Blog Single</a>
+                                <a class="dropdown-item" href="{{ url('/error') }}">404 Page</a>
+                                <a class="dropdown-item" href="{{ url('/email-template') }}">Email Template</a>
+                                <a class="dropdown-item" href="{{ url('/landing-single') }}">Landing Page</a>
+                                <a class="dropdown-item" href="{{ url('/shortcodes') }}">Shortcodes</a>
                             </div>
                         </li>
                         <li class="nav-item">
@@ -344,7 +345,7 @@ RIGHT SIDEBAR TOGGLE SECTION
             <div class="container py-xl-5 py-md-4 mt-5">
                 <h4 class="inner-text-title font-weight-bold mb-sm-2">Services</h4>
                 <ul class="breadcrumbs-custom-path">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="{{ url('/') }}">Home</a></li>
                     <li class="active"><span class="fa fa-chevron-right mx-2" aria-hidden="true"></span>Services</li>
                 </ul>
             </div>
@@ -355,7 +356,7 @@ RIGHT SIDEBAR TOGGLE SECTION
 
 <!---728x90--->
 
- 
+
 </div>
     <!-- services section -->
     <div class="service-section py-5">
@@ -377,13 +378,14 @@ RIGHT SIDEBAR TOGGLE SECTION
                 <div class="col-lg-4 col-md-6 item">
                     <div class="card">
                         <div class="card-header p-0 position-relative border-0">
-                            <a href="services.html">
-                                <img class="d-block img-responsive" src="assets/images/s4.jpg" alt="card-image">
+                            <a href="{{ url('/services') }}">
+                                <img class="d-block img-responsive" src="{{ asset('images/s4.jpg') }}"
+                                alt="card-image">
                             </a>
                         </div>
                         <div class="card-body service-details">
                             <span class="label-style">Work</span>
-                            <a href="services.html" class="service-heading">Website Designing</a>
+                            <a href="{{ url('/services') }}" class="service-heading">Website Designing</a>
                             <p>Sed ut perspiciatis unde omnis iste natus sit accusantium doloremque
                                 laudantium, totam rem aperiam</p>
                         </div>
@@ -392,13 +394,13 @@ RIGHT SIDEBAR TOGGLE SECTION
                 <div class="col-lg-4 col-md-6 mt-md-0 mt-4">
                     <div class="card">
                         <div class="card-header p-0 position-relative border-0">
-                            <a href="services.html">
-                                <img class="d-block img-responsive" src="assets/images/s5.jpg" alt="card-image">
+                            <a href="{{ url('/services') }}">
+                                <img class="d-block img-responsive" src="{{ asset('images/s5.jpg') }}" alt="card-image">
                             </a>
                         </div>
                         <div class="card-body service-details">
                             <span class="label-style label-style-2">Business</span>
-                            <a href="services.html" class="service-heading">Mobile Applications</a>
+                            <a href="{{ url('/services') }}" class="service-heading">Mobile Applications</a>
                             <p>Sed ut perspiciatis unde omnis iste natus sit accusantium doloremque
                                 laudantium, totam rem aperiam</p>
                         </div>
@@ -407,13 +409,13 @@ RIGHT SIDEBAR TOGGLE SECTION
                 <div class="col-lg-4 col-md-6 mt-lg-0 mt-4">
                     <div class="card">
                         <div class="card-header p-0 position-relative border-0">
-                            <a href="services.html">
-                                <img class="d-block img-responsive" src="assets/images/s6.jpg" alt="card-image">
+                            <a href="{{ url('/services') }}">
+                                <img class="d-block img-responsive" src="{{ asset('images/s6.jpg') }}" alt="card-image">
                             </a>
                         </div>
                         <div class="card-body service-details">
                             <span class="label-style label-style-3">Corporate</span>
-                            <a href="services.html" class="service-heading">Digital Marketing</a>
+                            <a href="{{ url('/services') }}" class="service-heading">Digital Marketing</a>
                             <p>Sed ut perspiciatis unde omnis iste natus sit accusantium doloremque
                                 laudantium, totam rem aperiam</p>
                         </div>
@@ -422,13 +424,13 @@ RIGHT SIDEBAR TOGGLE SECTION
                 <div class="col-lg-4 col-md-6 item mt-lg-5 mt-4">
                     <div class="card">
                         <div class="card-header p-0 position-relative border-0">
-                            <a href="services.html">
-                                <img class="d-block img-responsive" src="assets/images/s1.jpg" alt="card-image">
+                            <a href="{{ url('/services') }}">
+                                <img class="d-block img-responsive" src="{{ asset('images/s1.jpg') }}" alt="card-image">
                             </a>
                         </div>
                         <div class="card-body service-details">
                             <span class="label-style label-style-2">Services</span>
-                            <a href="services.html" class="service-heading">Marketing Services</a>
+                            <a href="{{ url('/services') }}" class="service-heading">Marketing Services</a>
                             <p>Sed ut perspiciatis unde omnis iste natus sit accusantium doloremque
                                 laudantium, totam rem aperiam</p>
                         </div>
@@ -437,13 +439,13 @@ RIGHT SIDEBAR TOGGLE SECTION
                 <div class="col-lg-4 col-md-6 mt-lg-5 mt-4">
                     <div class="card">
                         <div class="card-header p-0 position-relative border-0">
-                            <a href="services.html">
-                                <img class="d-block img-responsive" src="assets/images/s2.jpg" alt="card-image">
+                            <a href="{{ url('/services') }}">
+                                <img class="d-block img-responsive" src="{{ asset('images/s2.jpg') }}" alt="card-image">
                             </a>
                         </div>
                         <div class="card-body service-details">
                             <span class="label-style label-style-3">Marketing</span>
-                            <a href="services.html" class="service-heading">Corporate Business</a>
+                            <a href="{{ url('/services') }}" class="service-heading">Corporate Business</a>
                             <p>Sed ut perspiciatis unde omnis iste natus sit accusantium doloremque
                                 laudantium, totam rem aperiam</p>
                         </div>
@@ -452,13 +454,13 @@ RIGHT SIDEBAR TOGGLE SECTION
                 <div class="col-lg-4 col-md-6 mt-lg-5 mt-4">
                     <div class="card">
                         <div class="card-header p-0 position-relative border-0">
-                            <a href="services.html">
-                                <img class="d-block img-responsive" src="assets/images/s3.jpg" alt="card-image">
+                            <a href="{{ url('/services') }}">
+                                <img class="d-block img-responsive" src="{{ asset('images/s3.jpg') }}" alt="card-image">
                             </a>
                         </div>
                         <div class="card-body service-details">
                             <span class="label-style">Design</span>
-                            <a href="services.html" class="service-heading">Creative Design</a>
+                            <a href="{{ url('/services') }}" class="service-heading">Creative Design</a>
                             <p>Sed ut perspiciatis unde omnis iste natus sit accusantium doloremque
                                 laudantium, totam rem aperiam</p>
                         </div>
@@ -471,7 +473,7 @@ RIGHT SIDEBAR TOGGLE SECTION
 <div style="margin: 8px auto; display: block; text-align:center;">
 
 <!---728x90--->
- 
+
 </div>
     <!-- feature section -->
     <section class="w3l-feature-8 py-5">
@@ -483,13 +485,13 @@ RIGHT SIDEBAR TOGGLE SECTION
                             <i class="fas fa-magic"></i>
                         </div>
                         <div class="feature-info mt-3">
-                            <a href="about.html">
+                            <a href="{{ url('/about') }}">
                                 <h3 class="feature-titel">
                                     Graphic design
                                 </h3>
                             </a>
                             <p class="feature-text">Lorem ipsum dolor sit amet consectetur adipis</p>
-                            <a href="about.html" class="btn btn-style btn-style-normal mt-4">More Info</a>
+                            <a href="{{ url('/about') }}" class="btn btn-style btn-style-normal mt-4">More Info</a>
                         </div>
                     </div>
                 </div>
@@ -499,11 +501,11 @@ RIGHT SIDEBAR TOGGLE SECTION
                             <i class="fas fa-window-restore"></i>
                         </div>
                         <div class="feature-info mt-3">
-                            <a href="about.html">
+                            <a href="{{ url('/about') }}">
                                 <h3 class="feature-titel">Web development</h3>
                             </a>
                             <p class="feature-text">Lorem ipsum dolor sit amet consectetur adipis</p>
-                            <a href="about.html" class="btn btn-style btn-style-normal mt-4">More Info</a>
+                            <a href="{{ url('/about') }}" class="btn btn-style btn-style-normal mt-4">More Info</a>
                         </div>
                     </div>
                 </div>
@@ -513,11 +515,11 @@ RIGHT SIDEBAR TOGGLE SECTION
                             <i class="fas fa-edit"></i>
                         </div>
                         <div class="feature-info mt-3">
-                            <a href="about.html">
+                            <a href="{{ url('/about') }}">
                                 <h3 class="feature-titel">Content writing</h3>
                             </a>
                             <p class="feature-text">Lorem ipsum dolor sit amet consectetur adipis</p>
-                            <a href="about.html" class="btn btn-style btn-style-normal mt-4">More Info</a>
+                            <a href="{{ url('/about') }}" class="btn btn-style btn-style-normal mt-4">More Info</a>
                         </div>
                     </div>
                 </div>
@@ -527,11 +529,11 @@ RIGHT SIDEBAR TOGGLE SECTION
                             <i class="fas fa-tasks"></i>
                         </div>
                         <div class="feature-info mt-3">
-                            <a href="about.html">
+                            <a href="{{ url('/about') }}">
                                 <h3 class="feature-titel">Organized Tasks</h3>
                             </a>
                             <p class="feature-text">Lorem ipsum dolor sit amet consectetur adipis</p>
-                            <a href="about.html" class="btn btn-style btn-style-normal mt-4">More Info</a>
+                            <a href="{{ url('/about') }}" class="btn btn-style btn-style-normal mt-4">More Info</a>
                         </div>
                     </div>
                 </div>
@@ -542,7 +544,7 @@ RIGHT SIDEBAR TOGGLE SECTION
 <div style="margin: 8px auto; display: block; text-align:center;">
 
 <!---728x90--->
- 
+
 </div>
     <!-- content-6-section -->
     <section class="w3l-content-12-main">
@@ -568,7 +570,7 @@ RIGHT SIDEBAR TOGGLE SECTION
                                     ducimus neque, harum eos eligendi maiores ex cum nobis.</p>
                             </div>
                             <div class="col-lg-6 column mt-lg-0 mt-4">
-                                <img src="assets/images/s3.jpg" class="img-fluid radius-image" alt="">
+                                <img src="{{ asset('images/s3.jpg') }}" class="img-fluid radius-image" alt="">
                             </div>
 
                         </div>
@@ -586,7 +588,7 @@ RIGHT SIDEBAR TOGGLE SECTION
                                     ducimus neque, harum eos eligendi maiores ex cum nobis.</p>
                             </div>
                             <div class="col-lg-6 column mt-lg-0 mt-4">
-                                <img src="assets/images/s6.jpg" class="img-fluid radius-image" alt="">
+                              <img  src="{{ asset('images/s6.jpg') }}" class="img-fluid radius-image" alt="">
                             </div>
                         </div>
                     </section>
@@ -603,7 +605,7 @@ RIGHT SIDEBAR TOGGLE SECTION
                                     ducimus neque, harum eos eligendi maiores ex cum nobis.</p>
                             </div>
                             <div class="col-lg-6 column mt-lg-0 mt-4">
-                                <img src="assets/images/s5.jpg" class="img-fluid radius-image" alt="">
+                             <img   src="{{ asset('images/s5.jpg') }}" class="img-fluid radius-image" alt="">
                             </div>
                         </div>
                     </section>
@@ -645,23 +647,23 @@ RIGHT SIDEBAR TOGGLE SECTION
                 <div class="col-lg-3 col-sm-6 sub-two-right pl-lg-5 mt-sm-0 mt-5">
                     <h6>Our Services</h6>
                     <ul>
-                        <li><a href="services.html"><span class="fas fa-angle-right mr-2"></span>Website Designing</a>
+                        <li><a href="{{ url('/services') }}"><span class="fas fa-angle-right mr-2"></span>Website Designing</a>
                         </li>
-                        <li><a href="services.html"><span class="fas fa-angle-right mr-2"></span>Web Hosting</a>
+                        <li><a href="{{ url('/services') }}"><span class="fas fa-angle-right mr-2"></span>Web Hosting</a>
                         </li>
-                        <li><a href="services.html"><span class="fas fa-angle-right mr-2"></span>Digital Photography</a>
+                        <li><a href="{{ url('/services') }}"><span class="fas fa-angle-right mr-2"></span>Digital Photography</a>
                         </li>
-                        <li><a href="services.html"><span class="fas fa-angle-right mr-2"></span>Photoshop to HTML</a>
+                        <li><a href="{{ url('/services') }}"><span class="fas fa-angle-right mr-2"></span>Photoshop to HTML</a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-lg-2 col-sm-6 sub-two-right mt-lg-0 mt-sm-5 mt-4">
                     <h6>Quick links</h6>
                     <ul>
-                        <li><a href="index.html"><span class="fas fa-angle-right mr-2"></span>Home</a></li>
-                        <li><a href="about.html"><span class="fas fa-angle-right mr-2"></span>About</a>
+                        <li><a href="{{ url('/') }}"><span class="fas fa-angle-right mr-2"></span>Home</a></li>
+                        <li><a href="{{ url('/about') }}"><span class="fas fa-angle-right mr-2"></span>About</a>
                         </li>
-                        <li><a href="blog.html"><span class="fas fa-angle-right mr-2"></span>Blog Posts</a>
+                        <li><a href="{{ url('/blog') }}"><span class="fas fa-angle-right mr-2"></span>Blog Posts</a>
                         </li>
                         <li><a href="contact.html"><span class="fas fa-angle-right mr-2"></span>Contact</a></li>
                     </ul>
@@ -782,9 +784,9 @@ RIGHT SIDEBAR TOGGLE SECTION
         }
 
         $(document).ready(function () {
-            // Now to start autoTyping just call the autoType function with the 
+            // Now to start autoTyping just call the autoType function with the
             // class of outer div
-            // The second paramter is the speed between each letter is typed.   
+            // The second paramter is the speed between each letter is typed.
             autoType(".type-js", 200);
         });
     </script>
@@ -830,7 +832,8 @@ RIGHT SIDEBAR TOGGLE SECTION
     <!-- //disable body scroll which navbar is in active -->
 
     <!--bootstrap-->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+
     <!-- //bootstrap-->
     <!-- //Js scripts -->
 

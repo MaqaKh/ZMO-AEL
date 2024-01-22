@@ -61,7 +61,7 @@ if(typeof _bsa !== 'undefined' && _bsa) {
 </script>
 
 <meta name="robots" content="noindex">
-<body><link rel="stylesheet" href="../../../../../../assests/css/font-awesome.min.css">
+<body><link rel="stylesheet" href={{asset('css/font-awesome.min.css')}}>
 <!-- New toolbar-->
 <style>
 * {
@@ -261,7 +261,7 @@ RIGHT SIDEBAR TOGGLE SECTION
         <div class="container">
             <nav class="navbar navbar-expand-lg stroke">
                 <h1>
-                    <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
                         <span class="lostyle-1">E</span>
                         xecution
                     </a>
@@ -280,13 +280,13 @@ RIGHT SIDEBAR TOGGLE SECTION
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                     <ul class="navbar-nav ml-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="{{ url('/') }}">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="about.html">About</a>
+                            <a class="nav-link" href="{{ url('/about') }}">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="services.html">Services</a>
+                            <a class="nav-link" href="{{ url('/services') }}">Services</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -294,16 +294,16 @@ RIGHT SIDEBAR TOGGLE SECTION
                                 Pages <span class="fa fa-angle-down"></span>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="blog.html">Blog Posts</a>
-                                <a class="dropdown-item" href="blog-single.html">Blog Single</a>
-                                <a class="dropdown-item" href="error.html">404 Page</a>
-                                <a class="dropdown-item" href="email-template.html">Email Template</a>
-                                <a class="dropdown-item" href="landing-single.html">Landing Page</a>
-                                <a class="dropdown-item" href="shortcodes.html">Shortcodes</a>
+                                <a class="dropdown-item" href="{{ url('/blog') }}">Blog Posts</a>
+                                <a class="dropdown-item" href="{{ url('/blog-single') }}">Blog Single</a>
+                                <a class="dropdown-item" href="{{ url('/error') }}">404 Page</a>
+                                <a class="dropdown-item" href="{{ url('/email-template') }}">Email Template</a>
+                                <a class="dropdown-item" href="{{ url('/landing-single') }}">Landing Page</a>
+                                <a class="dropdown-item" href="{{ url('/shortcodes') }}">Shortcodes</a>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
+                            <a class="nav-link" href="{{ url('/contact') }}">Contact</a>
                         </li>
                         <!-- search button -->
                         <div class="search-right ml-lg-3">
@@ -345,7 +345,7 @@ RIGHT SIDEBAR TOGGLE SECTION
             <div class="container py-xl-5 py-md-4 mt-5">
                 <h4 class="inner-text-title font-weight-bold mb-sm-2">About Us</h4>
                 <ul class="breadcrumbs-custom-path">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="{{ url('/index') }}">Home</a></li>
                     <li class="active"><span class="fa fa-chevron-right mx-2" aria-hidden="true"></span>About Us</li>
                 </ul>
             </div>
@@ -364,13 +364,13 @@ RIGHT SIDEBAR TOGGLE SECTION
             <div class="container">
                 <div class="row top-cont-grid align-items-center">
                     <div class="col-lg-6 left-img pr-lg-4 order-lg-first order-last">
-                        <img src="assets/images/about1.jpg" alt="" class="img-responsive img-fluid" />
+                        <img src={{asset('images/about1.jpg')}} alt="" class="img-responsive img-fluid" />
                         <div class="row mt-3">
                             <div class="col-6 img-pad pr-2">
-                                <img src="assets/images/about2.jpg" alt="" class="img-responsive img-fluid" />
+                                <img src={{asset('images/about2.jpg')}} alt="" class="img-responsive img-fluid" />
                             </div>
                             <div class="col-6 img-pad-2 pl-2">
-                                <img src="assets/images/about3.jpg" alt="" class="img-responsive img-fluid" />
+                                <img src={{asset('images/about3.jpg')}} alt="" class="img-responsive img-fluid" />
                             </div>
                         </div>
                     </div>
@@ -383,7 +383,7 @@ RIGHT SIDEBAR TOGGLE SECTION
                             ultrices.</p>
                         <p class="mt-4">Sed luctus orci sit amet tempor luctus. Nullam non felis massa ipsum dolor sit
                             amet.</p>
-                        <a href="blog-single.html" class="btn btn-style mt-lg-5 mt-4">Learn More</a>
+                        <a href="{{ url('/blog-single') }}" class="btn btn-style mt-lg-5 mt-4">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -409,7 +409,7 @@ RIGHT SIDEBAR TOGGLE SECTION
                             <span class="fas fa-pencil-alt"></span>
                         </div>
                         <div class="info">
-                            <h4><a href="services.html">Website Designing</a></h4>
+                            <h4><a href="{{ url('/services') }}">Website Designing</a></h4>
                         </div>
                         <p class="mt-3">Lorem ipsum dolor sit amet consectetur ipsum elit. Qui eligendi vitae sit.</p>
                     </div>
@@ -420,7 +420,7 @@ RIGHT SIDEBAR TOGGLE SECTION
                             <span class="fas fa-envelope-open-text"></span>
                         </div>
                         <div class="info">
-                            <h4><a href="services.html">Digital Marketing</a></h4>
+                            <h4><a href="{{ url('/services') }}">Digital Marketing</a></h4>
                         </div>
                         <p class="mt-3">Lorem ipsum dolor sit amet consectetur ipsum elit. Qui eligendi vitae sit.</p>
                     </div>
@@ -431,7 +431,7 @@ RIGHT SIDEBAR TOGGLE SECTION
                             <span class="fas fa-laptop-code"></span>
                         </div>
                         <div class="info">
-                            <h4><a href="services.html">Web Development</a></h4>
+                            <h4><a href="{{ url('/services') }}">Web Development</a></h4>
                         </div>
                         <p class="mt-3">Lorem ipsum dolor sit amet consectetur ipsum elit. Qui eligendi vitae sit.</p>
                     </div>
@@ -450,7 +450,7 @@ RIGHT SIDEBAR TOGGLE SECTION
         <div class="container py-md-5 py-4">
             <div class="row align-items-center">
                 <div class="col-lg-6 pr-lg-5">
-                    <img src="assets/images/img.jpg" alt="" class="img-responsive img-fluid">
+                    <img src={{asset('images/img.jpg')}} alt="" class="img-responsive img-fluid">
                 </div>
                 <div class="col-lg-6 mt-lg-0 mt-5">
                     <h5 class="small-title-2">Our Talent</h5>
@@ -529,7 +529,7 @@ RIGHT SIDEBAR TOGGLE SECTION
                                 faucibus orci luctus.</p>
                         </div>
                         <div class="bottom-info mt-4">
-                            <a class="comment-img" href="#url"><img src="assets/images/testi1.jpg"
+                            <a class="comment-img" href="#url"><img src={{asset('images/testi1.jpg')}}
                                     class="img-responsive" alt="placeholder image"></a>
                             <div class="people-info align-self">
                                 <h3>Johnson william</h3>
@@ -548,7 +548,7 @@ RIGHT SIDEBAR TOGGLE SECTION
                                 faucibus orci luctus.</p>
                         </div>
                         <div class="bottom-info mt-4">
-                            <a class="comment-img" href="#url"><img src="assets/images/testi2.jpg"
+                            <a class="comment-img" href="#url"><img src={{asset('images/testi2.jpg')}}
                                     class="img-responsive" alt="placeholder image"></a>
                             <div class="people-info align-self">
                                 <h3>Alexander sakura</h3>
@@ -567,7 +567,7 @@ RIGHT SIDEBAR TOGGLE SECTION
                                 faucibus orci luctus.</p>
                         </div>
                         <div class="bottom-info mt-4">
-                            <a class="comment-img" href="#url"><img src="assets/images/testi3.jpg"
+                            <a class="comment-img" href="#url"><img src={{asset('images/testi3.jpg')}}
                                     class="img-responsive" alt="placeholder image"></a>
                             <div class="people-info align-self">
                                 <h3>John wilson</h3>
@@ -586,7 +586,7 @@ RIGHT SIDEBAR TOGGLE SECTION
                                 faucibus orci luctus.</p>
                         </div>
                         <div class="bottom-info mt-4">
-                            <a class="comment-img" href="#url"><img src="assets/images/testi3.jpg"
+                            <a class="comment-img" href="#url"><img src={{asset('images/testi3.jpg')}}
                                     class="img-responsive" alt="placeholder image"></a>
                             <div class="people-info align-self">
                                 <h3>Julia sakura</h3>
@@ -605,7 +605,7 @@ RIGHT SIDEBAR TOGGLE SECTION
                                 faucibus orci luctus.</p>
                         </div>
                         <div class="bottom-info mt-4">
-                            <a class="comment-img" href="#url"><img src="assets/images/testi1.jpg"
+                            <a class="comment-img" href="#url"><img src={{asset('images/testi1.jpg')}}
                                     class="img-responsive" alt="placeholder image"></a>
                             <div class="people-info align-self">
                                 <h3>John wilson</h3>
@@ -624,7 +624,7 @@ RIGHT SIDEBAR TOGGLE SECTION
                                 faucibus orci luctus.</p>
                         </div>
                         <div class="bottom-info mt-4">
-                            <a class="comment-img" href="#url"><img src="assets/images/testi2.jpg"
+                            <a class="comment-img" href="#url"><img src={{asset('images/testi2.jpg')}}
                                     class="img-responsive" alt="placeholder image"></a>
                             <div class="people-info align-self">
                                 <h3>Julia sakura</h3>
@@ -658,7 +658,7 @@ RIGHT SIDEBAR TOGGLE SECTION
                     <div class="team-block-single">
                         <div class="team-grids">
                             <a href="#team-single">
-                                <img src="assets/images/team3.jpg" class="img-fluid" alt="">
+                                <img src={{asset('images/team3.jpg')}} class="img-fluid" alt="">
                                 <div class="team-info">
                                     <div class="social-icons-section">
                                         <a class="fac" href="#facebook">
@@ -684,7 +684,7 @@ RIGHT SIDEBAR TOGGLE SECTION
                     <div class="team-block-single">
                         <div class="team-grids">
                             <a href="#team-single">
-                                <img src="assets/images/team2.jpg" class="img-fluid" alt="">
+                                <img src={{asset('images/team2.jpg')}}  class="img-fluid" alt="">
                                 <div class="team-info">
                                     <div class="social-icons-section">
                                         <a class="fac" href="#facebook">
@@ -710,7 +710,7 @@ RIGHT SIDEBAR TOGGLE SECTION
                     <div class="team-block-single">
                         <div class="team-grids">
                             <a href="#team-single">
-                                <img src="assets/images/team4.jpg" class="img-fluid" alt="">
+                                <img src={{asset('images/team4.jpg')}}  class="img-fluid" alt="">
                                 <div class="team-info">
                                     <div class="social-icons-section">
                                         <a class="fac" href="#facebook">
@@ -736,7 +736,7 @@ RIGHT SIDEBAR TOGGLE SECTION
                     <div class="team-block-single">
                         <div class="team-grids">
                             <a href="#team-single">
-                                <img src="assets/images/team1.jpg" class="img-fluid" alt="">
+                                <img src={{asset('images/team1.jpg')}}  class="img-fluid" alt="">
                                 <div class="team-info">
                                     <div class="social-icons-section">
                                         <a class="fac" href="#facebook">
@@ -795,25 +795,25 @@ RIGHT SIDEBAR TOGGLE SECTION
                 <div class="col-lg-3 col-sm-6 sub-two-right pl-lg-5 mt-sm-0 mt-5">
                     <h6>Our Services</h6>
                     <ul>
-                        <li><a href="services.html"><span class="fas fa-angle-right mr-2"></span>Website Designing</a>
+                        <li><a href="{{ url('/services') }}"><span class="fas fa-angle-right mr-2"></span>Website Designing</a>
                         </li>
-                        <li><a href="services.html"><span class="fas fa-angle-right mr-2"></span>Web Hosting</a>
+                        <li><a href="{{ url('/services') }}"><span class="fas fa-angle-right mr-2"></span>Web Hosting</a>
                         </li>
-                        <li><a href="services.html"><span class="fas fa-angle-right mr-2"></span>Digital Photography</a>
+                        <li><a href="{{ url('/services') }}"><span class="fas fa-angle-right mr-2"></span>Digital Photography</a>
                         </li>
-                        <li><a href="services.html"><span class="fas fa-angle-right mr-2"></span>Photoshop to HTML</a>
+                        <li><a href="{{ url('/services') }}"><span class="fas fa-angle-right mr-2"></span>Photoshop to HTML</a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-lg-2 col-sm-6 sub-two-right mt-lg-0 mt-sm-5 mt-4">
                     <h6>Quick links</h6>
                     <ul>
-                        <li><a href="index.html"><span class="fas fa-angle-right mr-2"></span>Home</a></li>
-                        <li><a href="about.html"><span class="fas fa-angle-right mr-2"></span>About</a>
+                        <li><a href="{{ url('/index') }}"><span class="fas fa-angle-right mr-2"></span>Home</a></li>
+                        <li><a href="{{ url('/about') }}"><span class="fas fa-angle-right mr-2"></span>About</a>
                         </li>
-                        <li><a href="blog.html"><span class="fas fa-angle-right mr-2"></span>Blog Posts</a>
+                        <li><a href="{{ url('/blog') }}"><span class="fas fa-angle-right mr-2"></span>Blog Posts</a>
                         </li>
-                        <li><a href="contact.html"><span class="fas fa-angle-right mr-2"></span>Contact</a></li>
+                        <li><a href="{{ url('/contact') }}"><span class="fas fa-angle-right mr-2"></span>Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-sm-6 sub-two-right pl-lg-5 mt-lg-0 mt-sm-5 mt-4">
