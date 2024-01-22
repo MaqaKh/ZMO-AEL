@@ -212,19 +212,19 @@ RIGHT SIDEBAR TOGGLE SECTION
 
     <div id="w3lDemoBar" class="w3l-demo-bar">
         <div class="demo-btns">
-        <a href="https://w3layouts.com/?p=4763800000046471">
+        <a href="{{ url()->previous() }}">
             <span class="w3l-icon -back">
                 <span class="fa fa-arrow-left"></span>
             </span>
             <span class="w3l-text">Back</span>
         </a>
-        <a href="https://w3layouts.com/?p=4763800000046471">
+        <a href="{{ url()->previous() }}">
             <span class="w3l-icon -download">
                 <span class="fa fa-download"></span>
             </span>
             <span class="w3l-text">Download</span>
         </a>
-        <a href="https://w3layouts.com/checkout/?add-to-cart=4763800000046471" class="no-margin-bottom-mobile">
+        <a href="{{ url()->previous() }}" class="no-margin-bottom-mobile">
             <span class="w3l-icon -buy">
                 <span class="fa fa-shopping-cart"></span>
             </span>

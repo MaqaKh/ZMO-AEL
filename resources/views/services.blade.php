@@ -212,19 +212,19 @@ RIGHT SIDEBAR TOGGLE SECTION
 
     <div id="w3lDemoBar" class="w3l-demo-bar">
         <div class="demo-btns">
-        <a href="https://w3layouts.com/?p=4763800000046471">
+        <a href="{{ url()->previous() }}">
             <span class="w3l-icon -back">
                 <span class="fa fa-arrow-left"></span>
             </span>
             <span class="w3l-text">Back</span>
         </a>
-        <a href="https://w3layouts.com/?p=4763800000046471">
+        <a href="{{ url()->previous() }}">
             <span class="w3l-icon -download">
                 <span class="fa fa-download"></span>
             </span>
             <span class="w3l-text">Download</span>
         </a>
-        <a href="https://w3layouts.com/checkout/?add-to-cart=4763800000046471" class="no-margin-bottom-mobile">
+        <a href="{{ url()->previous() }}" class="no-margin-bottom-mobile">
             <span class="w3l-icon -buy">
                 <span class="fa fa-shopping-cart"></span>
             </span>
@@ -303,7 +303,7 @@ RIGHT SIDEBAR TOGGLE SECTION
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
+                            <a class="nav-link"  href="{{ url('/contact') }}">Contact</a>
                         </li>
                         <!-- search button -->
                         <div class="search-right ml-lg-3">
@@ -665,7 +665,7 @@ RIGHT SIDEBAR TOGGLE SECTION
                         </li>
                         <li><a href="{{ url('/blog') }}"><span class="fas fa-angle-right mr-2"></span>Blog Posts</a>
                         </li>
-                        <li><a href="contact.html"><span class="fas fa-angle-right mr-2"></span>Contact</a></li>
+                        <li><a href="{{ url('/contact') }}"><span class="fas fa-angle-right mr-2"></span>Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-sm-6 sub-two-right pl-lg-5 mt-lg-0 mt-sm-5 mt-4">
@@ -750,11 +750,12 @@ RIGHT SIDEBAR TOGGLE SECTION
     <!-- //move top -->
 
     <!-- common jquery plugin -->
-    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
     <!-- //common jquery plugin -->
 
     <!-- theme switch js (light and dark)-->
-    <script src="assets/js/theme-change.js"></script>
+    <script src="{{ asset('js/theme-change.js') }}"></script>
+
     <script>
         function autoType(elementClass, typingSpeed) {
             var thhis = $(elementClass);

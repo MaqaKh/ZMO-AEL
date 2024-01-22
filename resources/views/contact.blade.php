@@ -18,9 +18,10 @@ Author URL: http://w3layouts.com
         rel="stylesheet">
     <!-- //google-fonts -->
     <!-- Font-Awesome-Icons-CSS -->
-    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="{{ asset('css/fontawesome-all.min.css') }}">
     <!-- Template CSS Style link -->
-    <link rel="stylesheet" href="assets/css/style-liberty.css">
+    <link rel="stylesheet" href="{{ asset('css/style-liberty.css') }}">
+
 </head>
 
 <body>
@@ -60,7 +61,8 @@ if(typeof _bsa !== 'undefined' && _bsa) {
 </script>
 
 <meta name="robots" content="noindex">
-<body><link rel="stylesheet" href="../../../../../../assests/css/font-awesome.min.css">
+<body><link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
+
 <!-- New toolbar-->
 <style>
 * {
@@ -211,19 +213,19 @@ RIGHT SIDEBAR TOGGLE SECTION
 
     <div id="w3lDemoBar" class="w3l-demo-bar">
         <div class="demo-btns">
-        <a href="https://w3layouts.com/?p=4763800000046471">
+        <a href="{{ url()->previous() }}">
             <span class="w3l-icon -back">
                 <span class="fa fa-arrow-left"></span>
             </span>
             <span class="w3l-text">Back</span>
         </a>
-        <a href="https://w3layouts.com/?p=4763800000046471">
+        <a href="{{ url()->previous() }}">
             <span class="w3l-icon -download">
                 <span class="fa fa-download"></span>
             </span>
             <span class="w3l-text">Download</span>
         </a>
-        <a href="https://w3layouts.com/checkout/?add-to-cart=4763800000046471" class="no-margin-bottom-mobile">
+        <a href="{{ url()->previous() }}" class="no-margin-bottom-mobile">
             <span class="w3l-icon -buy">
                 <span class="fa fa-shopping-cart"></span>
             </span>
@@ -260,12 +262,12 @@ RIGHT SIDEBAR TOGGLE SECTION
         <div class="container">
             <nav class="navbar navbar-expand-lg stroke">
                 <h1>
-                    <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
                         <span class="lostyle-1">E</span>
                         xecution
                     </a>
                 </h1>
-                <!-- if logo is image enable this   
+                <!-- if logo is image enable this
     <a class="navbar-brand" href="#index.html">
         <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
     </a> -->
@@ -279,13 +281,13 @@ RIGHT SIDEBAR TOGGLE SECTION
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                     <ul class="navbar-nav ml-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="{{ url('/') }}">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
+                            <a class="nav-link" href="{{ url('/about') }}">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="services.html">Services</a>
+                            <a class="nav-link" href="{{ url('/services') }}">Services</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -293,16 +295,16 @@ RIGHT SIDEBAR TOGGLE SECTION
                                 Pages <span class="fa fa-angle-down"></span>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="blog.html">Blog Posts</a>
-                                <a class="dropdown-item" href="blog-single.html">Blog Single</a>
-                                <a class="dropdown-item" href="error.html">404 Page</a>
-                                <a class="dropdown-item" href="email-template.html">Email Template</a>
-                                <a class="dropdown-item" href="landing-single.html">Landing Page</a>
-                                <a class="dropdown-item" href="shortcodes.html">Shortcodes</a>
+                                <a class="dropdown-item" href="{{ url('/blog') }}">Blog Posts</a>
+                                <a class="dropdown-item" href="{{ url('/blog-single') }}">Blog Single</a>
+                                <a class="dropdown-item" href="{{ url('/error') }}">404 Page</a>
+                                <a class="dropdown-item" href="{{ url('/email-template') }}">Email Template</a>
+                                <a class="dropdown-item" href="{{ url('/landing-single') }}">Landing Page</a>
+                                <a class="dropdown-item" href="{{ url('/shortcodes') }}">Shortcodes</a>
                             </div>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="contact.html">Contact</a>
+                            <a class="nav-link" href="{{ url('/contact') }}">Contact</a>
                         </li>
                         <!-- search button -->
                         <div class="search-right ml-lg-3">
@@ -344,7 +346,7 @@ RIGHT SIDEBAR TOGGLE SECTION
             <div class="container py-xl-5 py-md-4 mt-5">
                 <h4 class="inner-text-title font-weight-bold mb-sm-2">Contact Us</h4>
                 <ul class="breadcrumbs-custom-path">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="{{ url('/') }}">Home</a></li>
                     <li class="active"><span class="fa fa-chevron-right mx-2" aria-hidden="true"></span>Contact Us</li>
                 </ul>
             </div>
@@ -355,7 +357,7 @@ RIGHT SIDEBAR TOGGLE SECTION
 
 <!---728x90--->
 
- 
+
 </div>
     <!-- contact -->
     <section class="w3l-contact-info-main py-5" id="contact">
@@ -444,14 +446,14 @@ RIGHT SIDEBAR TOGGLE SECTION
 
     <div class="map-contact">
         <iframe class="map-w3layouts"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d317718.69319292053!2d-0.3817765050863085!3d51.528307984912544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C+UK!5e0!3m2!1sen!2spl!4v1562654563739!5m2!1sen!2spl"
+         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.3121280632595!2d49.87734117556946!3d40.37977435788844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307ce1c05fdc59%3A0x793d618e9e746c15!2s23%208%20November%20Ave%2C%20Baku%201000!5e0!3m2!1sen!2saz!4v1705922801293!5m2!1sen!2saz"
             width="100%" height="400" frameborder="0" style="border: 0px;" allowfullscreen=""></iframe>
     </div>
     <!-- //contact -->
 <div style="margin: 8px auto; display: block; text-align:center;">
 
 <!---728x90--->
- 
+
 </div>
     <!-- footer -->
     <footer class="w3l-footer-22 py-5">
@@ -485,25 +487,25 @@ RIGHT SIDEBAR TOGGLE SECTION
                 <div class="col-lg-3 col-sm-6 sub-two-right pl-lg-5 mt-sm-0 mt-5">
                     <h6>Our Services</h6>
                     <ul>
-                        <li><a href="services.html"><span class="fas fa-angle-right mr-2"></span>Website Designing</a>
+                        <li><a href="{{ url('/services') }}"><span class="fas fa-angle-right mr-2"></span>Website Designing</a>
                         </li>
-                        <li><a href="services.html"><span class="fas fa-angle-right mr-2"></span>Web Hosting</a>
+                        <li><a href="{{ url('/services') }}"><span class="fas fa-angle-right mr-2"></span>Web Hosting</a>
                         </li>
-                        <li><a href="services.html"><span class="fas fa-angle-right mr-2"></span>Digital Photography</a>
+                        <li><a href="{{ url('/services') }}"><span class="fas fa-angle-right mr-2"></span>Digital Photography</a>
                         </li>
-                        <li><a href="services.html"><span class="fas fa-angle-right mr-2"></span>Photoshop to HTML</a>
+                        <li><a href="{{ url('/services') }}"><span class="fas fa-angle-right mr-2"></span>Photoshop to HTML</a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-lg-2 col-sm-6 sub-two-right mt-lg-0 mt-sm-5 mt-4">
                     <h6>Quick links</h6>
                     <ul>
-                        <li><a href="index.html"><span class="fas fa-angle-right mr-2"></span>Home</a></li>
-                        <li><a href="about.html"><span class="fas fa-angle-right mr-2"></span>About</a>
+                        <li><a href="{{ url('/') }}"><span class="fas fa-angle-right mr-2"></span>Home</a></li>
+                        <li><a href="{{ url('/about') }}"><span class="fas fa-angle-right mr-2"></span>About</a>
                         </li>
-                        <li><a href="blog.html"><span class="fas fa-angle-right mr-2"></span>Blog Posts</a>
+                        <li><a href="{{ url('/blog') }}"><span class="fas fa-angle-right mr-2"></span>Blog Posts</a>
                         </li>
-                        <li><a href="contact.html"><span class="fas fa-angle-right mr-2"></span>Contact</a></li>
+                        <li><a href="{{ url('/contact') }}"><span class="fas fa-angle-right mr-2"></span>Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-sm-6 sub-two-right pl-lg-5 mt-lg-0 mt-sm-5 mt-4">
@@ -588,11 +590,12 @@ RIGHT SIDEBAR TOGGLE SECTION
     <!-- //move top -->
 
     <!-- common jquery plugin -->
-    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
     <!-- //common jquery plugin -->
 
     <!-- theme switch js (light and dark)-->
-    <script src="assets/js/theme-change.js"></script>
+    <script src="{{ asset('js/theme-change.js') }}"></script>
+
     <script>
         function autoType(elementClass, typingSpeed) {
             var thhis = $(elementClass);
@@ -622,9 +625,9 @@ RIGHT SIDEBAR TOGGLE SECTION
         }
 
         $(document).ready(function () {
-            // Now to start autoTyping just call the autoType function with the 
+            // Now to start autoTyping just call the autoType function with the
             // class of outer div
-            // The second paramter is the speed between each letter is typed.   
+            // The second paramter is the speed between each letter is typed.
             autoType(".type-js", 200);
         });
     </script>
@@ -670,7 +673,8 @@ RIGHT SIDEBAR TOGGLE SECTION
     <!-- //disable body scroll which navbar is in active -->
 
     <!--bootstrap-->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+
     <!-- //bootstrap-->
     <!-- //Js scripts -->
 
