@@ -12723,6 +12723,7 @@ h5.small-title-2 {
 .footer-contact {
   background: #191a1c;
   padding: 2em;
+  
 }
 
 .footer-contact.active {
@@ -12755,6 +12756,10 @@ h5.small-title-2 {
   text-align: center;
   margin-right: 20px;
 }
+
+/* .footer-contact div h5{
+  font-size:19px;
+} */
 
 @media (max-width: 1200px) {
   .footer-contact {
@@ -14393,6 +14398,7 @@ h4.inner-text-title {
   background: var(--bg-light);
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, .075);
   border-radius: 4px;
+  min-height: 130px;
 }
 
 .contact-address .contact-icon i {
