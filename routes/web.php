@@ -16,6 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index_page');
 });
+
+
+Route::get('/aboutpage', function () {
+    return view('about_page');
+});
 Route::get('/index', function () {
     return view('index');
 });
