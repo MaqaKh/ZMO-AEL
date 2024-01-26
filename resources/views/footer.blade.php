@@ -32,25 +32,25 @@
             <div class="col-lg-3 col-sm-6 sub-two-right pl-lg-5 mt-sm-0 mt-5">
                 <h6>Our Products</h6>
                 <ul>
-                    <li><a href="product.html"><span class="fas fa-angle-right mr-2"></span>Engine Oil</a>
+                    <li><a href="{{ url('/product') }}"><span class="fas fa-angle-right mr-2"></span>Engine Oil</a>
                     </li>
-                    <li><a href="product.html"><span class="fas fa-angle-right mr-2"></span>Transmission Oil</a>
+                    <li><a href="{{ url('/product') }}"><span class="fas fa-angle-right mr-2"></span>Transmission Oil</a>
                     </li>
-                    <li><a href="product.html"><span class="fas fa-angle-right mr-2"></span>Accessories</a>
+                    <li><a href="{{ url('/product') }}"><span class="fas fa-angle-right mr-2"></span>Accessories</a>
                     </li>
-                    <li><a href="product.html"><span class="fas fa-angle-right mr-2"></span>All Products</a>
+                    <li><a href="{{ url('/product') }}"><span class="fas fa-angle-right mr-2"></span>All Products</a>
                     </li>
                 </ul>
             </div>
             <div class="col-lg-2 col-sm-6 sub-two-right mt-lg-0 mt-sm-5 mt-4">
                 <h6>Quick links</h6>
                 <ul>
-                    <li><a href="index.html"><span class="fas fa-angle-right mr-2"></span>Home</a></li>
-                    <li><a href="about.html"><span class="fas fa-angle-right mr-2"></span>About</a>
+                    <li><a href="{{ url('/') }}"><span class="fas fa-angle-right mr-2"></span>Home</a></li>
+                    <li><a href="{{ url('/about') }}"><span class="fas fa-angle-right mr-2"></span>About</a>
                     </li>
-                    <li><a href="product.html"><span class="fas fa-angle-right mr-2"></span>Products</a>
+                    <li><a href="{{ url('/product') }}"><span class="fas fa-angle-right mr-2"></span>Products</a>
                     </li>
-                    <li><a href="contact.html"><span class="fas fa-angle-right mr-2"></span>Contact</a></li>
+                    <li><a href="{{ url('/contact') }}"><span class="fas fa-angle-right mr-2"></span>Contact</a></li>
                 </ul>
             </div>
             <div class="col-lg-3 col-sm-6 sub-two-right pl-lg-5 mt-lg-0 mt-sm-5 mt-4">

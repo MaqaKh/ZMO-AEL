@@ -13,20 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
-    return view('index_page');
-});
-
-
-Route::get('/aboutpage', function () {
-    return view('about_page');
-});
-Route::get('/index', function () {
     return view('index');
-});
-
-Route::get('/master', function () {
-    return view('master');
 });
 
 Route::get('/contact', function () {
@@ -36,13 +25,20 @@ Route::get('/contact', function () {
 Route::get('/about', function () {
     return view('about');
 });
+Route::get('/service', function () {
+    return view('service');
+});
+Route::get('/landing-single', function () {
+    return view('landing_single');
+});
+
 
 Route::get('/product', function () {
     return view('product');
 });
 
 Route::get('/product-detail', function () {
-    return view('product-detail');
+    return view('product_detail');
 });
 
 Route::get('/error', function () {
@@ -53,6 +49,3 @@ Route::get('/services', function () {
     return view('services');
 });
 
-Route::get('/landing-single', function () {
-    return view('landing-single');
-});

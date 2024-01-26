@@ -5,7 +5,7 @@
     <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Execution - Corporate Category Bootstrap Responsive Website Template - Home : W3Layouts</title>
+    <title>ZIMMER IS A TRADITIONAL GERMAN BRAND.</title>
     <!-- google-fonts -->
     <link href="http://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
         rel="stylesheet">

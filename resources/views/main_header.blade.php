@@ -39,9 +39,9 @@
                                 Products <span class="fa fa-angle-down"></span>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="product.html">Engine oil</a>
-                                <a class="dropdown-item" href="product.html">Transmission oil</a>
-                                <a class="dropdown-item" href="product.html">Promotional accessories</a>
+                                <a class="dropdown-item" href="{{ url('/product') }}">Engine oil</a>
+                                <a class="dropdown-item"href="{{ url('/product') }}">Transmission oil</a>
+                                <a class="dropdown-item" href="{{ url('/product') }}">Promotional accessories</a>
                                 <!--                                <a class="dropdown-item" href="email-template.html">Email Template</a>-->
                                 <!--                                <a class="dropdown-item" href="landing-single.html">Landing Page</a>-->
                                 <!--                                <a class="dropdown-item" href="shortcodes.html">Shortcodes</a>-->
@@ -54,11 +54,13 @@
                             <a class="nav-link" href="contact.html">Contact</a>
                         </li> --}}
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
+                            <a class="nav-link" href="{{ url('/contact') }}"
+                            >Contact</a>
                         </li>
                         <li class="nav-item">
                             <div class="nav-link language-container">
-                                <a href="contact.html">RU</a>
+                                <a href="{{ url('/contact') }}"
+                                >RU</a>
                                <!--- <a href="contact.html">EN</a>  -->
                             </div>
                         </li>
