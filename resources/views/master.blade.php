@@ -5,14 +5,14 @@
     <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>ZIMMER IS A TRADITIONAL GERMAN BRAND.</title>
+        <title>ZIMMER - A TRADITIONAL GERMAN BRAND</title>
     <!-- google-fonts -->
     <link href="http://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
         rel="stylesheet">
-    <!-- //google-fonts -->
-    <!-- Font-Awesome-Icons-CSS -->
+        <link rel="icon" type="image/x-icon" href="{{asset('/images/favicon.ico')}}">
 
-    <link rel="stylesheet" href={{asset('/css/fontawesome-all.min.css')}}>
+
+        <link rel="stylesheet" href={{asset('/css/fontawesome-all.min.css')}}>
     <!-- Template CSS Style link -->
     <link rel="stylesheet" href={{asset('/css/style-liberty.css')}}>
 
