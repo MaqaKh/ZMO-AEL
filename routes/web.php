@@ -49,3 +49,8 @@ Route::get('/services', function () {
     return view('services');
 });
 
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
