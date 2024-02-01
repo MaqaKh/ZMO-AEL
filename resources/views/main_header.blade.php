@@ -10,8 +10,8 @@
                 <!--                    </a>-->
                 <!--                </h1>-->
                 <!--                 if logo is image enable this   -->
-                <a class="navbar-brand" href="#index.html">
-                    <img alt="Your logo" src={{asset('images/logo-rectangle-withoutbg.png')}} style="height:48px;"
+                <a class="navbar-brand" href="/">
+                    <img alt="Your logo" src={{ asset('images/zimmer-logo-full.png') }} style="height:80px;"
                     title="Your logo"/>
                 </a>
                 <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"

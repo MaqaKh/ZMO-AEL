@@ -17,14 +17,14 @@
                     <a class="logo" href="index.html">
                         <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
                     </a> -->
-                    <h4>Zimmer Oil</h4>
-                    <p class="mt-3">HIGH QUALITY, MODERN INNOVATIVE GERMAN TECHNOLOGY AT A FAVORABLE PRICE!
+                    {{--                    <h4>Zimmer Oil</h4>--}}
+                    {{--                    <p class="mt-3">HIGH QUALITY, MODERN INNOVATIVE GERMAN TECHNOLOGY AT A FAVORABLE PRICE!--}}
 
-                        ZIMMER IS A TRADITIONAL GERMAN BRAND. MANUFACTURER OF ZIMMER PRODUCTS TO ORDER, SPECIALIZES IN
-                        THE PRODUCTION OF FUEL ADDITIVES, LUBRICANTS, GEAR OILS, MOTOR OILS, SPECIALTY FLUIDS, COOLANTS
-                        AND CAR CHEMICALS.
-                    </p>
-                    <a href="{{ url('/about') }}" class="btn btn-style mt-md-5 mt-4">Read More</a>
+                    {{--                        ZIMMER IS A TRADITIONAL GERMAN BRAND. MANUFACTURER OF ZIMMER PRODUCTS TO ORDER, SPECIALIZES IN--}}
+                    {{--                        THE PRODUCTION OF FUEL ADDITIVES, LUBRICANTS, GEAR OILS, MOTOR OILS, SPECIALTY FLUIDS, COOLANTS--}}
+                    {{--                        AND CAR CHEMICALS.--}}
+                    {{--                    </p>--}}
+                    {{--                    <a href="{{ url('/about') }}" class="btn btn-style mt-md-5 mt-4">Read More</a>--}}
                 </div>
             </div>
         </div>
