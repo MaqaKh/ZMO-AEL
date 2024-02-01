@@ -7,14 +7,15 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
-        //
+
+        $products=Product::with('category')->paginate(10);
+
+        return view('product',['products'=>$products]);
+         //return view('product',compact('products'));
+        // return view('product',$products);
     }
 
     /**

@@ -21,12 +21,10 @@ return new class extends Migration
             $table->string('code');
             $table->boolean('is_active')->default(false);
             $table->boolean('stock_status')->default(false);
+            $table->string('image_path');
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('main_categories');
             $table->timestamps();
-        });
-        Schema::table('main_categories', function (Blueprint $table) {
-            $table->foreign('parent_id')->references('id')->on('main_categories');
         });
     }
 
