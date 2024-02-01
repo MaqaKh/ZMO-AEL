@@ -68,9 +68,10 @@
                                 </div>
                             </div>
                         </div>
+
                         @endforeach
 
-                        {{$products->links()}}
+
 
 {{--
                         <div class="col-lg-4 col-md-6 mt-md-0 mt-4 mb-4">
@@ -176,10 +177,14 @@
 
 
                     </div>
+
                 </div>
+
             </div>
 
         </div>
+
+        {{$products->links()}}
         <!-- pagination -->
         <div class="pagination-style text-center mt-5 pt-lg-5 pt-2">
             <ul>
@@ -187,6 +192,7 @@
                     <span aria-hidden="true" class="fa fa-angle-double-left"></span>
                 </a>
                 </li>
+                {{$products->links()}}
                 <li><a class="active" href="#page">1</a></li>
                 <li>
                     <a href="#page">2</a>
