@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,9 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
+Route::get('/product-details/{id}', [ProductController::class,'show'])->name('product-details');
+
+
 Route::get('/about', function () {
     return view('about');
 });
@@ -33,9 +37,9 @@ Route::get('/landing-single', function () {
 });
 
 
-Route::get('/product', function () {
-    return view('product');
-});
+Route::get('/product', [ProductController::class,'index']);
+
+
 
 Route::get('/product-detail', function () {
     return view('product_detail');
@@ -49,3 +53,18 @@ Route::get('/services', function () {
     return view('services');
 });
 
+Route::get('/lang/{locale}', function ($locale) {
+    if (! in_array($locale, ['en', 'es', 'fr'])) {
+        abort(400);
+    }
+
+    App::setLocale($locale);
+
+    //
+});
+
+
+
+// Route::group(['prefix' => 'admin'], function () {
+//     Voyager::routes();
+// });

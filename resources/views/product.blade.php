@@ -40,20 +40,27 @@
                             <!-- You can add other content here if needed -->
                         </div>
                     </div>
+
+
+
                     <div class="row justify-content-center">
+
+
+                        @foreach($products as $product)
                         <div class="col-lg-4 col-md-6 item">
                             <div class="card">
                                 <div class="card-header p-0 position-relative border-0">
-                                    <a href="{{ url('/services') }}"  >
+                                    <a href="{{ route('product-details', ['id' => $product->id]) }}"  >
                                         <img alt="card-image"
                                              class="d-block img-responsive"
-                                             src="{{ asset('images/products/10W-40%20LOW%20PREMIUM%20UNIVERSAL.png') }}"
+                                             src={{$product->image_path}}
 >
                                     </a>
                                 </div>
+
                                 <div class="card-body service-details">
-                                    <span class="label-style">Enginer</span>
-                                    <a class="service-heading" href="{{ url('/services') }}">Website Designing</a>
+                                    <span class="label-style">{{$product->category->name}}</span>
+                                    <a class="service-heading" href="{{ url('/services') }}">{{$product->name}}</a>
                                     <p>We offer Mobil™ 10W-40 high viscosity motor oils for use in vehicles with more
                                         than
                                         75,000 miles, and a synthetic blend oil.
@@ -61,6 +68,12 @@
                                 </div>
                             </div>
                         </div>
+
+                        @endforeach
+
+
+
+{{--
                         <div class="col-lg-4 col-md-6 mt-md-0 mt-4 mb-4">
                             <div class="card">
                                 <div class="card-header p-0 position-relative border-0">
@@ -79,6 +92,8 @@
                                 </div>
                             </div>
                         </div>
+
+
                         <div class="col-lg-4 col-md-6 mt-lg-0 mt-4 mb-4">
                             <div class="card">
                                 <div class="card-header p-0 position-relative border-0">
@@ -97,6 +112,8 @@
                                 </div>
                             </div>
                         </div>
+
+
                         <div class="col-lg-4 col-md-6 mt-lg-0 mt-4 mb-4">
                             <div class="card">
                                 <div class="card-header p-0 position-relative border-0">
@@ -116,6 +133,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-lg-4 col-md-6 mt-lg-0 mt-4 mb-4">
                             <div class="card">
                                 <div class="card-header p-0 position-relative border-0">
@@ -134,6 +152,8 @@
                                 </div>
                             </div>
                         </div>
+
+
                         <div class="col-lg-4 col-md-6 mt-lg-0 mt-4 mb-4">
                             <div class="card">
                                 <div class="card-header p-0 position-relative border-0">
@@ -153,18 +173,26 @@
                                 </div>
                             </div>
                         </div>
+ --}}
+
+
                     </div>
+
                 </div>
+
             </div>
 
         </div>
-        <!-- pagination -->
+
+        {{$products->links()}}
+        {{-- <!-- pagination -->
         <div class="pagination-style text-center mt-5 pt-lg-5 pt-2">
             <ul>
                 <li><a class="not-allowed" disabled="" href="#none">
                     <span aria-hidden="true" class="fa fa-angle-double-left"></span>
                 </a>
                 </li>
+                {{$products->links()}}
                 <li><a class="active" href="#page">1</a></li>
                 <li>
                     <a href="#page">2</a>
@@ -178,7 +206,7 @@
                 </li>
             </ul>
         </div>
-        <!-- //pagination -->
+        <!-- //pagination --> --}}
     </div>
 </div>
 <!-- //blog section -->
