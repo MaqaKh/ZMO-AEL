@@ -23,6 +23,9 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
+Route::get('/product-details/{id}', [ProductController::class,'show'])->name('product-details');
+
+
 Route::get('/about', function () {
     return view('about');
 });

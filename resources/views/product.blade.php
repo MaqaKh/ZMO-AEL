@@ -50,7 +50,7 @@
                         <div class="col-lg-4 col-md-6 item">
                             <div class="card">
                                 <div class="card-header p-0 position-relative border-0">
-                                    <a href="{{ url('/services') }}"  >
+                                    <a href="{{ route('product-details', ['id' => $product->id]) }}"  >
                                         <img alt="card-image"
                                              class="d-block img-responsive"
                                              src={{$product->image_path}}
@@ -185,7 +185,7 @@
         </div>
 
         {{$products->links()}}
-        <!-- pagination -->
+        {{-- <!-- pagination -->
         <div class="pagination-style text-center mt-5 pt-lg-5 pt-2">
             <ul>
                 <li><a class="not-allowed" disabled="" href="#none">
@@ -206,7 +206,7 @@
                 </li>
             </ul>
         </div>
-        <!-- //pagination -->
+        <!-- //pagination --> --}}
     </div>
 </div>
 <!-- //blog section -->

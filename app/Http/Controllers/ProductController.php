@@ -39,15 +39,17 @@ class ProductController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Product  $product
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Product $product)
+
+
+    public function show($id)
     {
-        //
+        $product = Product::with('category')->find($id);
+
+        if (!$product) {
+            return view('error');
+        }
+
+        return view('product_detail', compact('product'));
     }
 
     /**
