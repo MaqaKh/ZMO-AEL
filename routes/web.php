@@ -53,8 +53,18 @@ Route::get('/services', function () {
     return view('services');
 });
 
+Route::get('/lang/{locale}', function ($locale) {
+    if (! in_array($locale, ['en', 'es', 'fr'])) {
+        abort(400);
+    }
 
+    App::setLocale($locale);
 
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
+    //
 });
+
+
+
+// Route::group(['prefix' => 'admin'], function () {
+//     Voyager::routes();
+// });
