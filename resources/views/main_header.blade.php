@@ -24,10 +24,10 @@
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                     <ul class="navbar-nav ml-lg-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="{{ url('/') }}">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="{{ url('/') }}">@lang('messages.home') <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/about') }}">About</a>
+                            <a class="nav-link" href="{{ url('/about') }}">@lang('messages.about')</a>
                         </li>
                         <!--                        <li class="nav-item">-->
                         <!--                            <a class="nav-link" href="services.html">Products</a>-->
@@ -36,12 +36,12 @@
                         <li class="nav-item">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Products <span class="fa fa-angle-down"></span>
+                                @lang('messages.products') <span class="fa fa-angle-down"></span>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ url('/product') }}">Engine oil</a>
-                                <a class="dropdown-item"href="{{ url('/product') }}">Transmission oil</a>
-                                <a class="dropdown-item" href="{{ url('/product') }}">Promotional accessories</a>
+                                <a class="dropdown-item" href="{{ url('/product') }}">@lang('messages.engine_oil')</a>
+                                <a class="dropdown-item"href="{{ url('/product') }}">@lang('messages.transmission_oil')</a>
+                                <a class="dropdown-item" href="{{ url('/product') }}">@lang('messages.promotional_accesories')</a>
                                 <!--                                <a class="dropdown-item" href="email-template.html">Email Template</a>-->
                                 <!--                                <a class="dropdown-item" href="landing-single.html">Landing Page</a>-->
                                 <!--                                <a class="dropdown-item" href="shortcodes.html">Shortcodes</a>-->
@@ -55,12 +55,20 @@
                         </li> --}}
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('/contact') }}"
-                            >Contact</a>
+                            >@lang('messages.contacts')</a>
                         </li>
                         <li class="nav-item">
                             <div class="nav-link language-container">
-                                <a href="{{ url('/contact') }}"
+
+                                @if(Session::get('locale') == 'en')
+                                <a href="{{ route('lang.switch', 'ru') }}"
                                 >RU</a>
+
+                                @elseif(Session::get('locale') == 'ru')
+                                <a href="{{ route('lang.switch', 'en') }}"
+                                >EN</a>
+
+                                @endif
                                <!--- <a href="contact.html">EN</a>  -->
                             </div>
                         </li>

@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
-
+use App\Http\Controllers\LanguageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -53,16 +53,16 @@ Route::get('/services', function () {
     return view('services');
 });
 
-Route::get('/lang/{locale}', function ($locale) {
-    if (! in_array($locale, ['en', 'es', 'fr'])) {
-        abort(400);
-    }
+// Route::get('/lang/{locale}', function ($locale) {
+//     if (! in_array($locale, ['en', 'ru'])) {
+//         abort(400);
+//     }
 
-    App::setLocale($locale);
+//     App::setLocale($locale);
 
-    //
-});
-
+//     //
+// });
+Route::get('lang/{locale}', [LanguageController::class, 'switch'])->name('lang.switch');
 
 
 // Route::group(['prefix' => 'admin'], function () {
