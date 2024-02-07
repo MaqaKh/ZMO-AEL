@@ -18,18 +18,18 @@ use App\Http\Controllers\LanguageController;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('/');
 
 Route::get('/contact', function () {
     return view('contact');
-});
+})->name('contact');
 
 
 
 
 Route::get('/about', function () {
     return view('about');
-});
+})->name('about');
 Route::get('/service', function () {
     return view('service');
 });
@@ -51,7 +51,7 @@ Route::get('/services', function () {
 
 
 
-Route::get('/product', [ProductController::class,'index']);
+Route::get('/product', [ProductController::class,'index'])->name('product');
 Route::get('/', [IndexController::class,'index']);
 Route::get('/product-details/{id}', [ProductController::class,'show'])->name('product-details');
 Route::get('lang/{locale}', [LanguageController::class, 'switch'])->name('lang.switch');
