@@ -56,7 +56,7 @@
                         <div class="ml-3">
                             <h5 class="contact-text">Visit Us:</h5>
                             <p>
-                                Address: Azerbaijan, Baku, Khatai district, November 8 Avenue 23, index AZ 1025</p>
+                                Azerbaijan, Baku, Khatai district, November 8 Avenue 23, index AZ 1025</p>
                         </div>
                     </div>
                 </div>
