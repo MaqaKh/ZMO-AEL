@@ -138,113 +138,35 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-lg-4 col-md-6 item">
-                <div class="card">
-                    <div class="card-header p-0 position-relative border-0">
-                        <a href="{{ url('/services') }}">
-                            <img alt="card-image"
-                                 class="d-block img-responsive"
-                                 src={{asset('images/products/10W-40%20LOW%20PREMIUM%20UNIVERSAL.png')}}>
-                        </a>
-                    </div>
-                    <div class="card-body service-details">
-                        <span class="label-style">Enginer</span>
-                        <a href={{ url('/services') }} class="service-heading">Website Designing</a>
-                        <p>We offer Mobil™ 10W-40 high viscosity motor oils for use in vehicles with more than
-                            75,000 miles, and a synthetic blend oil.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mt-md-0 mt-4 mb-4">
-                <div class="card">
-                    <div class="card-header p-0 position-relative border-0">
-                        <a href={{ url('/services') }}>
-                            <img alt="card-image"
-                                 class="d-block img-responsive" src={{ asset('images/products/5W-40%20FS%20ELITE%20LONG%20LIFE.png')}}>
-                        </a>
-                    </div>
-                    <div class="card-body service-details">
-                        <span class="label-style label-style-2">Engine</span>
-                        <a href={{ url('/services') }} class="service-heading">Mobile Applications</a>
-                        <p>w40 motor oil has a winter viscosity grade of five, meaning it’s less viscous at very low
-                            temperatures, compared to, say, 10w40</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mt-lg-0 mt-4 mb-4">
-                <div class="card">
-                    <div class="card-header p-0 position-relative border-0">
-                        <a href={{ url('/services') }}>
-                            <img alt="card-image" class="d-block img-responsive"
-                            src="{{ asset('images/products/5w30%20-eco%20power.png') }}"
-                            >
-                        </a>
-                    </div>
-                    <div class="card-body service-details">
-                        <span class="label-style label-style-3">Transmission</span>
-                        <a href={{ url('/services') }} class="service-heading">Digital Marketing</a>
-                        <p>We offer a wide selection of Mobil™ 5W-30 viscosity motor oils, including products
-                            designed for high mileage vehicles, trucks and SUVs.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mt-lg-0 mt-4 mb-4">
-                <div class="card">
-                    <div class="card-header p-0 position-relative border-0">
-                        <a href={{ url('/services') }}>
-                            <img alt="card-image" class="d-block img-responsive"
-                            src={{ asset('images/products/5w30%20-eco%20power.png') }}
 
-                        </a>
-                    </div>
-                    <div class="card-body service-details">
-                        <span class="label-style label-style-3">Transmission</span>
-                        <a class="service-heading" href="{{ url('/services') }}">Digital Marketing</a>
-                        <p>We offer a wide selection of Mobil™ 5W-30 viscosity motor oils, including products
-                            designed for high mileage vehicles, trucks and SUVs.
-                        </p>
-                    </div>
-                </div>
-            </div>
+
+
+
+
+            @foreach($products as $product)
             <div class="col-lg-4 col-md-6 mt-lg-0 mt-4 mb-4">
                 <div class="card">
                     <div class="card-header p-0 position-relative border-0">
-                        <a href="{{ url('/services') }}">
+                        <a href={{ route('product-details', ['id' => $product->id]) }}>
                             <img alt="card-image" class="d-block img-responsive"
-                            src="{{ asset('images/products/5w30%20-eco%20power.png') }}"
-                            >
-                        </a>
-                    </div>
-                    <div class="card-body service-details">
-                        <span class="label-style label-style-3">Transmission</span>
-                        <a class="service-heading" href={{ url('/services') }}>Digital Marketing</a>
-                        <p>We offer a wide selection of Mobil™ 5W-30 viscosity motor oils, including products
-                            designed for high mileage vehicles, trucks and SUVs.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mt-lg-0 mt-4 mb-4">
-                <div class="card">
-                    <div class="card-header p-0 position-relative border-0">
-                        <a href={{ url('/services') }}>
-                            <img alt="card-image" class="d-block img-responsive"
-                            src="{{ asset('images/products/5w30%20-eco%20power.png') }}"
+                            src="{{$product->image_path}}"
 
                             >
                         </a>
                     </div>
                     <div class="card-body service-details">
-                        <span class="label-style label-style-3">Transmission</span>
-                        <a class="service-heading" href={{ url('/services') }}>Digital Marketing</a>
+                        <span class="label-style label-style-3">{{$product->category->name}}</span>
+                        <a class="service-heading" href={{ route('product-details', ['id' => $product->id]) }}>{{$product->name}}</a>
                         <p>We offer a wide selection of Mobil™ 5W-30 viscosity motor oils, including products
                             designed for high mileage vehicles, trucks and SUVs.
                         </p>
                     </div>
                 </div>
             </div>
+            @endforeach
+
+
+
         </div>
     </div>
 </div>

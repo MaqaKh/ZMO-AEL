@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LanguageController;
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +24,7 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::get('/product-details/{id}', [ProductController::class,'show'])->name('product-details');
+
 
 
 Route::get('/about', function () {
@@ -35,12 +36,6 @@ Route::get('/service', function () {
 Route::get('/landing-single', function () {
     return view('landing_single');
 });
-
-
-Route::get('/product', [ProductController::class,'index']);
-
-
-
 Route::get('/product-detail', function () {
     return view('product_detail');
 });
@@ -53,6 +48,16 @@ Route::get('/services', function () {
     return view('services');
 });
 
+
+
+
+Route::get('/product', [ProductController::class,'index']);
+Route::get('/', [IndexController::class,'index']);
+Route::get('/product-details/{id}', [ProductController::class,'show'])->name('product-details');
+Route::get('lang/{locale}', [LanguageController::class, 'switch'])->name('lang.switch');
+
+
+
 // Route::get('/lang/{locale}', function ($locale) {
 //     if (! in_array($locale, ['en', 'ru'])) {
 //         abort(400);
@@ -62,7 +67,7 @@ Route::get('/services', function () {
 
 //     //
 // });
-Route::get('lang/{locale}', [LanguageController::class, 'switch'])->name('lang.switch');
+
 
 
 // Route::group(['prefix' => 'admin'], function () {

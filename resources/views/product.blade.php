@@ -61,9 +61,8 @@
                                 <div class="card-body service-details">
                                     <span class="label-style">{{$product->category->name}}</span>
                                     <a class="service-heading" href="{{ url('/services') }}">{{$product->name}}</a>
-                                    <p>We offer Mobil™ 10W-40 high viscosity motor oils for use in vehicles with more
-                                        than
-                                        75,000 miles, and a synthetic blend oil.
+                                    <p>
+                                        {{ $product->description }}
                                     </p>
                                 </div>
                             </div>

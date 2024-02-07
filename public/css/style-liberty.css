@@ -12723,7 +12723,7 @@ h5.small-title-2 {
 .footer-contact {
   background: #191a1c;
   padding: 2em;
-  
+
 }
 
 .footer-contact.active {
@@ -12886,7 +12886,7 @@ h5.small-title-2 {
 
 /* content section */
 .w3l-content-mid {
-  background: url(../images/engine-oil-banner.jpg) no-repeat left;
+  background: url(../images/engine-oil-banner.gif) no-repeat left;
   background-size: cover;
   -webkit-background-size: cover;
   -o-background-size: cover;
@@ -13890,7 +13890,7 @@ div#owl-demo2 .owl-dots {
 
 /* inner-banner */
 .inner-banner {
-  background: url(../images/engine-oil-banner.jpg) no-repeat top;
+  background: url(../images/inner-banner.gif) no-repeat top;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
