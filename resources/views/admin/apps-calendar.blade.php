@@ -1,4 +1,4 @@
-@extends('admins.layouts.master')
+@extends('admin.layouts.master')
 @section('title') @lang('translation.Calendars') @endsection
 @section('css')
 <link href="{{ URL::asset('admins/assets/libs/@fullcalendar/@fullcalendar.min.css') }}" rel="stylesheet">
