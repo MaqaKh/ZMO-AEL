@@ -1,7 +1,7 @@
-@extends('layouts.master')
+@extends('admin.layouts.master')
 @section('title') @lang('translation.Offcanvas')  @endsection
 @section('content')
-@component('components.breadcrumb')
+@component('admin.components.breadcrumb')
 @slot('li_1') Components @endslot
 @slot('title') Offcanvas @endslot
 @endcomponent
@@ -153,5 +153,5 @@
 </div><!-- end row -->
 @endsection
 @section('script')
-<script src="{{ URL::asset('/assets/js/app.min.js') }}"></script>
+<script src="{{ URL::asset('/admins/assets/js/app.min.js') }}"></script>
 @endsection

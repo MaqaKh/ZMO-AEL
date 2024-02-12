@@ -1,7 +1,7 @@
-@extends('layouts.master')
+@extends('admin.layouts.master')
 @section('title') @lang('translation.General')  @endsection
 @section('content')
-@component('components.breadcrumb')
+@component('admin.components.breadcrumb')
 @slot('li_1') Components @endslot
 @slot('title') General @endslot
 @endcomponent
@@ -536,7 +536,7 @@
                     <a class="icon-link font-size-15 text-decoration-underline link-light" href="#!">
                         <i class="mdi mdi-archive-outline bi"></i>
                         Icon link
-                    </a>                                    
+                    </a>
                 </div>
 
             </div><!-- end card-body -->
@@ -589,5 +589,5 @@
 </div><!-- end row -->
 @endsection
 @section('script')
-<script src="{{ URL::asset('/assets/js/app.min.js') }}"></script>
+<script src="{{ URL::asset('/admins/assets/js/app.min.js') }}"></script>
 @endsection

@@ -1,4 +1,4 @@
-@extends('layouts.master-without-nav')
+@extends('admin.layouts.master-without-nav')
 @section('title')
 @lang('translation.Confirm_Mail')
 @endsection
@@ -13,7 +13,7 @@
                         <div class="d-flex flex-column h-100">
                             <div class="mb-4 mb-md-5 text-center">
                                 <a href="{{ URL::asset('index') }}" class="d-block auth-logo">
-                                    <img src="{{ URL::asset('assets/images/logo-sm.svg') }}" alt="" height="28"> <span class="logo-txt">Dason</span>
+                                    <img src="{{ URL::asset('admins/assets/images/logo-sm.svg') }}" alt="" height="28"> <span class="logo-txt">Dason</span>
                                 </a>
                             </div>
                             <div class="auth-content my-auto">
@@ -63,13 +63,13 @@
                                 <div id="reviewcarouselIndicators" class="carousel slide" data-bs-ride="carousel">
                                     <div class="carousel-indicators auth-carousel carousel-indicators-rounded justify-content-center mb-0">
                                         <button type="button" data-bs-target="#reviewcarouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">
-                                            <img src="{{ URL::asset('assets/images/users/avatar-1.jpg') }}" class="avatar-md img-fluid rounded-circle d-block" alt="...">
+                                            <img src="{{ URL::asset('admins/assets/images/users/avatar-1.jpg') }}" class="avatar-md img-fluid rounded-circle d-block" alt="...">
                                         </button>
                                         <button type="button" data-bs-target="#reviewcarouselIndicators" data-bs-slide-to="1" aria-label="Slide 2">
-                                            <img src="{{ URL::asset('assets/images/users/avatar-2.jpg') }}" class="avatar-md img-fluid rounded-circle d-block" alt="...">
+                                            <img src="{{ URL::asset('admins/assets/images/users/avatar-2.jpg') }}" class="avatar-md img-fluid rounded-circle d-block" alt="...">
                                         </button>
                                         <button type="button" data-bs-target="#reviewcarouselIndicators" data-bs-slide-to="2" aria-label="Slide 3">
-                                            <img src="{{ URL::asset('assets/images/users/avatar-3.jpg') }}" class="avatar-md img-fluid rounded-circle d-block" alt="...">
+                                            <img src="{{ URL::asset('admins/assets/images/users/avatar-3.jpg') }}" class="avatar-md img-fluid rounded-circle d-block" alt="...">
                                         </button>
                                     </div>
                                     <!-- end carouselIndicators -->
@@ -142,6 +142,6 @@
 </div>
 @endsection
 @section('script')
-    <script src="{{ URL::asset('assets/js/pages/feather-icon.init.js') }}"></script>
+    <script src="{{ URL::asset('admins/assets/js/pages/feather-icon.init.js') }}"></script>
 @endsection
 

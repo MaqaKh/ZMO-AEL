@@ -25,7 +25,7 @@
                         <span data-key="t-ecommerce">@lang('translation.Ecommerce')</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="ecommerce-products" key="t-products">@lang('translation.Products')</a></li>
+                        <li><a href="{{ route('admin.products.index') }}" key="t-products">@lang('translation.Products')</a></li>
                         <li><a href="ecommerce-product-detail" data-key="t-product-detail">@lang('translation.Product_Detail')</a></li>
                         <li><a href="ecommerce-orders" data-key="t-orders">@lang('translation.Orders')</a></li>
                         <li><a href="ecommerce-customers" data-key="t-customers">@lang('translation.Customers')</a></li>

@@ -5,6 +5,8 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Admin\AdminProductController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -54,24 +56,31 @@ Route::get('/services', function () {
 
 
 
-Route::get('/product', [ProductController::class,'index'])->name('product');
-Route::get('/', [IndexController::class,'index']);
-Route::get('/product-details/{id}', [ProductController::class,'show'])->name('product-details');
+Route::get('/product', [ProductController::class, 'index'])->name('product');
+Route::get('/', [IndexController::class, 'index']);
+Route::get('/product-details/{id}', [ProductController::class, 'show'])->name('product-details');
 Route::get('lang/{locale}', [LanguageController::class, 'switch'])->name('lang.switch');
 
 //ADMIN---------------------------------------------------------------------------------------------------------
 
 
+Route::prefix('admin')->group(function () {
+    // Define middleware if needed
+    Route::middleware(['auth'])->group(function () {
+        Route::get('/', [App\Http\Controllers\HomeController::class, 'root'])->name('root');
+        Route::get('index/{locale}', [App\Http\Controllers\HomeController::class, 'lang']);
 
+        Route::get('/products', [AdminProductController::class, 'index'])->name('admin.products.index');
+
+        //Update User Details
+        Route::post('/update-profile/{id}', [App\Http\Controllers\HomeController::class, 'updateProfile'])->name('updateProfile');
+        Route::post('/update-password/{id}', [App\Http\Controllers\HomeController::class, 'updatePassword'])->name('updatePassword');
+        // Add more admin routes as needed
+    });
+});
 
 //Language Translation
-Route::get('index/{locale}', [App\Http\Controllers\HomeController::class, 'lang']);
 
-Route::get('/admin', [App\Http\Controllers\HomeController::class, 'root'])->name('root');
-
-//Update User Details
-Route::post('/update-profile/{id}', [App\Http\Controllers\HomeController::class, 'updateProfile'])->name('updateProfile');
-Route::post('/update-password/{id}', [App\Http\Controllers\HomeController::class, 'updatePassword'])->name('updatePassword');
 
 //Route::get('{any}', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
 

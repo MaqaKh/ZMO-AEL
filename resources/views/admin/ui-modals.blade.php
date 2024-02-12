@@ -1,7 +1,7 @@
-@extends('layouts.master')
+@extends('admin.layouts.master')
 @section('title') @lang('translation.Modals')  @endsection
 @section('content')
-@component('components.breadcrumb')
+@component('admin.components.breadcrumb')
 @slot('li_1') Components @endslot
 @slot('title') Modals @endslot
 @endcomponent
@@ -608,7 +608,7 @@
 </div><!-- end row -->
 @endsection
 @section('script')
-<script src="{{ URL::asset('assets/js/pages/modal.init.js') }}"></script>
+<script src="{{ URL::asset('admins/assets/js/pages/modal.init.js') }}"></script>
 <script>
     var myModal = document.getElementById('myModal')
     var myInput = document.getElementById('myInput')
@@ -617,5 +617,5 @@
     myInput.focus()
     })
 </script>
-<script src="{{ URL::asset('/assets/js/app.min.js') }}"></script>
+<script src="{{ URL::asset('/admins/assets/js/app.min.js') }}"></script>
 @endsection

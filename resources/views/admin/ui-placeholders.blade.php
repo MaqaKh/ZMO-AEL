@@ -1,7 +1,7 @@
-@extends('layouts.master')
+@extends('admin.layouts.master')
 @section('title') @lang('translation.Placeholders')  @endsection
 @section('content')
-@component('components.breadcrumb')
+@component('admin.components.breadcrumb')
 @slot('li_1') Components @endslot
 @slot('title') Placeholders @endslot
 @endcomponent
@@ -18,7 +18,7 @@
                 <div class="row gap-4">
                     <div class="col-lg-5">
                         <div class="card mb-0">
-                            <img src="{{ URL::asset('assets/images/small/img-1.jpg') }}" class="card-img-top" alt="...">
+                            <img src="{{ URL::asset('admins/assetss/images/small/img-1.jpg') }}" class="card-img-top" alt="...">
 
                             <div class="card-body">
                                 <h5 class="card-title">Card title</h5>
@@ -31,7 +31,7 @@
 
                     <div class="col-lg-5">
                         <div class="card mb-0" aria-hidden="true">
-                            <img src="{{ URL::asset('assets/images/small/img-1.jpg') }}" class="card-img-top" alt="...">
+                            <img src="{{ URL::asset('admins/assetss/images/small/img-1.jpg') }}" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title placeholder-glow">
                                     <span class="placeholder col-6"></span>
@@ -156,5 +156,5 @@
 </div> <!-- end row -->
 @endsection
 @section('script')
-<script src="{{ URL::asset('/assets/js/app.min.js') }}"></script>
+<script src="{{ URL::asset('/admins/assets/js/app.min.js') }}"></script>
 @endsection

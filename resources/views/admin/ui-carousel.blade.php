@@ -197,5 +197,5 @@
 </div><!-- end row -->
 @endsection
 @section('script')
-<script src="{{ URL::asset('/assets/js/app.min.js') }}"></script>
+<script src="{{ URL::asset('/admins/assets/js/app.min.js') }}"></script>
 @endsection

@@ -1,11 +1,11 @@
-@extends('layouts.master')
+@extends('admin.layouts.master')
 @section('title') @lang('translation.Utilities')  @endsection
 @section('content')
-@component('components.breadcrumb')
+@component('admin.components.breadcrumb')
 @slot('li_1') Components @endslot
 @slot('title') Utilities @endslot
 @endcomponent
-  
+
 <div class="row">
     <div class="col-xl-4">
         <div class="card">
@@ -81,13 +81,13 @@
             </div><!-- end card header -->
             <div class="card-body">
                 <div class="d-flex flex-wrap gap-3 align-items-center">
-                    <img src="assets/images/users/avatar-10.jpg" class="rounded avatar-xl" alt=" ">
-                    <img src="assets/images/users/avatar-10.jpg" class="rounded-top avatar-xl" alt="">
-                    <img src="assets/images/users/avatar-10.jpg" class="rounded-end avatar-xl" alt="">
-                    <img src="assets/images/users/avatar-10.jpg" class="rounded-bottom avatar-xl" alt="">
-                    <img src="assets/images/users/avatar-10.jpg" class="rounded-start avatar-xl" alt="">
-                    <img src="assets/images/users/avatar-10.jpg" class="rounded-circle avatar-xl" alt="">
-                    <img src="assets/images/small/img-3.jpg" alt="" class="rounded-pill w-25 h-auto">
+                    <img src="admins/assets/images/users/avatar-10.jpg" class="rounded avatar-xl" alt=" ">
+                    <img src="admins/assets/images/users/avatar-10.jpg" class="rounded-top avatar-xl" alt="">
+                    <img src="admins/assets/images/users/avatar-10.jpg" class="rounded-end avatar-xl" alt="">
+                    <img src="admins/assets/images/users/avatar-10.jpg" class="rounded-bottom avatar-xl" alt="">
+                    <img src="admins/assets/images/users/avatar-10.jpg" class="rounded-start avatar-xl" alt="">
+                    <img src="admins/assets/images/users/avatar-10.jpg" class="rounded-circle avatar-xl" alt="">
+                    <img src="admins/assets/images/small/img-3.jpg" alt="" class="rounded-pill w-25 h-auto">
                 </div>
             </div>
         </div>
@@ -99,12 +99,12 @@
             </div><!-- end card header -->
             <div class="card-body">
                 <div class="d-flex flex-wrap gap-2">
-                    <img src="assets/images/users/avatar-10.jpg" class="rounded-0 avatar-xl" alt="">
-                    <img src="assets/images/users/avatar-10.jpg" class="rounded-1 avatar-xl" alt="">
-                    <img src="assets/images/users/avatar-10.jpg" class="rounded-2 avatar-xl" alt="">
-                    <img src="assets/images/users/avatar-10.jpg" class="rounded-3 avatar-xl" alt="">
-                    <img src="assets/images/users/avatar-10.jpg" class="rounded-4 avatar-xl" alt="">
-                    <img src="assets/images/users/avatar-10.jpg" class="rounded-5 avatar-xl" alt="">
+                    <img src="admins/assets/images/users/avatar-10.jpg" class="rounded-0 avatar-xl" alt="">
+                    <img src="admins/assets/images/users/avatar-10.jpg" class="rounded-1 avatar-xl" alt="">
+                    <img src="admins/assets/images/users/avatar-10.jpg" class="rounded-2 avatar-xl" alt="">
+                    <img src="admins/assets/images/users/avatar-10.jpg" class="rounded-3 avatar-xl" alt="">
+                    <img src="admins/assets/images/users/avatar-10.jpg" class="rounded-4 avatar-xl" alt="">
+                    <img src="admins/assets/images/users/avatar-10.jpg" class="rounded-5 avatar-xl" alt="">
                 </div>
             </div><!-- end cardbody -->
         </div><!-- end card -->
@@ -706,8 +706,8 @@
         </div><!-- end card -->
     </div><!-- end col -->
 </div><!-- end row -->
-    
+
 @endsection
 @section('script')
-<script src="{{ URL::asset('/assets/js/app.min.js') }}"></script>
+<script src="{{ URL::asset('/admins/assets/js/app.min.js') }}"></script>
 @endsection

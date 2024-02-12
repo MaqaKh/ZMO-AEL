@@ -1,7 +1,7 @@
-@extends('layouts.master')
+@extends('admin.layouts.master')
 @section('title') @lang('translation.Tabs_&_Accordions')  @endsection
 @section('content')
-@component('components.breadcrumb')
+@component('admin.components.breadcrumb')
 @slot('li_1') Components @endslot
 @slot('title') Tabs & Accordions @endslot
 @endcomponent
@@ -16,36 +16,36 @@
                                             file—to extend our navigational tabs and pills to create tabbable panes
                                             of local content, even via dropdown menus.</p>
                                     </div><!-- end card header -->
-                                
+
                                     <div class="card-body">
                                         <!-- Nav tabs -->
                                         <ul class="nav nav-tabs" role="tablist">
                                             <li class="nav-item">
                                                 <a class="nav-link active" data-bs-toggle="tab" href="#home" role="tab">
                                                     <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
-                                                    <span class="d-none d-sm-block">Home</span>    
+                                                    <span class="d-none d-sm-block">Home</span>
                                                 </a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link" data-bs-toggle="tab" href="#profile" role="tab">
                                                     <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
-                                                    <span class="d-none d-sm-block">Profile</span>    
+                                                    <span class="d-none d-sm-block">Profile</span>
                                                 </a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link" data-bs-toggle="tab" href="#messages" role="tab">
                                                     <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
-                                                    <span class="d-none d-sm-block">Messages</span>    
+                                                    <span class="d-none d-sm-block">Messages</span>
                                                 </a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link" data-bs-toggle="tab" href="#settings" role="tab">
                                                     <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
-                                                    <span class="d-none d-sm-block">Settings</span>    
+                                                    <span class="d-none d-sm-block">Settings</span>
                                                 </a>
                                             </li>
                                         </ul>
-        
+
                                         <!-- Tab panes -->
                                         <div class="tab-content p-3 text-muted">
                                             <div class="tab-pane active" id="home" role="tabpanel">
@@ -95,7 +95,7 @@
                                     </div><!-- end card-body -->
                                 </div><!-- end card -->
                             </div><!-- end col -->
-        
+
                             <div class="col-xl-6">
                                 <div class="card">
                                     <div class="card-header">
@@ -105,36 +105,36 @@
                                             file—to extend our navigational tabs and pills to create tabbable panes
                                             of local content, even via dropdown menus.</p>
                                     </div><!-- end card header -->
-                                    
+
                                     <div class="card-body">
                                         <!-- Nav tabs -->
                                         <ul class="nav nav-pills nav-justified" role="tablist">
                                             <li class="nav-item waves-effect waves-light">
                                                 <a class="nav-link active" data-bs-toggle="tab" href="#home-1" role="tab">
                                                     <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
-                                                    <span class="d-none d-sm-block">Home</span> 
+                                                    <span class="d-none d-sm-block">Home</span>
                                                 </a>
                                             </li>
                                             <li class="nav-item waves-effect waves-light">
                                                 <a class="nav-link" data-bs-toggle="tab" href="#profile-1" role="tab">
                                                     <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
-                                                    <span class="d-none d-sm-block">Profile</span> 
+                                                    <span class="d-none d-sm-block">Profile</span>
                                                 </a>
                                             </li>
                                             <li class="nav-item waves-effect waves-light">
                                                 <a class="nav-link" data-bs-toggle="tab" href="#messages-1" role="tab">
                                                     <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
-                                                    <span class="d-none d-sm-block">Messages</span>   
+                                                    <span class="d-none d-sm-block">Messages</span>
                                                 </a>
                                             </li>
                                             <li class="nav-item waves-effect waves-light">
                                                 <a class="nav-link" data-bs-toggle="tab" href="#settings-1" role="tab">
                                                     <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
-                                                    <span class="d-none d-sm-block">Settings</span>    
+                                                    <span class="d-none d-sm-block">Settings</span>
                                                 </a>
                                             </li>
                                         </ul>
-        
+
                                         <!-- Tab panes -->
                                         <div class="tab-content p-3 text-muted">
                                             <div class="tab-pane active" id="home-1" role="tabpanel">
@@ -185,7 +185,7 @@
                                 </div><!-- end card -->
                             </div><!-- end col -->
                         </div><!-- end row -->
-        
+
                         <div class="row">
                             <div class="col-xl-6">
                                 <div class="card">
@@ -269,32 +269,32 @@
                                         <h4 class="card-title">Custom Tabs</h4>
                                         <p class="card-title-desc">Example of custom tabs</p>
                                     </div><!-- end card header -->
-                                    
+
                                     <div class="card-body">
                                         <!-- Nav tabs -->
                                         <ul class="nav nav-tabs nav-tabs-custom nav-justified" role="tablist">
                                             <li class="nav-item">
                                                 <a class="nav-link active" data-bs-toggle="tab" href="#home1" role="tab">
                                                     <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
-                                                    <span class="d-none d-sm-block">Home</span> 
+                                                    <span class="d-none d-sm-block">Home</span>
                                                 </a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link" data-bs-toggle="tab" href="#profile1" role="tab">
                                                     <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
-                                                    <span class="d-none d-sm-block">Profile</span> 
+                                                    <span class="d-none d-sm-block">Profile</span>
                                                 </a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link" data-bs-toggle="tab" href="#messages1" role="tab">
                                                     <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
-                                                    <span class="d-none d-sm-block">Messages</span>   
+                                                    <span class="d-none d-sm-block">Messages</span>
                                                 </a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link" data-bs-toggle="tab" href="#settings1" role="tab">
                                                     <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
-                                                    <span class="d-none d-sm-block">Settings</span>    
+                                                    <span class="d-none d-sm-block">Settings</span>
                                                 </a>
                                             </li>
                                         </ul>
@@ -361,27 +361,27 @@
                                                 <li class="nav-item">
                                                     <a class="nav-link active" data-bs-toggle="tab" href="#home2" role="tab">
                                                         <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
-                                                        <span class="d-none d-sm-block">Home</span> 
+                                                        <span class="d-none d-sm-block">Home</span>
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a class="nav-link" data-bs-toggle="tab" href="#profile2" role="tab">
                                                         <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
-                                                        <span class="d-none d-sm-block">Profile</span> 
+                                                        <span class="d-none d-sm-block">Profile</span>
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a class="nav-link" data-bs-toggle="tab" href="#messages2" role="tab">
                                                         <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
-                                                        <span class="d-none d-sm-block">Message</span>   
+                                                        <span class="d-none d-sm-block">Message</span>
                                                     </a>
                                                 </li>
                                             </ul>
                                         </div>
                                     </div><!-- end card header -->
-                                    
+
                                     <div class="card-body">
-                                       
+
                                         <!-- Tab panes -->
                                         <div class="tab-content text-muted">
                                             <div class="tab-pane active" id="home2" role="tabpanel">
@@ -431,27 +431,27 @@
                                                 <li class="nav-item">
                                                     <a class="nav-link active" data-bs-toggle="tab" href="#home3" role="tab">
                                                         <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
-                                                        <span class="d-none d-sm-block">Home</span> 
+                                                        <span class="d-none d-sm-block">Home</span>
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a class="nav-link" data-bs-toggle="tab" href="#profile3" role="tab">
                                                         <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
-                                                        <span class="d-none d-sm-block">Profile</span> 
+                                                        <span class="d-none d-sm-block">Profile</span>
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a class="nav-link" data-bs-toggle="tab" href="#messages3" role="tab">
                                                         <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
-                                                        <span class="d-none d-sm-block">Message</span>   
+                                                        <span class="d-none d-sm-block">Message</span>
                                                     </a>
                                                 </li>
                                             </ul>
                                         </div>
                                     </div><!-- end card header -->
-                                    
+
                                     <div class="card-body">
-                                       
+
                                         <!-- Tab panes -->
                                         <div class="tab-content text-muted">
                                             <div class="tab-pane active" id="home3" role="tabpanel">
@@ -509,7 +509,7 @@
                                             </select>
                                         </div>
                                     </div><!-- end card header -->
-                                    
+
                                     <div class="card-body text-muted">
                                         <p class="mb-0">
                                             Etsy mixtape wayfarers, ethical wes anderson tofu before they
@@ -560,7 +560,7 @@
                                     </div><!-- end card-body -->
                                 </div><!-- end card -->
                             </div><!-- end col -->
-                        </div><!-- end row -->                       
+                        </div><!-- end row -->
 
                         <div class="row">
                             <div class="col-xl-6">
@@ -596,7 +596,7 @@
                                                     <div class="accordion-body">
                                                         <div class="text-muted">
                                                             <strong class="text-dark">This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                                    
+
                                                         </div>
                                                     </div>
                                                 </div>
@@ -611,7 +611,7 @@
                                                     <div class="accordion-body">
                                                         <div class="text-muted">
                                                             <strong class="text-dark">This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                                    
+
                                                         </div>
                                                     </div>
                                                 </div>
@@ -681,7 +681,7 @@
                                         <h4 class="card-title">Flush Accordion</h4>
                                         <p class="card-title-desc">Add <code>.accordion-flush</code> to remove the default <code>background-color</code>, some borders, and some rounded corners to render accordions edge-to-edge with their parent container.</p>
                                     </div><!-- end card header -->
-                                    
+
                                     <div class="card-body">
                                         <div class="accordion accordion-flush" id="accordionFlushExample">
                                             <div class="accordion-item">
@@ -774,7 +774,7 @@
                                             A <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> can show and hide multiple elements by referencing them with a selector in its <code>href</code> or <code>data-bs-target</code> attribute.
                                         </p>
                                     </div><!-- end card header -->
-                                    
+
                                     <div class="card-body">
                                         <div class="d-flex gap-2 flex-wrap mb-3">
                                             <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
@@ -829,5 +829,5 @@
                         </div><!--  end row -->
 @endsection
 @section('script')
-<script src="{{ URL::asset('/assets/js/app.min.js') }}"></script>
+<script src="{{ URL::asset('/admins/assets/js/app.min.js') }}"></script>
 @endsection

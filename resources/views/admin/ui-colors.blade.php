@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('admin.layouts.master')
 @section('title') @lang('translation.Colors')  @endsection
 @section('content')
 @component('components.breadcrumb')
@@ -40,7 +40,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            
+
                             <tr>
                                 <th class="" scope="row">
                                     Primary
@@ -77,7 +77,7 @@
                                 </td>
                             </tr>
 
-                            
+
                             <tr>
                                 <th class="" scope="row">
                                     Secondary
@@ -510,7 +510,7 @@
                                 </td>
                             </tr>
 
-                            <tr>    
+                            <tr>
                                 <th class="" scope="row">
                                     Opacity-10
                                 </th>
@@ -548,7 +548,7 @@
                                 </td>
                             </tr>
 
-                            <tr>    
+                            <tr>
                                 <th class="" scope="row">
                                     Opacity-25
                                 </th>
@@ -699,7 +699,7 @@
                                     <div class="text-opacity-100 text-primary">text-opacity-100</div>
                                 </td>
                             </tr>
-                            
+
                         </tbody>
                     </table>
                 </div>
@@ -1004,5 +1004,5 @@
 </div> <!-- end row -->
 @endsection
 @section('script')
-<script src="{{ URL::asset('/assets/js/app.min.js') }}"></script>
+<script src="{{ URL::asset('/admins/assets/js/app.min.js') }}"></script>
 @endsection
