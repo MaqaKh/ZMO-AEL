@@ -148,3 +148,21 @@ RIGHT SIDEBAR TOGGLE SECTION
 }
 
 
+.navbar-logo-main {
+    height: 95px;
+    transition: height 0.3s;
+}
+
+.logo-scroll {
+    height: 95px; /* Default height */
+    transition: height 0.3s; /* Smooth transition */
+}
+
+.scrolled {
+    height: 50px; /* Height when scrolled */
+    transition: height 0.3s;
+}
+
+.mg-top-5 {
+    margin-top: 5%;
+}

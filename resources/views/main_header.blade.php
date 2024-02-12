@@ -11,8 +11,8 @@
                     <!--                </h1>-->
                     <!--                 if logo is image enable this   -->
                     <a class="navbar-brand" href="/">
-                        <img alt="Your logo" src={{ asset('images/zimmer-logo-full.png') }} style="height:95px;"
-                        title="Your logo"/>
+                        <img class="logoImg navbar-logo-main" alt="Your logo" title="Your logo"
+                             src={{ asset('images/zimmer-logo-full.png') }} />
                     </a>
                     <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
                         data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"

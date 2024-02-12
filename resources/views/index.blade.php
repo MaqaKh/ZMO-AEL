@@ -85,40 +85,35 @@
 <section class="w3l-aboutblock py-5">
     <div class="container py-md-5 py-sm-4">
         <div class="row">
-            <div class="col-lg-6 left-wthree-img mb-lg-0 mb-4">
+            <div class="col-lg-6 left-wthree-img mb-lg-0 mb-4 mg-top-5">
                 <img alt=" " class="img-fluid img-responsive" src={{asset('images/zimmer-intro.jfif')}}>
             </div>
             <div class="col-lg-6 about-right-faq align-self pl-lg-5">
                 <h3 class="title-style">The Largest Business Expert!</h3>
-                <p class="mt-2">ZIMMER is a traditional German brand. Manufacturer of ZIMMER products to order,
-                    specializes in the production
-                    of fuel additives, lubricants, gear oils, motor oils, specialty fluids,
-                    coolants and car chemicals. ZIMMER OIL products are produced by a manufacturing company with a
-                    total area
-                    of 17,000 square meters, including 13,000 square meters of covered warehouses and 500 square
-                    meters
-                    of laboratory space for 100 employees located in the UAE,
-                    by special order, with highly innovative German technology</p>
-                <!--                    <div class="mt-4 pt-md-2">-->
-                <!--                        <div class="about-info-m d-flex">-->
-                <!--                            <div class="icon-style-ab mr-4">-->
-                <!--                                <i class="fas fa-donate"></i>-->
-                <!--                            </div>-->
-                <!--                            <div class="about-detail">-->
-                <!--                                <h4>Extra benefit through Invest</h4>-->
-                <!--                                <p>Sed ut perspiciatis unde omnis iste natus error sit accusantium</p>-->
-                <!--                            </div>-->
-                <!--                        </div>-->
-                <!--                        <div class="about-info-m d-flex mt-4">-->
-                <!--                            <div class="icon-style-ab mr-4">-->
-                <!--                                <i class="fab fa-asymmetrik"></i>-->
-                <!--                            </div>-->
-                <!--                            <div class="about-detail">-->
-                <!--                                <h4>Expand profit and reduce Tax</h4>-->
-                <!--                                <p>Sed ut perspiciatis unde omnis iste natus error sit accusantium</p>-->
-                <!--                            </div>-->
-                <!--                        </div>-->
-                <!--                    </div>-->
+                <p class="mt-2">Unlock peak performance: Unleash the potential of your vehicle with ZIMMER's innovative,
+                    German-engineered lubricants and car care products.</p>
+                <div class="mt-4 pt-md-2">
+                    <div class="about-info-m d-flex">
+                        <div class="icon-style-ab mr-4">
+                            <i class="fas fa-truck-monster"></i>
+                        </div>
+                        <div class="about-detail">
+                            <h4>Drive with confidence</h4>
+                            <p> Trust ZIMMER, the German powerhouse for premium automotive solutions, to keep your car
+                                protected and performing at its best.</p>
+                        </div>
+                    </div>
+                    <div class="about-info-m d-flex mt-4">
+                        <div class="icon-style-ab mr-4">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <div class="about-detail">
+                            <h4>Experience the German tradition of quality</h4>
+                            <p>ZIMMER has been providing reliable lubricants and car chemicals for generations, keeping
+                                your vehicle running smoothly for miles to come.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -496,5 +491,3 @@
     <!-- Specific styles for the about page -->
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
 @endsection
-
-
