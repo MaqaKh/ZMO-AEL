@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Product;
+use Illuminate\Http\Request;
+
 class IndexController extends Controller
 {
     /**
@@ -15,7 +16,7 @@ class IndexController extends Controller
     {
 
         $products=Product::with('category')->paginate();
-        return dd($products);
+//        return dd($products);
         return view('index',['products'=>$products]);
     }
 
