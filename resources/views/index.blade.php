@@ -95,7 +95,7 @@
                 <div class="mt-4 pt-md-2">
                     <div class="about-info-m d-flex">
                         <div class="icon-style-ab mr-4">
-                            <i class="fas fa-donate"></i>
+                            <i class="fas fa-truck-monster"></i>
                         </div>
                         <div class="about-detail">
                             <h4>Drive with confidence</h4>
@@ -105,7 +105,7 @@
                     </div>
                     <div class="about-info-m d-flex mt-4">
                         <div class="icon-style-ab mr-4">
-                            <i class="fab fa-asymmetrik"></i>
+                            <i class="fas fa-medal"></i>
                         </div>
                         <div class="about-detail">
                             <h4>Experience the German tradition of quality</h4>

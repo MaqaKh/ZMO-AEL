@@ -50,7 +50,7 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-4 col-md-6">
-                <div class="contact-address p-4">
+                <div class="contact-address p-4 min-h-160">
                     <div class="contact-icon d-flex align-items-center">
                         <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                         <div class="ml-3">
@@ -62,7 +62,7 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mt-md-0 mt-4">
-                <div class="contact-address p-4">
+                <div class="contact-address p-4 min-h-160">
                     <div class="contact-icon d-flex align-items-center">
                         <i class="fas fa-phone-alt" aria-hidden="true"></i>
                         <div class="ml-3">
@@ -74,7 +74,7 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mt-lg-0 mt-4">
-                <div class="contact-address p-4">
+                <div class="contact-address p-4 min-h-160">
                     <div class="contact-icon d-flex align-items-center">
                         <i class="fas fa-envelope-open-text" aria-hidden="true"></i>
                         <div class="ml-3">
