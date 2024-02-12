@@ -7,16 +7,11 @@ use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
 
         $products=Product::with('category')->paginate();
-//        return dd($products);
+ 
         return view('index',['products'=>$products]);
     }
 
