@@ -71,6 +71,8 @@ Route::prefix('admin')->group(function () {
         Route::get('index/{locale}', [App\Http\Controllers\HomeController::class, 'lang']);
 
         Route::get('/products', [AdminProductController::class, 'index'])->name('admin.products.index');
+        Route::get('/products/create', [AdminProductController::class, 'create'])->name('products.create');
+        Route::post('/products/store', [AdminProductController::class, 'store'])->name('products.store');
 
         //Update User Details
         Route::post('/update-profile/{id}', [App\Http\Controllers\HomeController::class, 'updateProfile'])->name('updateProfile');

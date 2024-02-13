@@ -15,28 +15,35 @@
             Products
         @endslot
     @endcomponent
+    <a href="{{ route('products.create') }}" class="btn btn-primary"  >Create Product</a>
 
-    <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Cras justo odio</li>
-          <li class="list-group-item">Dapibus ac facilisis in</li>
-          <li class="list-group-item">Vestibulum at eros</li>
-        </ul>
-        <div class="card-body">
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
-        </div>
-      </div>
+
+
+
+    <div class="card-container" style="display: flex; flex-wrap: wrap;">
+        @foreach($products as $product)
+        <div class="card" style="width: 18rem; margin: 10px;">
+            <img src="{{$product->image_path}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{$product->name}}</h5>
+              <p class="card-text">{{$product->description}}</p>
+            </div>
+
+            <div class="card-body">
+              <a href="#" class="card-link">Edit</a>
+
+              <a href="#" class="card-link">Delete</a>
+            </div>
+          </div>
+        @endforeach
+    </div>
+
+
 
 @endsection
 @section('script')
-    <script src="{{ URL::asset('assets/libs/nouislider/nouislider.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/libs/wnumb/wnumb.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/js/pages/product-filter-range.init.js') }}"></script>
-    <script src="{{ URL::asset('/assets/js/app.min.js') }}"></script>
+    <script src="{{ URL::asset('admins/assets/libs/nouislider/nouislider.min.js') }}"></script>
+    <script src="{{ URL::asset('admins/assets/libs/wnumb/wnumb.min.js') }}"></script>
+    <script src="{{ URL::asset('admins/assets/js/pages/product-filter-range.init.js') }}"></script>
+    <script src="{{ URL::asset('/admins/assets/js/app.min.js') }}"></script>
 @endsection

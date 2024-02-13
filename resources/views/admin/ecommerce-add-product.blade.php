@@ -1,11 +1,11 @@
-@extends('layouts.master')
+@extends('admin.layouts.master')
 @section('title') @lang('translation.Add_Product') @endsection
 @section('css')
-<link href="{{ URL::asset('assets/libs/select2/select2.min.css') }}" rel="stylesheet">
-<link href="{{ URL::asset('assets/libs/dropzone/dropzone.min.css') }}" rel="stylesheet">
+<link href="{{ URL::asset('admins/assets/libs/select2/select2.min.css') }}" rel="stylesheet">
+<link href="{{ URL::asset('admins/assets/libs/dropzone/dropzone.min.css') }}" rel="stylesheet">
 @endsection
 @section('content')
-@component('components.breadcrumb')
+@component('admin.components.breadcrumb')
 @slot('li_1') Ecommerce @endslot
 @slot('title') Add Product @endslot
 @endcomponent
@@ -17,59 +17,63 @@
                 <p class="card-title-desc">Fill all information below</p>
             </div>
             <div class="card-body">
-                <form>
+                <form action="{{ route('products.store') }}" method="POST">
+                    @csrf
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="mb-3">
                                 <label for="productname">Product Name</label>
-                                <input id="productname" name="productname" type="text" class="form-control"  placeholder="Product Name">
+                                <input id="productname"   name="name" type="text" class="form-control"  placeholder="Product Name">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="manufacturerbrand">Price</label>
+                                <input id="manufacturerbrand" name="price" type="text" class="form-control" placeholder="Manufacturer Brand">
                             </div>
                             <div class="mb-3">
-                                <label for="manufacturername">Manufacturer Name</label>
-                                <input id="manufacturername" name="manufacturername" type="text" class="form-control" placeholder="Manufacturer Name">
+                                <label for="price">Code</label>
+                                <input id="price" name="code" type="text" class="form-control" placeholder="Price">
                             </div>
+
                             <div class="mb-3">
-                                <label for="manufacturerbrand">Manufacturer Brand</label>
-                                <input id="manufacturerbrand" name="manufacturerbrand" type="text" class="form-control" placeholder="Manufacturer Brand">
+                                <label for="price">Stock status</label>
+                                <input id="price" name="stock_status" type="text" class="form-control" placeholder="Price">
                             </div>
-                            <div class="mb-3">
-                                <label for="price">Price</label>
-                                <input id="price" name="price" type="text" class="form-control" placeholder="Price">
-                            </div>
+
                         </div>
 
                         <div class="col-sm-6">
                             <div class="mb-3">
                                 <label class="control-label">Category</label>
-                                <select class="form-control select2">
+                                <select name="category_id" class="form-control select2">
                                     <option>Select</option>
-                                    <option value="FA">Fashion</option>
-                                    <option value="EL">Electronic</option>
+                                    @foreach($categories as $category)
+                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                @endforeach
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <label class="control-label">Features</label>
+                                <label class="control-label">Visibility</label>
 
-                                <select class="select2 form-control select2-multiple" multiple="multiple" data-placeholder="Choose ...">
-                                    <option value="WI">Wireless</option>
-                                    <option value="BE">Battery life</option>
-                                    <option value="BA">Bass</option>
+                                <select name="is_active" class="select2 form-control select2" data-placeholder="Choose ...">
+                                    <option value="1">ON</option>
+                                    <option value="0">OFF</option>
                                 </select>
 
                             </div>
                             <div class="mb-3">
-                                <label for="productdesc">Product Description</label>
-                                <textarea class="form-control" id="productdesc" rows="5" placeholder="Product Description"></textarea>
+                                <label for="productdesc">Product Description EN</label>
+                                <textarea class="form-control" name="description_en" id="productdesc" rows="5" placeholder="Product Description"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="productdesc">Product Description RU</label>
+                                <textarea class="form-control" name="description_en" id="productdesc" rows="5" placeholder="Product Description"></textarea>
                             </div>
 
                         </div>
                     </div>
 
-                    <div class="d-flex flex-wrap gap-2">
-                        <button type="submit" class="btn btn-primary waves-effect waves-light">Save Changes</button>
-                        <button type="reset" class="btn btn-secondary waves-effect waves-light">Cancel</button>
-                    </div>
-                </form>
+
 
             </div>
         </div>
@@ -79,9 +83,9 @@
                 <h4 class="card-title mb-0">Product Images</h4>
             </div>
             <div class="card-body">
-                <form action="/" method="post" class="dropzone">
+
                     <div class="fallback">
-                        <input name="file" type="file" multiple />
+                        <input name="image" type="file" multiple />
                     </div>
 
                     <div class="dz-message needsclick">
@@ -91,12 +95,16 @@
 
                         <h4>Drop files here or click to upload.</h4>
                     </div>
-                </form>
+
             </div>
 
         </div> <!-- end card-->
-
-        <div class="card">
+        <div class="d-flex flex-wrap gap-2">
+            <button type="submit" class="btn btn-primary waves-effect waves-light">Save Changes</button>
+            <button type="reset" class="btn btn-secondary waves-effect waves-light">Cancel</button>
+        </div>
+    </form>
+        {{-- <div class="card">
             <div class="card-header">
                 <h4 class="card-title">Meta Data</h4>
                 <p class="card-title-desc">Fill all information below</p>
@@ -131,14 +139,14 @@
                 </form>
 
             </div>
-        </div>
+        </div> --}}
     </div>
 </div>
 <!-- end row -->
 @endsection
 @section('script')
-<script src="{{ URL::asset('assets/libs/select2/select2.min.js') }}"></script>
-<script src="{{ URL::asset('assets/libs/dropzone/dropzone.min.js') }}"></script>
-<script src="{{ URL::asset('assets/js/pages/ecommerce-select2.init.js') }}"></script>
-<script src="{{ URL::asset('/assets/js/app.min.js') }}"></script>
+<script src="{{ URL::asset('admins/assets/libs/select2/select2.min.js') }}"></script>
+<script src="{{ URL::asset('admins/assets/libs/dropzone/dropzone.min.js') }}"></script>
+<script src="{{ URL::asset('admins/assets/js/pages/ecommerce-select2.init.js') }}"></script>
+<script src="{{ URL::asset('/admins/assets/js/app.min.js') }}"></script>
 @endsection

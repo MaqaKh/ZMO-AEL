@@ -1,7 +1,7 @@
-@extends('layouts.master')
+@extends('admin.layouts.master')
 @section('title') @lang('translation.Product_Detail') @endsection
 @section('content')
-@component('components.breadcrumb')
+@component('admin.components.breadcrumb')
 @slot('li_1') Ecommerce @endslot
 @slot('title')Product Detail @endslot
 @endcomponent
@@ -16,16 +16,16 @@
                                 <div class="col-md-2 col-sm-3 col-4">
                                     <div class="nav flex-column nav-pills " id="v-pills-tab" role="tablist" aria-orientation="vertical">
                                         <a class="nav-link active" id="product-1-tab" data-bs-toggle="pill" href="#product-1" role="tab" aria-controls="product-1" aria-selected="true">
-                                            <img src="{{ URL::asset('assets/images/product/img-7.png') }}" alt="" class="img-fluid mx-auto d-block rounded">
+                                            <img src="{{ URL::asset('admins/assets/images/product/img-7.png') }}" alt="" class="img-fluid mx-auto d-block rounded">
                                         </a>
                                         <a class="nav-link" id="product-2-tab" data-bs-toggle="pill" href="#product-2" role="tab" aria-controls="product-2" aria-selected="false">
-                                            <img src="{{ URL::asset('assets/images/product/img-8.png') }}" alt="" class="img-fluid mx-auto d-block rounded">
+                                            <img src="{{ URL::asset('admins/assets/images/product/img-8.png') }}" alt="" class="img-fluid mx-auto d-block rounded">
                                         </a>
                                         <a class="nav-link" id="product-3-tab" data-bs-toggle="pill" href="#product-3" role="tab" aria-controls="product-3" aria-selected="false">
-                                            <img src="{{ URL::asset('assets/images/product/img-7.png') }}" alt="" class="img-fluid mx-auto d-block rounded">
+                                            <img src="{{ URL::asset('admins/assets/images/product/img-7.png') }}" alt="" class="img-fluid mx-auto d-block rounded">
                                         </a>
                                         <a class="nav-link" id="product-4-tab" data-bs-toggle="pill" href="#product-4" role="tab" aria-controls="product-4" aria-selected="false">
-                                            <img src="{{ URL::asset('assets/images/product/img-8.png') }}" alt="" class="img-fluid mx-auto d-block rounded">
+                                            <img src="{{ URL::asset('admins/assets/images/product/img-8.png') }}" alt="" class="img-fluid mx-auto d-block rounded">
                                         </a>
                                     </div>
                                 </div>
@@ -33,22 +33,22 @@
                                     <div class="tab-content" id="v-pills-tabContent">
                                         <div class="tab-pane fade show active" id="product-1" role="tabpanel" aria-labelledby="product-1-tab">
                                             <div>
-                                                <img src="{{ URL::asset('assets/images/product/img-7.png') }}" alt="" class="img-fluid mx-auto d-block">
+                                                <img src="{{ URL::asset('admins/assets/images/product/img-7.png') }}" alt="" class="img-fluid mx-auto d-block">
                                             </div>
                                         </div>
                                         <div class="tab-pane fade" id="product-2" role="tabpanel" aria-labelledby="product-2-tab">
                                             <div>
-                                                <img src="{{ URL::asset('assets/images/product/img-8.png') }}" alt="" class="img-fluid mx-auto d-block">
+                                                <img src="{{ URL::asset('admins/assets/images/product/img-8.png') }}" alt="" class="img-fluid mx-auto d-block">
                                             </div>
                                         </div>
                                         <div class="tab-pane fade" id="product-3" role="tabpanel" aria-labelledby="product-3-tab">
                                             <div>
-                                                <img src="{{ URL::asset('assets/images/product/img-7.png') }}" alt="" class="img-fluid mx-auto d-block">
+                                                <img src="{{ URL::asset('admins/assets/images/product/img-7.png') }}" alt="" class="img-fluid mx-auto d-block">
                                             </div>
                                         </div>
                                         <div class="tab-pane fade" id="product-4" role="tabpanel" aria-labelledby="product-4-tab">
                                             <div>
-                                                <img src="{{ URL::asset('assets/images/product/img-8.png') }}" alt="" class="img-fluid mx-auto d-block">
+                                                <img src="{{ URL::asset('admins/assets/images/product/img-8.png') }}" alt="" class="img-fluid mx-auto d-block">
                                             </div>
                                         </div>
                                     </div>
@@ -103,19 +103,19 @@
                                 <h5 class="font-size-15">Color :</h5>
                                 <a href="javascript: void(0);" class="active">
                                     <div class="product-color-item border rounded">
-                                        <img src="{{ URL::asset('assets/images/product/img-7.png') }}" alt="" class="avatar-lg">
+                                        <img src="{{ URL::asset('admins/assets/images/product/img-7.png') }}" alt="" class="avatar-lg">
                                     </div>
                                     <p>Black</p>
                                 </a>
                                 <a href="javascript: void(0);">
                                     <div class="product-color-item border rounded">
-                                        <img src="{{ URL::asset('assets/images/product/img-7.png') }}" alt="" class="avatar-lg">
+                                        <img src="{{ URL::asset('admins/assets/images/product/img-7.png') }}" alt="" class="avatar-lg">
                                     </div>
                                     <p>Blue</p>
                                 </a>
                                 <a href="javascript: void(0);">
                                     <div class="product-color-item border rounded">
-                                        <img src="{{ URL::asset('assets/images/product/img-7.png') }}" alt="" class="avatar-lg">
+                                        <img src="{{ URL::asset('admins/assets/images/product/img-7.png') }}" alt="" class="avatar-lg">
                                     </div>
                                     <p>Gray</p>
                                 </a>
@@ -166,7 +166,7 @@
                             <div class="col-xl-3 col-md-5">
                                 <div>
                                     <div class="d-flex">
-                                        <img src="{{ URL::asset('assets/images/users/avatar-2.jpg') }}" class="avatar-sm rounded-circle" alt="img" />
+                                        <img src="{{ URL::asset('admins/assets/images/users/avatar-2.jpg') }}" class="avatar-sm rounded-circle" alt="img" />
                                         <div class="flex-1 ms-4">
                                             <h5 class="mb-2 font-size-15 text-primary">Jerry Rossiter</h5>
                                             <h5 class="text-muted font-size-15">kuwait</h5>
@@ -206,7 +206,7 @@
                             <div class="col-xl-3 col-md-5">
                                 <div>
                                     <div class="d-flex">
-                                        <img src="{{ URL::asset('assets/images/users/avatar-4.jpg') }}" class="avatar-sm rounded-circle" alt="img" />
+                                        <img src="{{ URL::asset('admins/assets/images/users/avatar-4.jpg') }}" class="avatar-sm rounded-circle" alt="img" />
                                         <div class="flex-1 ms-4">
                                             <h5 class="mb-2 font-size-15 text-primary">Ernest Broadnax</h5>
                                             <h5 class="text-muted font-size-15">French</h5>
@@ -304,7 +304,7 @@
                         <div class="card-body">
                             <div class="row align-items-center">
                                 <div class="col-md-4">
-                                    <img src="assets/images/product/img-7.png" alt="" class="img-fluid mx-auto d-block">
+                                    <img src="admins/assets/images/product/img-7.png" alt="" class="img-fluid mx-auto d-block">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="text-center text-md-start pt-3 pt-md-0">
@@ -328,7 +328,7 @@
                         <div class="card-body">
                             <div class="row align-items-center">
                                 <div class="col-md-4">
-                                    <img src="assets/images/product/img-4.png" alt="" class="img-fluid mx-auto d-block">
+                                    <img src="admins/assets/images/product/img-4.png" alt="" class="img-fluid mx-auto d-block">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="text-center text-md-start pt-3 pt-md-0">
@@ -352,7 +352,7 @@
                         <div class="card-body">
                             <div class="row align-items-center">
                                 <div class="col-md-4">
-                                    <img src="assets/images/product/img-6.png" alt="" class="img-fluid mx-auto d-block">
+                                    <img src="admins/assets/images/product/img-6.png" alt="" class="img-fluid mx-auto d-block">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="text-center text-md-start pt-3 pt-md-0">
@@ -380,5 +380,5 @@
 <!-- end row -->
 @endsection
 @section('script')
-<script src="{{ URL::asset('/assets/js/app.min.js') }}"></script>
+<script src="{{ URL::asset('/admins/assets/js/app.min.js') }}"></script>
 @endsection
