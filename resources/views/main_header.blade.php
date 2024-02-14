@@ -360,6 +360,23 @@
                 });
             });
         </script>
+
+    <script>
+
+        // jQuery
+        $(window).scroll(function () {
+            var scrolled = $(window).scrollTop() > 10; // Check if page is scrolled
+
+            if (scrolled) {
+                $('.logoImg').addClass('scrolled'); // Add scrolled class
+                $('.logoImg').removeClass('navbar-logo-main'); // Add scrolled class
+            } else {
+                $('.logoImg').addClass('navbar-logo-main');
+                $('.logoImg').removeClass('scrolled'); // Remove scrolled class
+            }
+        });
+
+    </script>
         <!-- //MENU-JS -->
 
         <!-- disable body scroll which navbar is in active -->
