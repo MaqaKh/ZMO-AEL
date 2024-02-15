@@ -18,8 +18,6 @@
     <a href="{{ route('products.create') }}" class="btn btn-primary"  >Create Product</a>
 
 
-
-
     <div class="card-container" style="display: flex; flex-wrap: wrap;">
         @foreach($products as $product)
         <div class="card" style="width: 18rem; margin: 10px;">

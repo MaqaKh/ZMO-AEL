@@ -41,7 +41,7 @@
                 </div>
 
                 <div class="single-post-content">
-                    <p class="mb-4"> {{$product->description}}</p>
+                    <p class="mb-4"> {{$product->description_en}}</p>
 
 
                 </div>

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\HomeController;
@@ -57,6 +58,8 @@ Route::get('/services', function () {
 
 
 Route::get('/product', [ProductController::class, 'index'])->name('product');
+Route::get('/product/{category}', [ProductController::class, 'filter'])->name('product.filter');
+//Route::get('/category{key}', [CategoryController::class, 'filter'])->name('category.filter');
 Route::get('/', [IndexController::class, 'index']);
 Route::get('/product-details/{id}', [ProductController::class, 'show'])->name('product-details');
 Route::get('lang/{locale}', [LanguageController::class, 'switch'])->name('lang.switch');

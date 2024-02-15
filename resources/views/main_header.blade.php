@@ -39,9 +39,10 @@
                                     @lang('messages.products') <span class="fa fa-angle-down"></span>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ url('/product') }}">@lang('messages.engine_oil')</a>
-                                    <a class="dropdown-item"href="{{ url('/product') }}">@lang('messages.transmission_oil')</a>
-                                    <a class="dropdown-item" href="{{ url('/product') }}">@lang('messages.promotional_accesories')</a>
+                                    <a class="dropdown-item" href="{{ route('product.filter', ['category' => 'engine_oil']) }}">@lang('messages.engine_oil')</a>
+                                    <a class="dropdown-item" href="{{ route('product.filter', ['category' => 'transmission_oil']) }}">@lang('messages.transmission_oil')</a>
+                                    <a class="dropdown-item" href="{{ route('product.filter', ['category' => 'promotional_accessories']) }}">@lang('messages.promotional_accesories')</a>
+
                                     <!--                                <a class="dropdown-item" href="email-template.html">Email Template</a>-->
                                     <!--                                <a class="dropdown-item" href="landing-single.html">Landing Page</a>-->
                                     <!--                                <a class="dropdown-item" href="shortcodes.html">Shortcodes</a>-->

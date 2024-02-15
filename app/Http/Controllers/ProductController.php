@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -16,6 +18,18 @@ class ProductController extends Controller
         return view('product',['products'=>$products]);
          //return view('product',compact('products'));
         // return view('product',$products);
+    }
+    public function filter($categoryDescription)
+    {
+        $category = Category::where('description', $categoryDescription)->first();
+        //return dd($categoryDescription);
+        if ($category) {
+            $products = $category->products()->paginate();
+            return view('product_filter', compact('products'));
+        } else {
+            // Handle case where category with the given description does not exist
+            // For example, return an error view or redirect back
+        }
     }
 
     /**
