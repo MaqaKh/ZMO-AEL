@@ -24,8 +24,8 @@
 
     <div class="card-container" style="display: flex; flex-wrap: wrap;">
         @foreach($products as $product)
-            <div class="card" style="width: 11rem; margin: 8px; height:20rem;">
-                <img src="{{$product->image_path}}" class="card-img-top" alt="...">
+            <div class="card" style="width: 11rem; margin: 8px; height:22rem;">
+                <img src="{{$product->image_path}}" class="card-img-top" alt="">
                 <div class="card-body">
                     <h5 class="card-title">{{$product->name}}</h5>
                     <p class="card-text">{{$product->description}}</p>
