@@ -59,6 +59,7 @@ Route::get('/services', function () {
 
 Route::get('/product', [ProductController::class, 'index'])->name('product');
 Route::get('/product/{category}', [ProductController::class, 'filter'])->name('product.filter');
+
 //Route::get('/category{key}', [CategoryController::class, 'filter'])->name('category.filter');
 Route::get('/', [IndexController::class, 'index']);
 Route::get('/product-details/{id}', [ProductController::class, 'show'])->name('product-details');
@@ -76,6 +77,8 @@ Route::prefix('admin')->group(function () {
         Route::get('/products', [AdminProductController::class, 'index'])->name('admin.products.index');
         Route::get('/products/create', [AdminProductController::class, 'create'])->name('products.create');
         Route::post('/products/store', [AdminProductController::class, 'store'])->name('products.store');
+        Route::delete('/products/{id}', [AdminProductController::class, 'destroy'])->name('products.destroy');
+
 
         //Update User Details
         Route::post('/update-profile/{id}', [App\Http\Controllers\HomeController::class, 'updateProfile'])->name('updateProfile');

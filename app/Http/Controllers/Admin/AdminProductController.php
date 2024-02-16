@@ -12,7 +12,7 @@ class AdminProductController extends Controller
 
     public function index()
     {
-        $products=Product::with('category')->paginate();
+        $products=Product::with('category')->paginate(9);
         return view('admin.ecommerce-products',['products'=>$products]);
     }
 
@@ -96,14 +96,13 @@ class AdminProductController extends Controller
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy($id)
     {
-        //
+        $item = Product::findOrFail($id);
+
+        $item->delete();
+
+        return redirect()->back()->with('success', 'Product deleted successfully.');
     }
 }
