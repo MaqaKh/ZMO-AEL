@@ -26,6 +26,7 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('admin.products.index') }}" key="t-products">@lang('translation.Products')</a></li>
+                        <li><a href="{{ route('admin.categories.index') }}" key="t-products">Categories</a></li>
                           <!--
                         <li><a href="ecommerce-product-detail" data-key="t-product-detail">@lang('translation.Product_Detail')</a></li>
                         <li><a href="ecommerce-orders" data-key="t-orders">@lang('translation.Orders')</a></li>
@@ -46,7 +47,7 @@
 
                 <li>
                     <a href="apps-chat">
-                        <i data-feather="message-square"></i>
+                        <i data-feather="server"></i>
                         <span data-key="t-chat">@lang('translation.Chat')</span>
                     </a>
                 </li>

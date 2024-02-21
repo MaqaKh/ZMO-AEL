@@ -7,7 +7,7 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\AdminProductController;
-
+use App\Http\Controllers\Admin\AdminCategoryController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -74,15 +74,20 @@ Route::prefix('admin')->group(function () {
         Route::get('/', [App\Http\Controllers\HomeController::class, 'root'])->name('root');
         Route::get('index/{locale}', [App\Http\Controllers\HomeController::class, 'lang']);
 
+        //Products
         Route::get('/products', [AdminProductController::class, 'index'])->name('admin.products.index');
         Route::get('/products/create', [AdminProductController::class, 'create'])->name('products.create');
-
         Route::get('/products/edit/{id}', [AdminProductController::class, 'edit'])->name('products.edit');
         Route::post('/products/update/{id}', [AdminProductController::class, 'update'])->name('products.update');
-
         Route::post('/products/store', [AdminProductController::class, 'store'])->name('products.store');
         Route::delete('/products/{id}', [AdminProductController::class, 'destroy'])->name('products.destroy');
-
+        //Categories
+        Route::get('/categories', [AdminCategoryController::class, 'index'])->name('admin.categories.index');
+        Route::get('/categories/create', [AdminCategoryController::class, 'create'])->name('categories.create');
+        Route::get('/categories/edit/{id}', [AdminCategoryController::class, 'edit'])->name('categories.edit');
+        Route::post('/categories/update/{id}', [AdminCategoryController::class, 'update'])->name('categories.update');
+        Route::post('/categories/store', [AdminCategoryController::class, 'store'])->name('categories.store');
+        Route::delete('/categories/{id}', [AdminCategoryController::class, 'destroy'])->name('categories.destroy');
 
         //Update User Details
         Route::post('/update-profile/{id}', [App\Http\Controllers\HomeController::class, 'updateProfile'])->name('updateProfile');
