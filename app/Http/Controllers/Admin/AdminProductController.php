@@ -7,13 +7,14 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 class AdminProductController extends Controller
 {
 
     public function index()
     {
-        $products=Product::with('category')->paginate(9);
-        return view('admin.ecommerce-products',['products'=>$products]);
+        $products = Product::with('category')->paginate(9);
+        return view('admin.ecommerce-products', ['products' => $products]);
     }
 
 
@@ -40,9 +41,75 @@ class AdminProductController extends Controller
         // ]);
 
         // Store image in public directory
-        $imageName = $request->image;
-        $path = Storage::disk('public')->put('images/' . 'products' . '/' . $imageName, $request->image);
-        $url = Storage::disk('public')->url('products/'.$imageName);
+
+      if ($request->has('image')) {
+            //   $image->move(public_path('images'), $imageName)
+            // $imageName =  $request->image->getClientOriginalName();
+            // $path = Storage::disk('public')->putFile('images/products', $request->image, 'public');
+            // //$path = Storage::disk('public')->put('images/' . 'products' . '/' . $imageName, $request->image);
+            // $url = Storage::disk('public')->url('products/'.$imageName);
+
+
+       // $filename = $request->image->getClientOriginalName();
+        //return dd($filename);
+        $file=$request->file('image');
+        $filename = $request->file('image')->getClientOriginalName();
+
+        // Store the image in the public disk
+        Storage::disk('public')->putFileAs('images/products', $file,$filename);
+
+        // Get the full URL of the stored image
+        $imageUrl = Storage::disk('public')->url('images/products/' . $filename);
+     //   $path =  Storage::disk('public')->storeAs( ' . $filename);
+
+
+                //  $fileName = time() . '.' . $request->image->extension();
+                //  $url=$request->image->storeAs('public/images', $fileName);
+            // $imageName = $request->image;
+            // Storage::disk('public')->put('images/products/' . $imageName, $request->image);
+
+            // $url = Storage::disk('public')->url('products/'.$imageName);
+
+            // $targetFolder = $_SERVER['DOCUMENT_ROOT'] . '/storage/app/public';
+            // $linkFolder = $_SERVER['DOCUMENT_ROOT'] . '/public/storage';
+
+            // // Check if the symbolic link already exists
+            // if (is_link($linkFolder)) {
+            //     // If it exists, delete it
+            //     unlink($linkFolder);
+
+            // }
+
+            // // Create the symbolic link
+            // symlink($targetFolder, $linkFolder);
+
+
+            // $image = $request->file('image');
+            // $imageName = $image->getClientOriginalName();
+            // $image->move(public_path('images/products'), $imageName);
+            // $url = asset('images/products/' . $imageName);
+
+
+
+
+            }
+
+
+
+
+
+
+
+            // Upload the image to the public folder
+
+            // Generate the URL for the uploaded image
+            //$url = Storage::url($path);
+
+            // You can return the URL or do any further processing as needed
+
+
+        // }
+
 
         // Create product
         $product = new Product();
@@ -53,13 +120,13 @@ class AdminProductController extends Controller
         $product->code = $request->code;
         $product->is_active = $request->is_active;
         $product->stock_status = $request->stock_status;
-        $product->image_path = $url;
+        $product->image_path =$imageUrl;
         $product->category_id = $request->category_id;
         // Add more fields as needed
 
         $product->save();
 
-          return redirect()->route('admin.products.index')->with('success', 'Product created successfully.');
+        return redirect()->route('admin.products.index')->with('success', 'Product created successfully.');
     }
 
     /**
@@ -73,29 +140,62 @@ class AdminProductController extends Controller
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit($id)
     {
-        //
+        $categories = Category::all();
+        $products = Product::find($id);
+        return view('admin.ecommerce-edit-product', ['products' => $products, 'categories' => $categories]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, $id)
     {
-        //
-    }
+      // Find the product by id
+      $product = Product::findOrFail($id);
 
+      // Retrieve the uploaded file before applying validation rules
+
+
+      // Update image if provided
+      if ($request->has('image')) {
+        // Perform image update
+            $file=$request->file('image');
+
+            $relativePath = str_replace(url('/'), '', $product->image_path);
+
+            // Remove the 'storage' part
+            $relativePath = str_replace('/storage', '', $relativePath);
+
+            $fullPath= 'public/' . $relativePath;
+          // Delete old imag
+          if( Storage::exists($fullPath)){
+
+            Storage::delete($fullPath);
+          }
+          $filename = $request->file('image')->getClientOriginalName();
+
+          // Store the image in the public disk
+          Storage::disk('public')->putFileAs('images/products', $file,$filename);
+
+          // Get the full URL of the stored image
+          $imageUrl = Storage::disk('public')->url('images/products/' . $filename);
+
+          $product->image_path = $imageUrl;
+        // Update other fields
+        $product->name = $request->name;
+        $product->description_en = $request->description_en;
+        $product->description_ru = $request->description_ru;
+        $product->price = $request->price;
+        $product->code = $request->code;
+        $product->is_active = $request->is_active;
+        $product->stock_status = $request->stock_status;
+        $product->category_id = $request->category_id;
+        // Add more fields as needed
+        $product->save();
+        return redirect()->route('admin.products.index')->with('success', 'Product updated successfully.');
+    }
+    }
 
     public function destroy($id)
     {

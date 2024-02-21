@@ -7,37 +7,39 @@
 @section('content')
 @component('admin.components.breadcrumb')
 @slot('li_1') Ecommerce @endslot
-@slot('title') Add Product @endslot
+@slot('title') Edit Product @endslot
 @endcomponent
 <div class="row">
     <div class="col-12">
         <div class="card">
             <div class="card-header">
                 <h4 class="card-title">Basic Information</h4>
-                <p class="card-title-desc">Fill all information below</p>
+                <p class="card-title-desc">Update all information below</p>
             </div>
             <div class="card-body">
-                <form action="{{ route('products.store') }}" enctype="multipart/form-data" method="POST">
+
+                <form action="{{ route('products.update', $products->id) }}" enctype="multipart/form-data" method="POST">
                     @csrf
+                    @method('PUT')
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="mb-3">
                                 <label for="productname">Product Name</label>
-                                <input id="productname"   name="name" type="text" class="form-control"  placeholder="Product Name">
+                                <input id="productname"  value={{$products->name}} name="name" type="text" class="form-control"  placeholder="Product Name">
                             </div>
 
                             <div class="mb-3">
                                 <label for="manufacturerbrand">Price</label>
-                                <input id="manufacturerbrand" name="price" type="text" class="form-control" placeholder="Manufacturer Brand">
+                                <input id="manufacturerbrand" value={{$products->price}} name="price" type="text" class="form-control" placeholder="Manufacturer Brand">
                             </div>
                             <div class="mb-3">
                                 <label for="price">Code</label>
-                                <input id="price" name="code" type="text" class="form-control" placeholder="Price">
+                                <input id="price" name="code" value={{$products->code}} type="text" class="form-control" placeholder="Price">
                             </div>
 
                             <div class="mb-3">
                                 <label for="price">Stock status</label>
-                                <input id="price" name="stock_status" type="text" class="form-control" placeholder="Price">
+                                <input id="price" name="stock_status" value={{$products->stock_status}} type="text" class="form-control" placeholder="Price">
                             </div>
 
                         </div>
@@ -63,11 +65,11 @@
                             </div>
                             <div class="mb-3">
                                 <label for="productdesc">Product Description EN</label>
-                                <textarea class="form-control" name="description_en" id="productdesc" rows="5" placeholder="Product Description"></textarea>
+                                <textarea class="form-control" value={{$products->description_en}}  name="description_en" id="productdesc" rows="5" placeholder="Product Description"></textarea>
                             </div>
                             <div class="mb-3">
                                 <label for="productdesc">Product Description RU</label>
-                                <textarea class="form-control" name="description_en" id="productdesc" rows="5" placeholder="Product Description"></textarea>
+                                <textarea class="form-control" value={{$products->description_ru}}  name="description_en" id="productdesc" rows="5" placeholder="Product Description"></textarea>
                             </div>
 
                         </div>
@@ -100,9 +102,10 @@
 
         </div> <!-- end card-->
         <div class="d-flex flex-wrap gap-2">
-            <button type="submit" class="btn btn-primary waves-effect waves-light">Save Changes</button>
+            <button type="submit" class="btn btn-primary waves-effect waves-light">Update</button>
             <button type="reset" class="btn btn-secondary waves-effect waves-light">Cancel</button>
         </div>
+
     </form>
         {{-- <div class="card">
             <div class="card-header">

@@ -32,11 +32,19 @@
                 </div>
 
                 <div class="card-footer d-flex justify-content-between">
-                    <a href="#" class="btn btn-primary mr-2">Edit</a>
+
+
+
+
+
+
+                    <a href="{{ route('products.edit', $product->id) }}" class="btn btn-primary mr-2">Edit</a>
+
+
                     <form action="{{ route('products.destroy', $product->id) }}" method="POST">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this item?')">Delete</button>
+                        <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this product?')">Delete</button>
                     </form>
                 </div>
             </div>
