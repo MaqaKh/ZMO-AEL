@@ -41,7 +41,7 @@
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
                                     @foreach($categories as $category)
-                                    <a class="dropdown-item" href="">{{$category->name_en}}</a>
+                                    <a class="dropdown-item" href="{{ route('product.filter', ['category' => $category->description_en]) }}">{{$category->name_en}}</a>
 
                                     @endforeach
                                     <!--                                <a class="dropdown-item" href="email-template.html">Email Template</a>-->

@@ -27,18 +27,19 @@ class AdminProductController extends Controller
 
     public function store(Request $request)
     {
-        // $request->validate([
-        //     'name' => 'required|string|max:255',
-        //     'description_en' => 'required|string',
-        //     'description_ru' => 'required|string',
-        //     'price' => 'required|numeric',
-        //     'code' => 'required|string|max:50',
-        //     'is_active' => 'required|boolean',
-        //     'stock_status' => 'required|string|max:255',
-        //     'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-        //     'category_id' => 'required|exists:main_categories,id',
-        //     // Add more validation rules as needed
-        // ]);
+        $product = new Product();
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'description_en' => 'required|string',
+            'description_ru' => 'required|string',
+            'price' => 'numeric',
+            'code' => 'string|max:50',
+            'is_active' => 'boolean',
+            'stock_status' => 'string|max:255',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'category_id' => 'required|exists:main_categories,id',
+            // Add more validation rules as needed
+        ]);
 
         // Store image in public directory
 
@@ -52,6 +53,7 @@ class AdminProductController extends Controller
 
        // $filename = $request->image->getClientOriginalName();
         //return dd($filename);
+
         $file=$request->file('image');
         $filename = $request->file('image')->getClientOriginalName();
 
@@ -61,7 +63,7 @@ class AdminProductController extends Controller
         // Get the full URL of the stored image
         $imageUrl = Storage::disk('public')->url('images/products/' . $filename);
      //   $path =  Storage::disk('public')->storeAs( ' . $filename);
-
+         $product->image_path =$imageUrl;
 
                 //  $fileName = time() . '.' . $request->image->extension();
                 //  $url=$request->image->storeAs('public/images', $fileName);
@@ -112,7 +114,7 @@ class AdminProductController extends Controller
 
 
         // Create product
-        $product = new Product();
+
         $product->name = $request->name;
         $product->description_en = $request->description_en;
         $product->description_ru = $request->description_ru;
@@ -120,7 +122,7 @@ class AdminProductController extends Controller
         $product->code = $request->code;
         $product->is_active = $request->is_active;
         $product->stock_status = $request->stock_status;
-        $product->image_path =$imageUrl;
+
         $product->category_id = $request->category_id;
         // Add more fields as needed
 
@@ -183,18 +185,20 @@ class AdminProductController extends Controller
 
           $product->image_path = $imageUrl;
         // Update other fields
-        $product->name = $request->name;
-        $product->description_en = $request->description_en;
-        $product->description_ru = $request->description_ru;
-        $product->price = $request->price;
-        $product->code = $request->code;
-        $product->is_active = $request->is_active;
-        $product->stock_status = $request->stock_status;
-        $product->category_id = $request->category_id;
-        // Add more fields as needed
-        $product->save();
-        return redirect()->route('admin.products.index')->with('success', 'Product updated successfully.');
+
     }
+
+    $product->name = $request->name;
+    $product->description_en = $request->description_en;
+    $product->description_ru = $request->description_ru;
+    $product->price = $request->price;
+    $product->code = $request->code;
+    $product->is_active = $request->is_active;
+    $product->stock_status = $request->stock_status;
+    $product->category_id = $request->category_id;
+    // Add more fields as needed
+    $product->save();
+    return redirect()->route('admin.products.index')->with('success', 'Product updated successfully.');
     }
 
     public function destroy($id)

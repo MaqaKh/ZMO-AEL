@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name_en');
             $table->text('description_en');
             $table->string('name_ru');
-            $table->text('description_ru')->nullable();
+            $table->text('description_ru');
             $table->boolean('is_active')->default(false);
             $table->timestamps();
         });

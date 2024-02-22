@@ -21,38 +21,59 @@
                     @csrf
                     <div class="row">
                         <div class="col-sm-6">
-                            <div class="mb-3">
+               <div class="mb-3">
                                 <label for="productname">Product Name</label>
                                 <input id="productname"   name="name" type="text" class="form-control"  placeholder="Product Name">
                             </div>
+
+                            @error('name')
+    <div class="alert alert-danger">{{ $message }}</div>
+@enderror
+
 
                             <div class="mb-3">
                                 <label for="manufacturerbrand">Price</label>
                                 <input id="manufacturerbrand" name="price" type="text" class="form-control" placeholder="Manufacturer Brand">
                             </div>
+                            @error('price')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
+
                             <div class="mb-3">
                                 <label for="price">Code</label>
                                 <input id="price" name="code" type="text" class="form-control" placeholder="Price">
                             </div>
+                            @error('code')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
+
 
                             <div class="mb-3">
                                 <label for="price">Stock status</label>
                                 <input id="price" name="stock_status" type="text" class="form-control" placeholder="Price">
                             </div>
+                            @error('stock_status')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
 
                         </div>
 
                         <div class="col-sm-6">
                             <div class="mb-3">
+
                                 <label class="control-label">Category</label>
                                 <select name="category_id" class="form-control select2">
                                     <option>Select</option>
                                     @foreach($categories as $category)
-                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                    <option value="{{ $category->id }}">{{ $category->name_en}}</option>
                                 @endforeach
                                 </select>
+                                @error('category_id')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                             </div>
                             <div class="mb-3">
+
                                 <label class="control-label">Visibility</label>
 
                                 <select name="is_active" class="select2 form-control select2" data-placeholder="Choose ...">
@@ -61,15 +82,25 @@
                                 </select>
 
                             </div>
+                            @error('is_active')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
+
                             <div class="mb-3">
                                 <label for="productdesc">Product Description EN</label>
                                 <textarea class="form-control" name="description_en" id="productdesc" rows="5" placeholder="Product Description"></textarea>
                             </div>
+                            @error('description_en')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
+
                             <div class="mb-3">
                                 <label for="productdesc">Product Description RU</label>
-                                <textarea class="form-control" name="description_en" id="productdesc" rows="5" placeholder="Product Description"></textarea>
+                                <textarea class="form-control" name="description_ru" id="productdesc" rows="5" placeholder="Product Description"></textarea>
                             </div>
-
+                            @error('description_ru')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                         </div>
                     </div>
 

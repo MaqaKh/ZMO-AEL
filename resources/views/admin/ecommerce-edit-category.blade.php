@@ -1,5 +1,5 @@
 @extends('admin.layouts.master')
-@section('title') @lang('translation.Add_Product') @endsection
+@section('title') Edit Category @endsection
 @section('css')
 <link href="{{ URL::asset('admins/assets/libs/select2/select2.min.css') }}" rel="stylesheet">
 <link href="{{ URL::asset('admins/assets/libs/dropzone/dropzone.min.css') }}" rel="stylesheet">
@@ -18,20 +18,37 @@
             </div>
             <div class="card-body">
 
-                <form action="{{ route('categories.update', $category->id) }}" enctype="multipart/form-data" method="POST">
+
+                <form action="{{ route('categories.update', $category->id) }}"   method="POST">
                     @csrf
                     @method('PUT')
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="mb-3">
-                                <label for="productname">Category Name</label>
-                                <input id="productname"  value={{$category->name}} name="name" type="text" class="form-control"  placeholder="Product Name">
+                                <label for="productname">Category Name EN</label>
+                                <input id="productname"  value={{$category->name_en}} name="name_en" type="text" class="form-control"  placeholder="Product Name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="productname">Category Name RU</label>
+                                <input id="productname"  value=   {{ $category->name_ru }} name="name_ru" type="text" class="form-control"  placeholder="Product Name">
                             </div>
 
                             <div class="mb-3">
-                                <label for="manufacturerbrand">Category Description</label>
-                                <input id="manufacturerbrand" value={{$category->description}} name="description" type="text" class="form-control" placeholder="Manufacturer Brand">
+                                <label for="manufacturerbrand">Category Description EN</label>
+                                <input id="manufacturerbrand" value={{$category->description_en}} name="description_en" type="text" class="form-control" placeholder="Manufacturer Brand">
                             </div>
+
+                            <div class="mb-3">
+                                <label for="manufacturerbrand">Category Description RU</label>
+                                <input id="manufacturerbrand" value={{  $category->description_ru }} name="description_ru" type="text" class="form-control" placeholder="Manufacturer Brand">
+                            </div>
+
+                            <label class="control-label">Visibility</label>
+
+                            <select name="is_active" class="select2 form-control select2" data-placeholder="Choose ...">
+                                <option value="1">ON</option>
+                                <option value="0">OFF</option>
+                            </select>
 
 
                         </div>

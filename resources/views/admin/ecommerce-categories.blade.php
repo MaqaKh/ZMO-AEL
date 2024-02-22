@@ -27,7 +27,7 @@
             <div class="card" style="width: 11rem; margin: 8px; height:12rem;">
                 <img src="" class="card-img-top" alt="">
                 <div class="card-body">
-                    <h5 class="card-title">{{$category->name}}</h5>
+                    <h5 class="card-title">{{$category->name_en}}</h5>
                     <p class="card-text"></p>
                 </div>
 

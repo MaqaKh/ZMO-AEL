@@ -23,6 +23,15 @@ class AdminCategoryController extends Controller
 
     public function store(Request $request)
     {
+
+
+        $request->validate([
+            'name_en' => 'required|string|max:255',
+            'name_ru' => 'required|string|max:255',
+            'description_en' => 'required|string',
+            'description_ru' => 'required|string',
+            'is_active' => 'required|in:0,1', // Ensure is_active is either 0 or 1
+        ]);
               // $request->validate([
         //     'name' => 'required|string|max:255',
         //     'description_en' => 'required|string',
@@ -37,8 +46,11 @@ class AdminCategoryController extends Controller
         // ]);
 
         $category = new Category();
-        $category->name = $request->name;
-        $category->description = $request->description;
+        $category->name_en = $request->name_en;
+        $category->name_ru = $request->name_ru;
+        $category->description_en = $request->description_en;
+        $category->description_ru = $request->description_ru;
+        $category->is_active=$request->is_active;
         $category->save();
 
         return redirect()->route('admin.categories.index')->with('success', 'Category created successfully.');
@@ -57,16 +69,31 @@ class AdminCategoryController extends Controller
         return view('admin.ecommerce-edit-category', ['category' => $category]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, $id)
     {
-        //
+
+        // $request->validate([
+        //     'name_en' => 'required|string|max:255',
+        //     'description_en' => 'required|string',
+        //     'description_ru' => 'required|string',
+        //     'is_active' => 'required|in:0,1', // Ensure is_active is either 0 or 1
+        // ]);
+
+        $category = Category::findOrFail($id);
+
+        // Update the category properties with the new values
+        $category->name_en = $request->name_en;
+        $category->name_ru = $request->name_ru;
+        $category->description_en = $request->description_en;
+        $category->description_ru = $request->description_ru;
+        $category->is_active = $request->is_active;
+
+        // Save the updated category
+        $category->save();
+
+        // Redirect back to the category index page with a success message
+        return redirect()->route('admin.categories.index')->with('success', 'Category updated successfully.');
     }
 
     /**

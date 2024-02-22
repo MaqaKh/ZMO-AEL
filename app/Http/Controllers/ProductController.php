@@ -21,7 +21,7 @@ class ProductController extends Controller
     }
     public function filter($categoryDescription)
     {
-        $category = Category::where('description', $categoryDescription)->first();
+        $category = Category::where('description_en', $categoryDescription)->first();
         //return dd($categoryDescription);
         if ($category) {
             $products = $category->products()->paginate();

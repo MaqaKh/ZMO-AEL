@@ -31,6 +31,12 @@
                                 <input id="manufacturerbrand" name="description" type="text" class="form-control" placeholder="Manufacturer Brand">
                             </div>
 
+                            <label class="control-label">Visibility</label>
+
+                            <select name="is_active" class="select2 form-control select2" data-placeholder="Choose ...">
+                                <option value="1">ON</option>
+                                <option value="0">OFF</option>
+                            </select>
 
                         </div>
 
