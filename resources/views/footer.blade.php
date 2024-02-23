@@ -16,9 +16,9 @@
                         <li><a href="#linkedin" title="linkedin"><span class="fab fa-linkedin-in"
                                     aria-hidden="true"></span></a>
                         </li>
-                        <li><a href="#twitter" title="twitter"><span class="fab fa-twitter"
-                                    aria-hidden="true"></span></a>
-                        </li>
+                        <li><a href="#youtube" title="youtube"><span class="fab fa-youtube"
+                            aria-hidden="true"></span></a>
+                </li>
                         <li><a href="#google" title="google"><span class="fab fa-google-plus-g"
                                     aria-hidden="true"></span></a>
                         </li>
@@ -86,14 +86,14 @@
                     <span class="fas fa-phone-alt" aria-hidden="true"></span>
                     <div>
                         <a href="tel:+44-000-888-999">+994 (12) 310-09-35</a><br>
-                        <a href="tel:+44-000-888-999">+994 (55) 238 72 12</a>
+                        <a href="tel:+44-000-888-999">+994 (55) 238-72-12</a>
                         <p>Call Us Now</p>
                     </div>
                 </div>
                 <div class="col-md-4 footer-contact d-flex align-items-center">
                     <span class="fas fa-map-marker-alt" aria-hidden="true"></span>
                     <div>
-                        <h5>Address: Azerbaijan, Baku, Khatai district, November 8 Avenue 23, index AZ 1025</h5>
+                        <h5> Azerbaijan, Baku, Khatai district, November 8 Avenue 23, index AZ 1025</h5>
                         <p>Get Direction</p>
                     </div>
                 </div>

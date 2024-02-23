@@ -68,7 +68,7 @@
                         <div class="ml-3">
                             <h5 class="contact-text">Call Us:</h5>
                             <a href="tel:+12 23456790">+994 (12) 310-09-35</a><br>
-                            <a href="tel:+12 23456790">+994 (55) 238 72 12</a>
+                            <a href="tel:+12 23456790">+994 (55) 238-72-12</a>
                         </div>
                     </div>
                 </div>

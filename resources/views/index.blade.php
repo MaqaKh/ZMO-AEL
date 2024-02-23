@@ -140,25 +140,48 @@
 
             @foreach($products as $product)
             <div class="col-lg-4 col-md-6 mt-lg-0 mt-4 mb-4">
-                <div class="card">
+                <div class="card" style="height: 450px; /* Set a fixed height for the card */">
                     <div class="card-header p-0 position-relative border-0">
                         <a href={{ route('product-details', ['id' => $product->id]) }}>
-                            <img alt="card-image" class="d-block img-responsive"
-                            src="{{$product->image_path}}"
-
-                            >
+                            <img alt="card-image" class="d-block img-responsive card-img-top"
+                                 src="{{$product->image_path}}" style="object-fit: cover; width: 100%; height: 100%;">
                         </a>
                     </div>
                     <div class="card-body service-details">
                         <span class="label-style label-style-3">{{$product->category->name}}</span>
                         <a class="service-heading" href={{ route('product-details', ['id' => $product->id]) }}>{{$product->name}}</a>
-                        <p>We offer a wide selection of Mobil™ 5W-30 viscosity motor oils, including products
-                            designed for high mileage vehicles, trucks and SUVs.
+                        <p>
+                            <!-- Your additional content here -->
                         </p>
                     </div>
                 </div>
             </div>
             @endforeach
+
+
+                   {{-- @foreach($products as $product)
+                        <div class="col-lg-4 col-md-6 mt-lg-0 mt-4 mb-4">
+                            <div class="card">
+                                <div class="card-header p-0 position-relative border-0">
+                                    <a href={{ route('product-details', ['id' => $product->id]) }}>
+                                        <img alt="card-image" class="d-block img-responsive"
+                                        src="{{$product->image_path}}"
+
+                                        >
+                                    </a>
+                                </div>
+                                <div class="card-body service-details">
+                                    <span class="label-style label-style-3">{{$product->category->name}}</span>
+                                    <a class="service-heading" href={{ route('product-details', ['id' => $product->id]) }}>{{$product->name}}</a>
+                                    <p>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        @endforeach --}}
+
+
+
 
 
 
