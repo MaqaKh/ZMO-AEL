@@ -30,7 +30,7 @@ class CategoriesComposerServiceProvider extends ServiceProvider
         // });
 
          View::composer('main_header', function ( $view) {
-            $categories=Category::all();
+            $categories = Category::where('is_active', 1)->paginate(10);
             $view->with('categories', $categories);
         });
     }

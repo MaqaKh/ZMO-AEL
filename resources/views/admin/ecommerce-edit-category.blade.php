@@ -46,8 +46,8 @@
                             <label class="control-label">Visibility</label>
 
                             <select name="is_active" class="select2 form-control select2" data-placeholder="Choose ...">
-                                <option value="1">ON</option>
-                                <option value="0">OFF</option>
+                                <option value="1" {{ old('is_active', $category->is_active) == '1' ? 'selected' : '' }}>ON</option>
+                                <option value="0" {{ old('is_active', $category->is_active) == '0' ? 'selected' : '' }}>OFF</option>
                             </select>
 
 
@@ -64,7 +64,8 @@
       <!-- end card-->
         <div class="d-flex flex-wrap gap-2">
             <button type="submit" class="btn btn-primary waves-effect waves-light">Update</button>
-            <button type="reset" class="btn btn-secondary waves-effect waves-light">Cancel</button>
+            <a type="reset" class="btn btn-secondary waves-effect waves-light" href={{ route("admin.categories.index") }}>Cancel</a>
+
         </div>
 
     </form>

@@ -1,6 +1,6 @@
 @extends('admin.layouts.master')
 @section('title')
-    @lang('translation.Products')
+    Categories
 @endsection
 @section('css')
     <link href="{{ URL::asset('admins/assets/libs/nouislider/nouislider.min.css') }}" rel="stylesheet">

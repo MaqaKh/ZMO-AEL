@@ -1,5 +1,5 @@
 @extends('admin.layouts.master')
-@section('title') @lang('translation.Add_Product') @endsection
+@section('title') Edit Product @endsection
 @section('css')
 <link href="{{ URL::asset('admins/assets/libs/select2/select2.min.css') }}" rel="stylesheet">
 <link href="{{ URL::asset('admins/assets/libs/dropzone/dropzone.min.css') }}" rel="stylesheet">
@@ -42,6 +42,26 @@
                                 <input id="price" name="stock_status" value={{$products->stock_status}} type="text" class="form-control" placeholder="Price">
                             </div>
 
+                            <label for="price">Product Image</label>
+                            <div class="card-body">
+
+                                <div class="fallback">
+                                    <input name="image" type="file" multiple />
+                                </div>
+
+                                <div class="dz-message needsclick">
+                                    <div class="mb-3">
+                                        <i class="display-4 text-muted bx bxs-cloud-upload"></i>
+                                    </div>
+
+                                    <h4>Drop files here or click to upload.</h4>
+                                </div>
+
+                                @if($products->image_path)
+                                    <img src="{{ $products->image_path }}" alt="Product Image" style="max-height: 200px; max-width: 200px;">
+                                @endif
+
+                            </div>
                         </div>
 
                         <div class="col-sm-6">
@@ -58,8 +78,8 @@
                                 <label class="control-label">Visibility</label>
 
                                 <select name="is_active" class="select2 form-control select2" data-placeholder="Choose ...">
-                                    <option value="1">ON</option>
-                                    <option value="0">OFF</option>
+                                    <option value="1" {{ old('is_active', $category->is_active) == '1' ? 'selected' : '' }}>ON</option>
+                                    <option value="0" {{ old('is_active', $category->is_active) == '0' ? 'selected' : '' }}>OFF</option>
                                 </select>
 
                             </div>
@@ -72,6 +92,10 @@
                                 <textarea class="form-control" value={{$products->description_ru}}  name="description_en" id="productdesc" rows="5" placeholder="Product Description"></textarea>
                             </div>
 
+
+
+
+                            <!-- end card-->
                         </div>
                     </div>
 
@@ -80,30 +104,11 @@
             </div>
         </div>
 
-        <div class="card">
-            <div class="card-header">
-                <h4 class="card-title mb-0">Product Images</h4>
-            </div>
-            <div class="card-body">
 
-                    <div class="fallback">
-                        <input name="image" type="file" multiple />
-                    </div>
 
-                    <div class="dz-message needsclick">
-                        <div class="mb-3">
-                            <i class="display-4 text-muted bx bxs-cloud-upload"></i>
-                        </div>
-
-                        <h4>Drop files here or click to upload.</h4>
-                    </div>
-
-            </div>
-
-        </div> <!-- end card-->
         <div class="d-flex flex-wrap gap-2">
             <button type="submit" class="btn btn-primary waves-effect waves-light">Update</button>
-            <button type="reset" class="btn btn-secondary waves-effect waves-light">Cancel</button>
+            <a type="reset" class="btn btn-secondary waves-effect waves-light" href={{ route("admin.products.index") }}>Cancel</a>
         </div>
 
     </form>
