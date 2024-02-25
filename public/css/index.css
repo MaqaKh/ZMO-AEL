@@ -149,8 +149,13 @@ RIGHT SIDEBAR TOGGLE SECTION
 
 
 .navbar-logo-main {
-    height: 95px;
+    height: 150px;
     transition: height 0.3s;
+}
+
+.min-height-150 {
+    min-height: 160px;
+    background-color: black;
 }
 
 .logo-scroll {

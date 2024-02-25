@@ -1,15 +1,8 @@
 
 <main_header>
-    <header id="site-header" class="fixed-top">
-            <div class="container">
+    <header id="site-header" class="fixed-top full-header min-height-150">
+        <div class="container-fluid">
                 <nav class="navbar navbar-expand-lg stroke">
-                    <!--                <h1>-->
-                    <!--                    <a class="navbar-brand d-flex align-items-center" href="index.html">-->
-                    <!--                        <span class="lostyle-1">Z</span>-->
-                    <!--                        immer-->
-                    <!--                    </a>-->
-                    <!--                </h1>-->
-                    <!--                 if logo is image enable this   -->
                     <a class="navbar-brand" href="/">
                         <img class="logoImg navbar-logo-main" alt="Your logo" title="Your logo"
                              src={{ asset('images/zimmer-logo-full.png') }} />
@@ -22,7 +15,14 @@
                     </button>
 
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                        <ul class="navbar-nav ml-lg-auto">
+                        <ul class="nav navbar-nav ml-lg-auto">
+                            <a class="navbar-brand" href="/">
+                                <img class="logoImg navbar-logo-main" alt="Your logo" title="Your logo"
+                                     src={{ asset('images/partners.png') }} />
+                            </a>
+                        </ul>
+
+                        <ul class=" navbar-nav ml-lg-auto">
                             <li class="nav-item  {{ request()->is('/') ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ url('/') }}">@lang('messages.home') <span class="sr-only"></span></a>
                             </li>
@@ -36,7 +36,7 @@
                             <li class="nav-item  {{ request()->is('product') ? 'active' : '' }} ">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    @lang('messages.products') <span class="fa fa-angle-down"></span>
+                                    @lang('messages.automotive') <span class="fa fa-angle-down"></span>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
@@ -48,6 +48,33 @@
                                     <!--                                <a class="dropdown-item" href="landing-single.html">Landing Page</a>-->
                                     <!--                                <a class="dropdown-item" href="shortcodes.html">Shortcodes</a>-->
                                 </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    @lang('messages.industry') <span class="fa fa-angle-down"></span>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="expected.html"> @lang('messages.hydraulic')</a>
+                                    <a class="dropdown-item" href="expected.html"> @lang('messages.industrial')</a>
+                                    <a class="dropdown-item" href="expected.html"> @lang('messages.compressor')</a>
+                                    <a class="dropdown-item" href="expected.html"> @lang('messages.marine')</a>
+                                    <a class="dropdown-item" href="expected.html"> @lang('messages.turbine')</a>
+                                    <a class="dropdown-item" href="expected.html"> @lang('messages.special')</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    @lang('messages.specialProducts') <span class="fa fa-angle-down"></span>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="expected.html"> @lang('messages.antifreeze')</a>
+                                </div>
+                            </li>
+                            <li class="nav-item {{ request()->is('gallery') ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ url('/gallery') }}"
+                                >@lang('messages.gallery')</a>
                             </li>
                             <!--                        <li class="nav-item">-->
                             <!--                            <a class="nav-link" href="contact.html">Promotional accessories</a>-->
@@ -372,9 +399,11 @@
             if (scrolled) {
                 $('.logoImg').addClass('scrolled'); // Add scrolled class
                 $('.logoImg').removeClass('navbar-logo-main'); // Add scrolled class
+                $('.full-header').removeClass('min-height-150');
             } else {
                 $('.logoImg').addClass('navbar-logo-main');
                 $('.logoImg').removeClass('scrolled'); // Remove scrolled class
+                $('.full-header').addClass('min-height-150');
             }
         });
 
