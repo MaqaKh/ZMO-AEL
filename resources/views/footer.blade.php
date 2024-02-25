@@ -1,7 +1,20 @@
-<footer>
 <!-- footer -->
 <footer class="w3l-footer-22 py-5">
     <div class="container py-md-5 py-4">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center">
+                <img alt="Your logo" title="Your logo"
+                     src="{{ asset('images/zimmer-logo-full.png') }}"
+                     style=" max-height: 130px;"/>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 text-center">
+                <img alt="Your logo" title="Your logo"
+                     src="{{ asset('images/partners.png') }}"
+                     style=" max-height: 150px;"/>
+            </div>
+        </div>
         <div class="row sub-columns">
             <div class="col-lg-4 col-sm-6 sub-one-left">
                 <h6>About </h6>
@@ -54,17 +67,7 @@
                 </ul>
             </div>
             <div class="col-lg-3 col-sm-6 sub-two-right pl-lg-5 mt-lg-0 mt-sm-5 mt-4">
-                <h6>Help & Support</h6>
-                <ul>
-                    <li><a href="#live"><span class="fas fa-angle-right mr-2"></span>Live
-                            Chart</a></li>
-                    <li><a href="#faq"><span class="fas fa-angle-right mr-2"></span>Faq</a>
-                    </li>
-                    <li><a href="#support"><span class="fas fa-angle-right mr-2"></span>Support</a>
-                    </li>
-                    <li><a href="#terms"><span class="fas fa-angle-right mr-2"></span>Terms
-                            of Services</a></li>
-                </ul>
+                <img src={{asset('images/flags.png')}} alt="" class="img-responsive img-fluid"/>
             </div>
         </div>
         <div class="sub-contact mt-5 pt-lg-4">
@@ -72,11 +75,11 @@
                 <div class="col-md-4 footer-contact d-flex align-items-center">
                     <span class="fas fa-envelope-open" aria-hidden="true"></span>
                     <div>
-                        <a href="https://p.w3layouts.com/cdn-cgi/l/email-protection#ea83848c85aa8f928b879a868fc4898587">
-                            <span class="__cf_email__" data-cfemail="3e575058517e5b465f534e525b105d5153">info@zimmer-oil.com
+                        <a href="#">
+                            info@zimmer-oil.com
                         </a>
-                        <a href="https://p.w3layouts.com/cdn-cgi/l/email-protection#ea83848c85aa8f928b879a868fc4898587">
-                            <span class="__cf_email__" data-cfemail="3e575058517e5b465f534e525b105d5153">office@zimmer-oil.com</span>
+                        <a href="#">
+                            office@zimmer-oil.com
                         </a>
                         <p>Drop Us a Line</p>
                     </div>
@@ -93,7 +96,7 @@
                 <div class="col-md-4 footer-contact d-flex align-items-center">
                     <span class="fas fa-map-marker-alt" aria-hidden="true"></span>
                     <div>
-                        <h5> Azerbaijan, Baku, Khatai district, November 8 Avenue 23, index AZ 1025</h5>
+                        <h5> Baku, Khatai district, November 8 Avenue 23, index AZ 1025</h5>
                         <p>Get Direction</p>
                     </div>
                 </div>
@@ -116,4 +119,3 @@
 </footer>
 <!-- //footer -->
 
-</footer>

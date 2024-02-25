@@ -28,7 +28,13 @@
         <div class="container">
             <div class="row top-cont-grid align-items-center">
                 <div class="col-lg-6 left-img pr-lg-4 order-lg-first order-last">
-                    <img src={{asset('images/zimmer-intro.jfif')}} alt="" class="img-responsive img-fluid" />                        <div class="row mt-3">
+                    <video autoplay muted loop class="img-responsive">
+                        <source src="{{ asset('videos/fabric.mp4') }}" type="video/mp4">
+                        <source src="{{ asset('videos/your-video.webm') }}" type="video/webm">
+                        <source src="{{ asset('videos/your-video.ogg') }}" type="video/ogg">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="row mt-3">
                         <div class="col-6 img-pad pr-2">
                             <img src={{asset('images/about2.jfif')}} alt="" class="img-responsive img-fluid" />
                         </div>
