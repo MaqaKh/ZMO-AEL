@@ -10,7 +10,7 @@
                 <li class="menu-title" data-key="t-menu">@lang('translation.Menu')</li>
 
                 <li>
-                    <a href="index">
+                    <a href="{{route('admin.products.index')}}">
                         <i data-feather="home"></i>
                         <span class="badge rounded-pill bg-success-subtle text-success float-end">9+</span>
                         <span data-key="t-dashboard">@lang('translation.Dashboards')</span>
@@ -22,7 +22,7 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
                         <i data-feather="shopping-cart"></i>
-                        <span data-key="t-ecommerce">@lang('translation.Ecommerce')</span>
+                        <span data-key="t-ecommerce">Product Management</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('admin.products.index') }}" key="t-products">@lang('translation.Products')</a></li>
@@ -44,15 +44,15 @@
                     -->
                     </ul>
                 </li>
-
+{{--
                 <li>
                     <a href="apps-chat">
                         <i data-feather="server"></i>
                         <span data-key="t-chat">@lang('translation.Chat')</span>
                     </a>
-                </li>
+                </li> --}}
 
-                <li>
+                {{-- <li>
                     <a href="javascript: void(0);" class="has-arrow">
                         <i data-feather="mail"></i>
                         <span data-key="t-email">@lang('translation.Email')</span>
@@ -61,16 +61,16 @@
                         <li><a href="apps-email-inbox" data-key="t-inbox">@lang('translation.Inbox')</a></li>
                         <li><a href="apps-email-read" data-key="t-read-email">@lang('translation.Read_Email')</a></li>
                     </ul>
-                </li>
+                </li> --}}
 
-                <li>
+                {{-- <li>
                     <a href="apps-calendar">
                         <i data-feather="calendar"></i>
                         <span data-key="t-calendar">@lang('translation.Calendars')</span>
                     </a>
-                </li>
+                </li> --}}
 
-                <li>
+                {{-- <li>
                     <a href="javascript: void(0);" class="has-arrow">
                         <i data-feather="users"></i>
                         <span data-key="t-contacts">@lang('translation.Contacts')</span>
@@ -80,9 +80,9 @@
                         <li><a href="apps-contacts-list" data-key="t-user-list">@lang('translation.User_List')</a></li>
                         <li><a href="apps-contacts-profile" data-key="t-profile">@lang('translation.Profile')</a></li>
                     </ul>
-                </li>
+                </li> --}}
 
-                <li>
+                {{-- <li>
                     <a href="javascript: void(0);" class="has-arrow">
                         <i data-feather="trello"></i>
                         <span data-key="t-tasks">@lang('translation.Tasks')</span>
@@ -92,11 +92,11 @@
                         <li><a href="tasks-kanban" key="t-kanban-board">@lang('translation.Kanban_Board')</a></li>
                         <li><a href="tasks-create" key="t-create-task">@lang('translation.Create_Task')</a></li>
                     </ul>
-                </li>
+                </li> --}}
 
-                <li class="menu-title" data-key="t-pages">@lang('translation.Pages')</li>
+                {{-- <li class="menu-title" data-key="t-pages">@lang('translation.Pages')</li> --}}
 
-                <li>
+                {{-- <li>
                     <a href="javascript: void(0);" class="has-arrow">
                         <i data-feather="layers"></i>
                         <span data-key="t-authentication">@lang('translation.Authentication')</span>
@@ -111,9 +111,9 @@
                         <li><a href="auth-email-verification" data-key="t-email-verification">@lang('translation.Email_verification')</a></li>
                         <li><a href="auth-two-step-verification" data-key="t-two-step-verification">@lang('translation.Two_step_verification')</a></li>
                     </ul>
-                </li>
+                </li> --}}
 
-                <li>
+                {{-- <li>
                     <a href="javascript: void(0);" class="has-arrow">
                         <i data-feather="file-text"></i>
                         <span data-key="t-pages">@lang('translation.Pages')</span>
@@ -128,18 +128,18 @@
                         <li><a href="pages-404" key="t-error-404">@lang('translation.Error_404')</a></li>
                         <li><a href="pages-500" key="t-error-500">@lang('translation.Error_500')</a></li>
                     </ul>
-                </li>
+                </li> --}}
 
-                <li>
+                {{-- <li>
                     <a href="layouts-horizontal">
                         <i data-feather="layout"></i>
                         <span data-key="t-horizontal">@lang('translation.Horizontal')</span>
                     </a>
-                </li>
+                </li> --}}
+{{--
+                <li class="menu-title mt-2" data-key="t-components">@lang('translation.Components')</li> --}}
 
-                <li class="menu-title mt-2" data-key="t-components">@lang('translation.Components')</li>
-
-                <li>
+                {{-- <li>
                     <a href="javascript: void(0);" class="has-arrow">
                         <i data-feather="briefcase"></i>
                         <span data-key="t-components">@lang('translation.Bootstrap')</span>
@@ -165,8 +165,8 @@
                             <span class="badge rounded-pill bg-danger-subtle text-danger float-end">New</span>
                         </a></li>
                     </ul>
-                </li>
-
+                </li> --}}
+{{--
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
                         <i data-feather="gift"></i>
@@ -180,9 +180,9 @@
                         <li><a href="extended-rating" data-key="t-rating">@lang('translation.Rating')</a></li>
                         <li><a href="extended-notifications" data-key="t-notifications">@lang('translation.Notifications')</a></li>
                     </ul>
-                </li>
+                </li> --}}
 
-                <li>
+                {{-- <li>
                     <a href="javascript: void(0);">
                         <i data-feather="box"></i>
                         <span class="badge rounded-pill bg-danger-subtle text-danger float-end">7</span>
@@ -197,8 +197,8 @@
                         <li><a href="form-wizard" data-key="t-form-wizard">@lang('translation.Wizard')</a></li>
                         <li><a href="form-mask" data-key="t-form-mask">@lang('translation.Mask')</a></li>
                     </ul>
-                </li>
-
+                </li> --}}
+{{--
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
                         <i data-feather="sliders"></i>
@@ -210,9 +210,9 @@
                         <li><a href="tables-responsive" data-key="t-responsive-table">@lang('translation.Responsive')</a></li>
                         <li><a href="tables-editable" data-key="t-editable-table">@lang('translation.Editable_Table')</a></li>
                     </ul>
-                </li>
+                </li> --}}
 
-                <li>
+                {{-- <li>
                     <a href="javascript: void(0);" class="has-arrow">
                         <i data-feather="pie-chart"></i>
                         <span data-key="t-charts">@lang('translation.Charts')</span>
@@ -224,9 +224,9 @@
                         <li><a href="charts-knob" data-key="t-knob-charts">@lang('translation.Jquery_Knob')</a></li>
                         <li><a href="charts-sparkline" data-key="t-sparkline-charts">@lang('translation.Sparkline')</a></li>
                     </ul>
-                </li>
+                </li> --}}
 
-                <li>
+                {{-- <li>
                     <a href="javascript: void(0);" class="has-arrow">
                         <i data-feather="cpu"></i>
                         <span data-key="t-icons">@lang('translation.Icons')</span>
@@ -238,8 +238,8 @@
                         <li><a href="icons-dripicons" data-key="t-dripicons">@lang('translation.Dripicons')</a></li>
                         <li><a href="icons-fontawesome" data-key="t-font-awesome">@lang('translation.Font_awesome') 5</a></li>
                     </ul>
-                </li>
-
+                </li> --}}
+{{--
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
                         <i data-feather="map"></i>
@@ -250,9 +250,9 @@
                         <li><a href="maps-vector" data-key="t-v-maps">@lang('translation.Vector')</a></li>
                         <li><a href="maps-leaflet" data-key="t-l-maps">@lang('translation.Leaflet')</a></li>
                     </ul>
-                </li>
+                </li> --}}
 
-                <li>
+                {{-- <li>
                     <a href="javascript: void(0);" class="has-arrow">
                         <i data-feather="share-2"></i>
                         <span data-key="t-multi-level">@lang('translation.Multi_Level')</span>
@@ -267,11 +267,11 @@
                             </ul>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
 
             </ul>
 
-            <div class="card sidebar-alert shadow-none text-center mx-4 mb-0 mt-5">
+            {{-- <div class="card sidebar-alert shadow-none text-center mx-4 mb-0 mt-5">
                 <div class="card-body">
                     <img src="admins/assets/images/giftbox.png" alt="">
                     <div class="mt-4">
@@ -280,7 +280,7 @@
                         <a href="#!" class="btn btn-primary mt-2">Upgrade Now</a>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
         <!-- Sidebar -->
     </div>

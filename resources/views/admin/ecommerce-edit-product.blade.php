@@ -68,9 +68,10 @@
                             <div class="mb-3">
                                 <label class="control-label">Category</label>
                                 <select name="category_id" class="form-control select2">
-                                    <option>Select</option>
+
                                     @foreach($categories as $category)
-                                    <option value="{{ $category->id }}">{{ $category->name_en }}</option>
+                                    {{-- <option value="{{ $category->id }}">{{ $category->name_en }}</option> --}}
+                                    <option value="{{ $category->id }}" {{ $category->id == $products->category_id ? 'selected' : '' }}>{{ $category->name_en }}</option>
                                 @endforeach
                                 </select>
                             </div>
@@ -78,18 +79,18 @@
                                 <label class="control-label">Visibility</label>
 
                                 <select name="is_active" class="select2 form-control select2" data-placeholder="Choose ...">
-                                    <option value="1" {{ old('is_active', $category->is_active) == '1' ? 'selected' : '' }}>ON</option>
-                                    <option value="0" {{ old('is_active', $category->is_active) == '0' ? 'selected' : '' }}>OFF</option>
+                                    <option value="1" {{ old('is_active', $products->is_active) == '1' ? 'selected' : '' }}>ON</option>
+                                    <option value="0" {{ old('is_active', $products->is_active) == '0' ? 'selected' : '' }}>OFF</option>
                                 </select>
 
                             </div>
                             <div class="mb-3">
                                 <label for="productdesc">Product Description EN</label>
-                                <textarea class="form-control" value={{$products->description_en}}  name="description_en" id="productdesc" rows="5" placeholder="Product Description"></textarea>
+                                <textarea class="form-control"    name="description_en" id="productdesc" rows="5" placeholder="Product Description">{{ old('description_en', $products->description_en) }}</textarea>
                             </div>
                             <div class="mb-3">
                                 <label for="productdesc">Product Description RU</label>
-                                <textarea class="form-control" value={{$products->description_ru}}  name="description_en" id="productdesc" rows="5" placeholder="Product Description"></textarea>
+                                <textarea class="form-control"    name="description_ru" id="productdesc" rows="5" placeholder="Product Description">{{ old('description_en', $products->description_ru) }}</textarea>
                             </div>
 
 

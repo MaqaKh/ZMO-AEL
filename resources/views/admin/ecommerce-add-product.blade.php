@@ -132,7 +132,7 @@
         </div> <!-- end card-->
         <div class="d-flex flex-wrap gap-2">
             <button type="submit" class="btn btn-primary waves-effect waves-light">Save Changes</button>
-            <button type="reset" class="btn btn-secondary waves-effect waves-light">Cancel</button>
+            <a type="reset" class="btn btn-secondary waves-effect waves-light" href={{ route("admin.products.index") }}>Cancel</a>
         </div>
     </form>
         {{-- <div class="card">

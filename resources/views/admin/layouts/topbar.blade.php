@@ -8,11 +8,11 @@
                         <img src="{{ URL::asset('admins/assets/images/logo-sm.svg') }}" alt="" height="30">
                     </span>
                     <span class="logo-lg">
-                        <img src="{{ URL::asset('admins/assets/images/logo-sm.svg') }}" alt="" height="24"> <span class="logo-txt">Dason</span>
+                        <img src="{{ URL::asset('admins/assets/images/logo-sm.svg') }}" alt="" height="24"> <span class="logo-txt">Zimmer</span>
                     </span>
                 </a>
 
-                <a href="index" class="logo logo-light">
+                <a href="{{route('admin.products.index')}}" class="logo logo-light">
                     <span class="logo-sm">
                         <img src="{{ URL::asset('admins/assets/images/logo-sm.svg') }}" alt="" height="30">
                     </span>

@@ -1,5 +1,5 @@
 @extends('admin.layouts.master')
-@section('title') @lang('translation.Add_Product') @endsection
+@section('title') Add Category @endsection
 @section('css')
 <link href="{{ URL::asset('admins/assets/libs/select2/select2.min.css') }}" rel="stylesheet">
 <link href="{{ URL::asset('admins/assets/libs/dropzone/dropzone.min.css') }}" rel="stylesheet">
@@ -22,22 +22,43 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="mb-3">
-                                <label for="productname">Category Name</label>
-                                <input id="productname"   name="name" type="text" class="form-control"  placeholder="Product Name">
+                                <label for="productname">Category Name En</label>
+                                <input id="productname"   name="name_en" type="text" class="form-control"  placeholder="Product Name">
                             </div>
+                            @error('name_en')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
+                            <div class="mb-3">
+                                <label for="productname">Category Name Ru</label>
+                                <input id="productname"   name="name_ru" type="text" class="form-control"  placeholder="Product Name">
+                            </div>
+                            @error('name_ru')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
 
                             <div class="mb-3">
-                                <label for="manufacturerbrand">Category Description</label>
-                                <input id="manufacturerbrand" name="description" type="text" class="form-control" placeholder="Manufacturer Brand">
+                                <label for="manufacturerbrand">Category Description En</label>
+                                <input id="manufacturerbrand" name="description_en" type="text" class="form-control" placeholder="Manufacturer Brand">
                             </div>
-
+                            @error('description_en')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
+                            <div class="mb-3">
+                                <label for="manufacturerbrand">Category Description Ru</label>
+                                <input id="manufacturerbrand" name="description_ru" type="text" class="form-control" placeholder="Manufacturer Brand">
+                            </div>
+                            @error('description_ru')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                             <label class="control-label">Visibility</label>
 
                             <select name="is_active" class="select2 form-control select2" data-placeholder="Choose ...">
                                 <option value="1">ON</option>
                                 <option value="0">OFF</option>
                             </select>
-
+                            @error('is_active')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                         </div>
 
                         <div class="col-sm-6">
@@ -72,7 +93,7 @@
         </div> <!-- end card--> --}}
         <div class="d-flex flex-wrap gap-2">
             <button type="submit" class="btn btn-primary waves-effect waves-light">Save Changes</button>
-            <button type="reset" class="btn btn-secondary waves-effect waves-light">Cancel</button>
+            <a type="reset" class="btn btn-secondary waves-effect waves-light" href={{ route("admin.categories.index") }}>Cancel</a>
         </div>
     </form>
         {{-- <div class="card">

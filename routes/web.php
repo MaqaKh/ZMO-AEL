@@ -8,6 +8,8 @@ use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\AdminProductController;
 use App\Http\Controllers\Admin\AdminCategoryController;
+use App\Http\Controllers\ConstructionController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,9 +24,10 @@ use App\Http\Controllers\Admin\AdminCategoryController;
 Auth::routes();
 
 
-Route::get('/', function () {
-    return view('index');
-})->name('/');
+// Route::get('/', function () {
+//     return view('index');
+// })->name('/');
+Route::get('/', [ConstructionController::class, 'index'])->name('/');
 
 Route::get('/contact', function () {
     return view('contact');
@@ -61,7 +64,7 @@ Route::get('/product', [ProductController::class, 'index'])->name('product');
 Route::get('/product/{category}', [ProductController::class, 'filter'])->name('product.filter');
 
 //Route::get('/category{key}', [CategoryController::class, 'filter'])->name('category.filter');
-Route::get('/', [IndexController::class, 'index']);
+ Route::get('/prod', [IndexController::class, 'index']);
 Route::get('/product-details/{id}', [ProductController::class, 'show'])->name('product-details');
 Route::get('lang/{locale}', [LanguageController::class, 'switch'])->name('lang.switch');
 

@@ -153,6 +153,7 @@ class AdminProductController extends Controller
 
     public function update(Request $request, $id)
     {
+       // return dd($request->all());
       // Find the product by id
       $product = Product::findOrFail($id);
 
@@ -195,9 +196,12 @@ class AdminProductController extends Controller
     $product->code = $request->code;
     $product->is_active = $request->is_active;
     $product->stock_status = $request->stock_status;
+    //return dd($request->category_id);
     $product->category_id = $request->category_id;
     // Add more fields as needed
+
     $product->save();
+
     return redirect()->route('admin.products.index')->with('success', 'Product updated successfully.');
     }
 
