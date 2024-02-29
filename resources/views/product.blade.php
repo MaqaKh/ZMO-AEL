@@ -47,8 +47,8 @@
 
 
                         @foreach($products as $product)
-                        <div class="col-lg-4 col-md-6 item">
-                            <div class="card">
+                            <div class="col-lg-4 col-md-6 mt-lg-0 mt-4 mb-4">
+                                <div class="card" style="height: 450px; /* Set a fixed height for the card */">
                                 <div class="card-header p-0 position-relative border-0">
                                     <a href="{{ route('product-details', ['id' => $product->id]) }}"  >
                                         <img alt="card-image"
