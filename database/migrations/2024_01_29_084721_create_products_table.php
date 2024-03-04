@@ -19,6 +19,7 @@ return new class extends Migration
             $table->text('description_en')->nullable();
             $table->text('description_ru')->nullable();
             $table->decimal('price', 10, 2);
+            $table->binary('pdf')->nullable();
             $table->string('code');
             $table->boolean('is_active')->default(false);
             $table->boolean('stock_status')->default(false);

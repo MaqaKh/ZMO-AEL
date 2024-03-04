@@ -1,4 +1,5 @@
 @extends('admin.layouts.master')
+
 @section('title') Edit Product @endsection
 @section('css')
 <link href="{{ URL::asset('admins/assets/libs/select2/select2.min.css') }}" rel="stylesheet">
@@ -84,14 +85,36 @@
                                 </select>
 
                             </div>
+
                             <div class="mb-3">
-                                <label for="productdesc">Product Description EN</label>
-                                <textarea class="form-control"    name="description_en" id="productdesc" rows="5" placeholder="Product Description">{{ old('description_en', $products->description_en) }}</textarea>
+                                <label for="description_en">Product Description EN</label>
+                                <textarea class="form-control" id="description_en"   name="description_en" id="productdesc" rows="5" placeholder="Product Description En">{{ old('description_en', $products->description_en) }}</textarea>
                             </div>
                             <div class="mb-3">
-                                <label for="productdesc">Product Description RU</label>
-                                <textarea class="form-control"    name="description_ru" id="productdesc" rows="5" placeholder="Product Description">{{ old('description_en', $products->description_ru) }}</textarea>
+                                <label for="description_ru">Product Description RU</label>
+                                <textarea class="form-control"  id="description_ru"  name="description_ru"   rows="5" placeholder="Product Description Ru">{{ old('description_ru', $products->description_ru) }}</textarea>
                             </div>
+
+
+                            <div class="mb-3">
+                                <label for="pdf">Pdf</label>
+                                <input id="pdf" name="pdf" type="file" class="form-control" placeholder="PDf">
+                            </div>
+
+                            @if($products->pdf)
+                            <embed src="{{$products->pdf }}" type="application/pdf" width="50%" height="400px">
+
+                                <p class="mb-2 mt-4">
+                                    <span class="fas fa-download" aria-hidden="true"></span>
+
+                                    <a href="{{ asset($products->pdf) }}"    target="_blank">Open PDF</a>
+
+
+                                </p>
+                                @else
+                            <p>No PDF available for this product</p>
+
+                        @endif
 
 
 
@@ -151,6 +174,8 @@
         </div> --}}
     </div>
 </div>
+<x-head.tinymce-config/>
+
 <!-- end row -->
 @endsection
 @section('script')

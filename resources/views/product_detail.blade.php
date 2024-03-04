@@ -42,13 +42,22 @@
                     </div>
                     <div class="col-md-5 mb-3">
                         <h3 class="title-style mb-sm-3 mb-2">{{$product->name}}</h3>
+
+
+
+
                         <br>
                         <br>
+                        @if($product->pdf)
                         <p class="mb-2 mt-4">
                             <span class="fas fa-download" aria-hidden="true"></span>
-                            <a href="#"> {{$product->name}}</a>
+
+                            <a href="{{ asset($product->pdf) }}"    target="_blank">Open PDF</a>
+                            @else
+                           <p>No PDF available</p>
+                            @endif
                         </p>
-                        <p class="mb-4">Category: Transmission</p>
+                        <p class="mb-4">Category: {{$product->category->name_en}}</p>
                     </div>
                 </div>
 
