@@ -15,12 +15,6 @@
                     </button>
 
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                        <ul class="nav navbar-nav ml-lg-auto">
-                            <a class="navbar-brand" href="/">
-                                <img class="logoImg navbar-logo-main" alt="Your logo" title="Your logo"
-                                     src={{ asset('images/partners.png') }} />
-                            </a>
-                        </ul>
 
                         <ul class=" navbar-nav ml-lg-auto">
                             <li class="nav-item  {{ request()->is('/') ? 'active' : '' }}">
@@ -29,10 +23,6 @@
                             <li class="nav-item {{ request()->is('about') ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ url('/about') }}">@lang('messages.about')</a>
                             </li>
-                            <!--                        <li class="nav-item">-->
-                            <!--                            <a class="nav-link" href="services.html">Products</a>-->
-                            <!--                        </li>-->
-
                             <li class="nav-item  {{ request()->is('product') ? 'active' : '' }} ">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -118,6 +108,13 @@
                                   </form>
                               </div>-->
                             <!-- //search button -->
+                        </ul>
+
+                        <ul class="nav navbar-nav ml-lg-auto">
+                            <a class="navbar-brand" href="/">
+                                <img class="logoImg navbar-logo-main" alt="Your logo" title="Your logo"
+                                     src={{ asset('images/partnersN.png') }} />
+                            </a>
                         </ul>
                     </div>
                     <!-- toggle switch for light and dark theme -->
