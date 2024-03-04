@@ -164,7 +164,7 @@ RIGHT SIDEBAR TOGGLE SECTION
 }
 
 .scrolled {
-    height: 50px; /* Height when scrolled */
+    height: 60px; /* Height when scrolled */
     transition: height 0.3s;
 }
 

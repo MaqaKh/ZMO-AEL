@@ -12828,6 +12828,18 @@ h5.small-title-2 {
 }
 
 @media (max-width: 568px) {
+    .navbar-logo-main {
+        height: 90px !important;
+    }
+
+    .mode-container {
+        display: none;
+    }
+
+    .scrolled {
+        height: 30px; /* Height when scrolled */
+        transition: height 0.3s;
+    }
   .w3l-footer-22 .subscride-link h4 {
     margin-top: 50px;
   }

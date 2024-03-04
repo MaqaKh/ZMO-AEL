@@ -28,23 +28,41 @@
 <!-- single post -->
 <section class="blog-post-main">
     <div class="blog-content-inf py-5">
-        <div class="container py-md-5 py-4">
-            <div class="blog-posthny-info mx-auto" style="max-width:600px">
-                <div class="style-title position-relative">
-                    <h3 class="title-style mb-sm-3 mb-2">{{$product->name}}</h3>
+        <div class="container-fluid py-md-5 py-4">
+            <div class="blog-posthny-info mx-auto">
+
+                <div class="row justify-content-center">
+                    <div class="col-md-5">
+                        <div class="single-post-image mb-4">
+
+                            <img alt="blog-post-image" class="img-responsive"
+                                 src="{{$product->image_path}}"/>
+
+                        </div>
+                    </div>
+                    <div class="col-md-5 mb-3">
+                        <h3 class="title-style mb-sm-3 mb-2">{{$product->name}}</h3>
+                        <br>
+                        <br>
+                        <p class="mb-2 mt-4">
+                            <span class="fas fa-download" aria-hidden="true"></span>
+                            <a href="#"> {{$product->name}}</a>
+                        </p>
+                        <p class="mb-4">Category: Transmission</p>
+                    </div>
                 </div>
-                <div class="single-post-image mb-4">
 
-                    <img alt="blog-post-image" class="img-fluid img-responsive"
-                         src="{{$product->image_path}}"/>
 
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div>
+                            {!! $product->description_ru !!}
+                        </div>
+                    </div>
                 </div>
-
-                <div class="single-post-content">
-                    <p class="mb-4"> {{$product->description_en}}</p>
-
-
-                </div>
+            </div>
+        </div>
+    </div>
 
 </section>
 <!-- //single post -->

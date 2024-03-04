@@ -53,8 +53,8 @@
                     @else
 
                       @foreach($products as $product)
-                        <div class="col-lg-4 col-md-6 item">
-                            <div class="card">
+                                <div class="col-lg-4 col-md-6 item mt-4 mb-4">
+                                    <div class="card" style="height: 450px; ">
                                 <div class="card-header p-0 position-relative border-0">
                                     <a href="{{ route('product-details', ['id' => $product->id]) }}"  >
                                         <img alt="card-image"

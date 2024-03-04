@@ -31,7 +31,7 @@
                         </li>
                         <li><a href="#youtube" title="youtube"><span class="fab fa-youtube"
                             aria-hidden="true"></span></a>
-                </li>
+                        </li>
                         <li><a href="#google" title="google"><span class="fab fa-google-plus-g"
                                     aria-hidden="true"></span></a>
                         </li>
