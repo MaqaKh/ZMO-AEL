@@ -8,6 +8,8 @@ use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Crypt;
 class AdminProductController extends Controller
 {
 
@@ -60,7 +62,7 @@ class AdminProductController extends Controller
         // Store the image in the public disk
         Storage::disk('public')->putFileAs('images/products', $file,$filename);
 
-        // Get the full URL of the stored image
+
         $imageUrl = Storage::disk('public')->url('images/products/' . $filename);
      //   $path =  Storage::disk('public')->storeAs( ' . $filename);
          $product->image_path =$imageUrl;
@@ -159,17 +161,29 @@ class AdminProductController extends Controller
 
       // Retrieve the uploaded file before applying validation rules
 
-
+    //   $request->validate([
+    //     'name' => 'required|string|max:255',
+    //     'description_en' => 'required|string',
+    //     'description_ru' => 'required|string',
+    //     'price' => 'numeric',
+    //     'code' => 'string|max:50',
+    //     'is_active' => 'boolean',
+    //     'stock_status' => 'string|max:255',
+    //     'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:5048',
+    //     'category_id' => 'required|exists:main_categories,id',
+    //     // Add more validation rules as needed
+    // ]);
       // Update image if provided
       if ($request->has('image')) {
         // Perform image update
             $file=$request->file('image');
-
+           // return dd ($file);
             $relativePath = str_replace(url('/'), '', $product->image_path);
+          //  return dd ($relativePath);
 
             // Remove the 'storage' part
             $relativePath = str_replace('/storage', '', $relativePath);
-
+            //return dd($relativePath);
             $fullPath= 'public/' . $relativePath;
           // Delete old imag
           if( Storage::exists($fullPath)){
@@ -177,14 +191,33 @@ class AdminProductController extends Controller
             Storage::delete($fullPath);
           }
           $filename = $request->file('image')->getClientOriginalName();
+          $encryptedName = Crypt::encrypt($filename);
+          $extension = $request->file('image')->getClientOriginalExtension();
+
+          // Encrypt only the filename
+          $encryptedName = Crypt::encrypt(pathinfo($filename, PATHINFO_FILENAME));
+
+          // Combine the encrypted filename with the original extension
+          $encryptedFileName = $encryptedName . '.' . $extension;
+
+          return dd($file);
+          //return dd($encryptedFileName);
+         // $name= str_replace(' ', '_', $filename);
+
 
           // Store the image in the public disk
-          Storage::disk('public')->putFileAs('images/products', $file,$filename);
+         Storage::disk('public')->putFileAs('images/products', $file,$encryptedFileName);
 
           // Get the full URL of the stored image
-          $imageUrl = Storage::disk('public')->url('images/products/' . $filename);
 
+          if (Storage::disk('public')->exists('images/products/' . $encryptedFileName)) {
+          $imageUrl = Storage::disk('public')->url('images/products/' . $encryptedFileName);
+        //return dd($imageUrl);
           $product->image_path = $imageUrl;
+          }
+          else{
+            return dd($encryptedFileName);
+          }
         // Update other fields
 
     }
