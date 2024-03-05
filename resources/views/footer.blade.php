@@ -1,6 +1,6 @@
 <!-- footer -->
 <footer class="w3l-footer-22 py-5">
-    <div class="container py-md-5 py-4">
+    <div class="container ">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
                 <img alt="Your logo" title="Your logo"
@@ -67,7 +67,8 @@
                 </ul>
             </div>
             <div class="col-lg-3 col-sm-6 sub-two-right pl-lg-5 mt-lg-0 mt-sm-5 mt-4">
-                <img src={{asset('images/flags.png')}} alt="" class="img-responsive img-fluid"/>
+                <img src={{asset('images/flags.png')}} alt="" class="img-responsive img-fluid"
+                     style="margin-top: -20%;"/>
             </div>
         </div>
         <div class="sub-contact mt-5 pt-lg-4">
