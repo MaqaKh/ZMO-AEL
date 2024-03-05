@@ -11081,6 +11081,7 @@ button,
 }
 
 .img-responsive {
+    max-height: 300px;
   max-width: 100%;
   display: block;
   width: 100%;

@@ -29,7 +29,7 @@
             <div class="service-section py-5">
                 <div class="container py-md-5 py-4">
                     <div class="row align-items-center mb-5">
-                        <div class="col-md-6 section-heading">
+                        <div class="col-md-6 section-heading text-left">
                             <!--                    <h5 class="small-title-2">Web Services</h5>-->
                             <h3 class="title-style-2">
                                 Our Best Products</h3>

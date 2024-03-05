@@ -42,14 +42,10 @@
                     </div>
                     <div class="col-md-5 mb-3">
                         <h3 class="title-style mb-sm-3 mb-2">{{$product->name}}</h3>
-
-
-
-
                         <br>
                         <br>
                         @if($product->pdf)
-                        <p class="mb-2 mt-4">
+                            <p class="mb-2 mt-4 justify-content-end align-items-center">
                             <span class="fas fa-download" aria-hidden="true"></span>
 
                             <a href="{{ asset($product->pdf) }}"    target="_blank">Open PDF</a>
@@ -62,7 +58,7 @@
                 </div>
 
 
-                <div class="row justify-content-center">
+                <div class="row justify-content-center mt-5">
                     <div class="col-md-8">
                         <div>
                             {!! $product->description_ru !!}
