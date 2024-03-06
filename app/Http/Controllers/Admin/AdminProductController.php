@@ -111,7 +111,7 @@ class AdminProductController extends Controller
             //$url = Storage::url($path);
 
             // You can return the URL or do any further processing as needed
-            
+
 
         // }
 
@@ -202,7 +202,7 @@ class AdminProductController extends Controller
           // Combine the encrypted filename with the original extension
           $encryptedFileName = $encryptedName . '.' . $extension;
 
-          return dd($file);
+          
           //return dd($encryptedFileName);
          // $name= str_replace(' ', '_', $filename);
 
