@@ -94,6 +94,10 @@
                                 <label for="description_ru">Product Description RU</label>
                                 <textarea class="form-control"  id="description_ru"  name="description_ru"   rows="5" placeholder="Product Description Ru">{{ old('description_ru', $products->description_ru) }}</textarea>
                             </div>
+                            <div class="mb-3">
+                                <label for="description_ge">Product Description GE</label>
+                                <textarea class="form-control"  id="description_ge"  name="description_ge"   rows="5" placeholder="Product Description Ge">{{ old('description_ge', $products->description_ge) }}</textarea>
+                            </div>
 
 
                             <div class="mb-3">

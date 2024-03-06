@@ -34,6 +34,7 @@ class AdminProductController extends Controller
             'name' => 'required|string|max:255',
             'description_en' => 'required|string',
             'description_ru' => 'required|string',
+            'description_ge' => 'required|string',
             'price' => 'numeric',
             'code' => 'string|max:50',
             'is_active' => 'boolean',
@@ -120,6 +121,7 @@ class AdminProductController extends Controller
         $product->name = $request->name;
         $product->description_en = $request->description_en;
         $product->description_ru = $request->description_ru;
+        $product->description_ge = $request->description_ge;
         $product->price = $request->price;
         $product->code = $request->code;
         $product->is_active = $request->is_active;
@@ -259,6 +261,7 @@ class AdminProductController extends Controller
     $product->name = $request->name;
     $product->description_en = $request->description_en;
     $product->description_ru = $request->description_ru;
+    $product->description_ge = $request->description_ge;
     $product->price = $request->price;
     $product->code = $request->code;
     $product->is_active = $request->is_active;

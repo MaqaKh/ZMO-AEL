@@ -28,6 +28,7 @@
                             @error('name_en')
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
+
                             <div class="mb-3">
                                 <label for="productname">Category Name Ru</label>
                                 <input id="productname"   name="name_ru" type="text" class="form-control"  placeholder="Product Name">
@@ -35,6 +36,14 @@
                             @error('name_ru')
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
+
+                        <div class="mb-3">
+                            <label for="name_ge">Category Name Ge</label>
+                            <input id="name_ge"   name="name_ge" type="text" class="form-control"  placeholder="Product Name Ge">
+                        </div>
+                        @error('name_ge')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
 
                             <div class="mb-3">
                                 <label for="manufacturerbrand">Category Description En</label>
@@ -50,6 +59,15 @@
                             @error('description_ru')
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
+
+                        <div class="mb-3">
+                            <label for="description_ge">Category Description Ge</label>
+                            <input id="description_ge" name="description_ge" type="text" class="form-control" placeholder="Manufacturer Brand">
+                        </div>
+                        @error('description_ge')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+
                             <label class="control-label">Visibility</label>
 
                             <select name="is_active" class="select2 form-control select2" data-placeholder="Choose ...">

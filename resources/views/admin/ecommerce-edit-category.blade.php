@@ -32,6 +32,10 @@
                                 <label for="productname">Category Name RU</label>
                                 <input id="productname"  value=   {{ $category->name_ru }} name="name_ru" type="text" class="form-control"  placeholder="Product Name">
                             </div>
+                            <div class="mb-3">
+                                <label for="name_ge">Category Name Ge</label>
+                                <input id="name_ge"  value={{ $category->name_ge }} name="name_ge" type="text" class="form-control"  placeholder="Product Name">
+                            </div>
 
                             <div class="mb-3">
                                 <label for="manufacturerbrand">Category Description EN</label>
@@ -41,6 +45,11 @@
                             <div class="mb-3">
                                 <label for="manufacturerbrand">Category Description RU</label>
                                 <input id="manufacturerbrand" value={{  $category->description_ru }} name="description_ru" type="text" class="form-control" placeholder="Manufacturer Brand">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="description_ge">Category Description GE</label>
+                                <input id="description_ge" value={{  $category->description_ge }} name="description_ge" type="text" class="form-control" placeholder="Manufacturer Brand">
                             </div>
 
                             <label class="control-label">Visibility</label>

@@ -101,6 +101,15 @@
                             @error('description_ru')
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
+
+                        <div class="mb-3">
+                            <label for="productdesc">Product Description GE</label>
+                            <textarea class="form-control" name="description_ge" id="productdesc" rows="5" placeholder="Product Description"></textarea>
+                        </div>
+                        @error('description_ge')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+
                         </div>
                     </div>
 

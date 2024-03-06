@@ -28,8 +28,10 @@ class AdminCategoryController extends Controller
         $request->validate([
             'name_en' => 'required|string|max:255',
             'name_ru' => 'required|string|max:255',
+            'name_ge' => 'required|string|max:255',
             'description_en' => 'required|string',
             'description_ru' => 'required|string',
+            'description_ge' => 'required|string',
             'is_active' => 'required|in:0,1', // Ensure is_active is either 0 or 1
         ]);
               // $request->validate([
@@ -48,8 +50,10 @@ class AdminCategoryController extends Controller
         $category = new Category();
         $category->name_en = $request->name_en;
         $category->name_ru = $request->name_ru;
+        $category->name_ge= $request->name_ge;
         $category->description_en = $request->description_en;
         $category->description_ru = $request->description_ru;
+        $category->description_ge = $request->description_ge;
         $category->is_active=$request->is_active;
         $category->save();
 
@@ -85,8 +89,10 @@ class AdminCategoryController extends Controller
         // Update the category properties with the new values
         $category->name_en = $request->name_en;
         $category->name_ru = $request->name_ru;
+        $category->name_ge = $request->name_ge;
         $category->description_en = $request->description_en;
         $category->description_ru = $request->description_ru;
+        $category->description_ge = $request->description_ge;
         $category->is_active = $request->is_active;
 
         // Save the updated category
