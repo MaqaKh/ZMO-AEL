@@ -111,7 +111,7 @@ class AdminProductController extends Controller
             //$url = Storage::url($path);
 
             // You can return the URL or do any further processing as needed
-
+            
 
         // }
 
