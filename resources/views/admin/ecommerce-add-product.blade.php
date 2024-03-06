@@ -87,24 +87,24 @@
                         @enderror
 
                             <div class="mb-3">
-                                <label for="productdesc">Product Description EN</label>
-                                <textarea class="form-control" name="description_en" id="productdesc" rows="5" placeholder="Product Description"></textarea>
+                                <label for="description_en">Product Description EN</label>
+                                <textarea class="form-control" name="description_en" id="description_en" rows="5" placeholder="Product Description"></textarea>
                             </div>
                             @error('description_en')
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
 
                             <div class="mb-3">
-                                <label for="productdesc">Product Description RU</label>
-                                <textarea class="form-control" name="description_ru" id="productdesc" rows="5" placeholder="Product Description"></textarea>
+                                <label for="description_ru">Product Description RU</label>
+                                <textarea class="form-control" name="description_ru" id="description_ru" rows="5" placeholder="Product Description"></textarea>
                             </div>
                             @error('description_ru')
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
 
                         <div class="mb-3">
-                            <label for="productdesc">Product Description GE</label>
-                            <textarea class="form-control" name="description_ge" id="productdesc" rows="5" placeholder="Product Description"></textarea>
+                            <label for="description_ge">Product Description GE</label>
+                            <textarea class="form-control" name="description_ge" id="description_ge" rows="5" placeholder="Product Description"></textarea>
                         </div>
                         @error('description_ge')
                         <div class="alert alert-danger">{{ $message }}</div>
