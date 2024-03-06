@@ -25,22 +25,22 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="mb-3">
-                                <label for="productname">Product Name</label>
-                                <input id="productname"  value={{$products->name}} name="name" type="text" class="form-control"  placeholder="Product Name">
+                                <label for="name">Product Name</label>
+                                <input id="name"  value="{{$products->name}}" name="name" type="text" class="form-control"  placeholder="Product Name">
                             </div>
 
                             <div class="mb-3">
-                                <label for="manufacturerbrand">Price</label>
-                                <input id="manufacturerbrand" value={{$products->price}} name="price" type="text" class="form-control" placeholder="Manufacturer Brand">
+                                <label for="price">Price</label>
+                                <input id="price" value="{{$products->price}}" name="price" type="text" class="form-control" placeholder="Manufacturer Brand">
                             </div>
                             <div class="mb-3">
                                 <label for="price">Code</label>
-                                <input id="price" name="code" value={{$products->code}} type="text" class="form-control" placeholder="Price">
+                                <input id="price" name="code" value="{{$products->code}}" type="text" class="form-control" placeholder="Price">
                             </div>
 
                             <div class="mb-3">
                                 <label for="price">Stock status</label>
-                                <input id="price" name="stock_status" value={{$products->stock_status}} type="text" class="form-control" placeholder="Price">
+                                <input id="price" name="stock_status" value="{{$products->stock_status}}" type="text" class="form-control" placeholder="Price">
                             </div>
 
                             <label for="price">Product Image</label>

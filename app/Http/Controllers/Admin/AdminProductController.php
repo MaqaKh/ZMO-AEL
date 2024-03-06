@@ -202,7 +202,7 @@ class AdminProductController extends Controller
           // Combine the encrypted filename with the original extension
           $encryptedFileName = $encryptedName . '.' . $extension;
 
-          
+
           //return dd($encryptedFileName);
          // $name= str_replace(' ', '_', $filename);
 
