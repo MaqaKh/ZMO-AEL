@@ -182,6 +182,7 @@
         </div> --}}
     </div>
 </div>
+<x-head.tinymce-config/>
 <!-- end row -->
 @endsection
 @section('script')
