@@ -82,14 +82,25 @@
                                     @if(Session::get('locale') == 'en')
                                     <a href="{{ route('lang.switch', 'ru') }}"
                                     >RU</a>
+                                    <a href="{{ route('lang.switch', 'ge') }}"
+                                    >GE</a>
 
                                     @elseif(Session::get('locale') == 'ru')
                                     <a href="{{ route('lang.switch', 'en') }}"
                                     >EN</a>
+                                    <a href="{{ route('lang.switch', 'ge') }}"
+                                    >GE</a>
 
+                                    @elseif(Session::get('locale') == 'ge')
+                                    <a href="{{ route('lang.switch', 'en') }}"
+                                    >EN</a>
+                                    <a href="{{ route('lang.switch', 'ru') }}"
+                                    >RU</a>
                                     @else
                                     <a href="{{ route('lang.switch', 'ru') }}"
                                     >RU</a>
+                                    <a href="{{ route('lang.switch', 'ge') }}"
+                                    >GE</a>
 
                                     @endif
                                    <!--- <a href="contact.html">EN</a>  -->

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->text('description_en')->nullable();
             $table->text('description_ru')->nullable();
+            $table->text('description_ge')->nullable();
             $table->decimal('price', 10, 2);
             $table->binary('pdf')->nullable();
             $table->string('code');
