@@ -25,6 +25,9 @@
 </div>
 
 
+@php
+$currentLanguage = app()->getLocale(); // Get the current language
+@endphp
 <!-- single post -->
 <section class="blog-post-main">
     <div class="blog-content-inf py-5">
@@ -53,15 +56,36 @@
                            <p>No PDF available</p>
                             @endif
                         </p>
-                        <p class="mb-4">Category: {{$product->category->name_en}}</p>
+                        <p class="mb-4">
+                            @if($currentLanguage == 'en')
+                            Category: {{$product->category->name_en}}
+                            @elseif($currentLanguage == 'ru')
+                             Category: {{$product->category->name_ru}}
+                            @elseif($currentLanguage == 'ge')
+                            Category: {{$product->category->name_ge}}
+                            @else
+                            Category: {{$product->category->name_en}}
+                            @endif
+                        </p>
                     </div>
                 </div>
+
+
 
 
                 <div class="row justify-content-center mt-5">
                     <div class="col-md-8">
                         <div>
-                            {!! $product->description_ru !!}
+                            {{-- {!! $product->description_ru !!} --}}
+                            @if($currentLanguage == 'en')
+                            {!! $product->description_en !!}
+                         @elseif($currentLanguage == 'ru')
+                          {!! $product->description_ru !!}
+                         @elseif($currentLanguage == 'ge')
+                          {!! $product->description_ge !!}
+                          @else
+                          {!! $product->description_en !!}
+                          @endif
                         </div>
                     </div>
                 </div>
