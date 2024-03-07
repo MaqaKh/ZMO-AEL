@@ -11084,7 +11084,7 @@ button,
     max-height: 300px;
   max-width: 100%;
   display: block;
-  width: 100%;
+    /*width: 100%;*/
   border-radius: 8px;
 }
 
