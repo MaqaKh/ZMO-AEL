@@ -32,26 +32,36 @@
 
 
                             <div class="mb-3">
-                                <label for="manufacturerbrand">Price</label>
-                                <input id="manufacturerbrand" name="price" type="text" class="form-control" placeholder="Manufacturer Brand">
+                                <label for="price">Price</label>
+                                <input id="price" name="price" type="text" class="form-control" placeholder="Price">
                             </div>
                             @error('price')
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
 
                             <div class="mb-3">
-                                <label for="price">Code</label>
-                                <input id="price" name="code" type="text" class="form-control" placeholder="Price">
+                                <label for="code">Code</label>
+                                <input id="code" name="code" type="text" class="form-control" placeholder="code">
                             </div>
                             @error('code')
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
 
 
-                            <div class="mb-3">
+                            {{-- <div class="mb-3">
                                 <label for="price">Stock status</label>
-                                <input id="price" name="stock_status" type="text" class="form-control" placeholder="Price">
-                            </div>
+                                <input id="price" name="stock_status" type="text" class="form-control" placeholder="Stock status">
+                            </div> --}}
+
+
+
+                            <label class="control-label">Stock status</label>
+
+                            <select name="stock_status" class="select2 form-control select2" data-placeholder="Choose ...">
+                                <option value="1">Available</option>
+                                <option value="0">Not available</option>
+                            </select>
+
                             @error('stock_status')
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
@@ -88,7 +98,7 @@
 
                             <div class="mb-3">
                                 <label for="description_en">Product Description EN</label>
-                                <textarea class="form-control" name="description_en" id="description_en" rows="5" placeholder="Product Description"></textarea>
+                                <textarea class="form-control" name="description_en" id="description_en" rows="5" placeholder="Product Description En"></textarea>
                             </div>
                             @error('description_en')
                             <div class="alert alert-danger">{{ $message }}</div>
@@ -96,7 +106,7 @@
 
                             <div class="mb-3">
                                 <label for="description_ru">Product Description RU</label>
-                                <textarea class="form-control" name="description_ru" id="description_ru" rows="5" placeholder="Product Description"></textarea>
+                                <textarea class="form-control" name="description_ru" id="description_ru" rows="5" placeholder="Product Description Ru"></textarea>
                             </div>
                             @error('description_ru')
                             <div class="alert alert-danger">{{ $message }}</div>
@@ -104,7 +114,7 @@
 
                         <div class="mb-3">
                             <label for="description_ge">Product Description GE</label>
-                            <textarea class="form-control" name="description_ge" id="description_ge" rows="5" placeholder="Product Description"></textarea>
+                            <textarea class="form-control" name="description_ge" id="description_ge" rows="5" placeholder="Product Description Ge"></textarea>
                         </div>
                         @error('description_ge')
                         <div class="alert alert-danger">{{ $message }}</div>
@@ -140,7 +150,7 @@
 
         </div> <!-- end card-->
         <div class="d-flex flex-wrap gap-2">
-            <button type="submit" class="btn btn-primary waves-effect waves-light">Save Changes</button>
+            <button type="submit" class="btn btn-primary waves-effect waves-light">Create Product</button>
             <a type="reset" class="btn btn-secondary waves-effect waves-light" href={{ route("admin.products.index") }}>Cancel</a>
         </div>
     </form>

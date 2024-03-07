@@ -38,10 +38,16 @@
                                 <input id="price" name="code" value="{{$products->code}}" type="text" class="form-control" placeholder="Price">
                             </div>
 
-                            <div class="mb-3">
+                            {{-- <div class="mb-3">
                                 <label for="price">Stock status</label>
                                 <input id="price" name="stock_status" value="{{$products->stock_status}}" type="text" class="form-control" placeholder="Price">
-                            </div>
+                            </div> --}}
+                            <label class="control-label">Stock status</label>
+
+                            <select name="stock_status" class="select2 form-control select2" data-placeholder="Choose ...">
+                                <option value="1" {{ old('stock_status', $products->stock_status) == '1' ? 'selected' : '' }}>Available</option>
+                                <option value="0" {{ old('stock_status', $products->stock_status) == '0' ? 'selected' : '' }}>Not available</option>
+                            </select>
 
                             <label for="price">Product Image</label>
                             <div class="card-body">

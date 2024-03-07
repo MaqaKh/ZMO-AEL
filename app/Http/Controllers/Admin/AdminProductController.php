@@ -38,7 +38,7 @@ class AdminProductController extends Controller
             'price' => 'numeric',
             'code' => 'string|max:50',
             'is_active' => 'boolean',
-            'stock_status' => 'string|max:255',
+            'stock_status' => 'boolean',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
             'category_id' => 'required|exists:main_categories,id',
             // Add more validation rules as needed
@@ -180,6 +180,7 @@ class AdminProductController extends Controller
         // Perform image update
             $file=$request->file('image');
            // return dd ($file);
+
             $relativePath = str_replace(url('/'), '', $product->image_path);
           //  return dd ($relativePath);
 
