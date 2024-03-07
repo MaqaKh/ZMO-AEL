@@ -144,12 +144,13 @@ RIGHT SIDEBAR TOGGLE SECTION
 }
 
 .language-container a {
-    margin-right: 10px; /* Add some space between the links */
+    margin-right: 3px; /* Add some space between the links */
+    margin-left: 3px; /* Add some space between the links */
 }
 
 
 .navbar-logo-main {
-    height: 150px;
+    height: 140px;
     transition: height 0.3s;
 }
 

@@ -81,7 +81,7 @@
 
                                     @if(Session::get('locale') == 'en')
                                     <a href="{{ route('lang.switch', 'ru') }}"
-                                    >RU</a>
+                                    >RU</a> |
                                     <a href="{{ route('lang.switch', 'ge') }}"
                                     >GE</a>
 
@@ -98,7 +98,7 @@
                                     >RU</a>
                                     @else
                                     <a href="{{ route('lang.switch', 'ru') }}"
-                                    >RU</a>
+                                    >RU</a>|
                                     <a href="{{ route('lang.switch', 'ge') }}"
                                     >GE</a>
 
