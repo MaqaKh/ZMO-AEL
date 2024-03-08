@@ -15,8 +15,9 @@ class AdminProductController extends Controller
 
     public function index()
     {
-        $products = Product::with('category')->paginate(10);
-        return view('admin.ecommerce-products', ['products' => $products]);
+        $products = Product::with('category')
+        ->orderBy('created_at', 'desc')
+        ->paginate(10);
     }
 
 
