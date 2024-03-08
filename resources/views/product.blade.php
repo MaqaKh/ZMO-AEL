@@ -20,7 +20,9 @@
 <div style="margin: 8px auto; display: block; text-align:center;">
 
     <!---728x90--->
-
+    @php
+    $currentLanguage = app()->getLocale(); // Get the current language
+    @endphp
 <!-- blog section -->
 <div class="w3l-homeblock2 py-5">
     <div class="container py-md-5 py-4">
@@ -59,7 +61,17 @@
                                 </div>
 
                                 <div class="card-body service-details">
-                                    <span class="label-style">{{$product->category->name}}</span>
+                                    <span class="label-style">
+                                        @if($currentLanguage == 'en')
+                                        {{$product->category->name_en}}
+                                      @elseif($currentLanguage == 'ru')
+                                         {{$product->category->name_ru}}
+                                      @elseif($currentLanguage == 'ge')
+                                        {{$product->category->name_ge}}
+                                      @else
+                                        {{$product->category->name_en}}
+                                      @endif
+                                    </span>
                                     <a class="service-heading" href="{{ url('/services') }}">{{$product->name}}</a>
                                     <p>
                                         {{ $product->description }}

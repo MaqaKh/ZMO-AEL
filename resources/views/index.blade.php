@@ -78,7 +78,9 @@
 <div style="margin: 8px auto; display: block; text-align:center;">
 </div>
 
-
+@php
+$currentLanguage = app()->getLocale(); // Get the current language
+@endphp
 <!-- //banner section -->
 
 <!-- banner bottom section -->
@@ -148,7 +150,20 @@
                         </a>
                     </div>
                     <div class="card-body service-details">
-                        <span class="label-style label-style-3">{{$product->category->name}}</span>
+                        <span class="label-style label-style-3">
+
+                            {{-- {{$product->category->name}} --}}
+
+                            @if($currentLanguage == 'en')
+                              {{$product->category->name_en}}
+                            @elseif($currentLanguage == 'ru')
+                               {{$product->category->name_ru}}
+                            @elseif($currentLanguage == 'ge')
+                              {{$product->category->name_ge}}
+                            @else
+                              {{$product->category->name_en}}
+                            @endif
+                        </span>
                         <a class="service-heading" href={{ route('product-details', ['id' => $product->id]) }}>{{$product->name}}</a>
                         <p>
                             <!-- Your additional content here -->
