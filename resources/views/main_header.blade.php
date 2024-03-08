@@ -3,7 +3,7 @@
     <header id="site-header" class="fixed-top full-header min-height-150">
         <div class="container-fluid">
                 <nav class="navbar navbar-expand-lg stroke">
-                    <a class="navbar-brand" href="/">
+                    <a class="navbar-brand" href="/prod">
                         <img class="logoImg navbar-logo-main" alt="Your logo" title="Your logo"
                              src={{ asset('images/zimmer-logo-full.png') }} />
                     </a>
@@ -18,7 +18,8 @@
 
                         <ul class=" navbar-nav ml-lg-auto">
                             <li class="nav-item  {{ request()->is('/') ? 'active' : '' }}">
-                                <a class="nav-link" href="{{ url('/') }}">@lang('messages.home') <span class="sr-only"></span></a>
+                                <a class="nav-link" href="{{ url('/prod') }}">@lang('messages.home') <span
+                                        class="sr-only"></span></a>
                             </li>
                             <li class="nav-item {{ request()->is('about') ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ url('/about') }}">@lang('messages.about')</a>
@@ -122,7 +123,7 @@
                         </ul>
 
                         <ul class="nav navbar-nav ml-lg-auto">
-                            <a class="navbar-brand" href="/">
+                            <a class="navbar-brand" href="/prod">
                                 <img class="logoImg navbar-logo-main" alt="Your logo" title="Your logo"
                                      src={{ asset('images/partnersN.png') }} />
                             </a>

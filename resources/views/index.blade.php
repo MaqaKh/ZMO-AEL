@@ -130,7 +130,7 @@ $currentLanguage = app()->getLocale(); // Get the current language
                     Our Best Products</h3>
             </div>
             <div class="col-md-6 section-heading mt-md-0 mt-2 text-right">
-                <a href="#url" class="ml-auto">All products</a>
+                <a href="/product" class="ml-auto">All products</a>
                 <!-- You can add other content here if needed -->
             </div>
         </div>
