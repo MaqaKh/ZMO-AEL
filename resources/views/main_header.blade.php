@@ -45,12 +45,12 @@
                                     @lang('messages.industry') <span class="fa fa-angle-down"></span>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="expected.html"> @lang('messages.hydraulic')</a>
-                                    <a class="dropdown-item" href="expected.html"> @lang('messages.industrial')</a>
-                                    <a class="dropdown-item" href="expected.html"> @lang('messages.compressor')</a>
-                                    <a class="dropdown-item" href="expected.html"> @lang('messages.marine')</a>
-                                    <a class="dropdown-item" href="expected.html"> @lang('messages.turbine')</a>
-                                    <a class="dropdown-item" href="expected.html"> @lang('messages.special')</a>
+                                    <a class="dropdown-item" href="{{ route('cooming-soon') }}"> @lang('messages.hydraulic')</a>
+                                    <a class="dropdown-item" href="{{ route('cooming-soon') }}"> @lang('messages.industrial')</a>
+                                    <a class="dropdown-item" href="{{ route('cooming-soon') }}"> @lang('messages.compressor')</a>
+                                    <a class="dropdown-item" href="{{ route('cooming-soon') }}"> @lang('messages.marine')</a>
+                                    <a class="dropdown-item" href="{{ route('cooming-soon') }}"> @lang('messages.turbine')</a>
+                                    <a class="dropdown-item" href="{{ route('cooming-soon') }}"> @lang('messages.special')</a>
                                 </div>
                             </li>
                             <li class="nav-item">

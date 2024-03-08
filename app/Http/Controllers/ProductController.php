@@ -22,6 +22,11 @@ class ProductController extends Controller
          //return view('product',compact('products'));
         // return view('product',$products);
     }
+
+    public function cooming_soon(){
+
+        return view('coming_soon');
+    }
     public function filter($categoryDescription)
     {
         $category = Category::where('description_en', $categoryDescription)->first();

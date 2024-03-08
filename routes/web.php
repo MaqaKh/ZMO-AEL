@@ -59,7 +59,7 @@ Route::get('/services', function () {
 
 
 
-
+Route::get('/cooming-soon', [ProductController::class, 'cooming_soon'])->name('cooming-soon');
 Route::get('/product', [ProductController::class, 'index'])->name('product');
 Route::get('/product/{category}', [ProductController::class, 'filter'])->name('product.filter');
 
