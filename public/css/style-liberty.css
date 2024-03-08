@@ -12833,6 +12833,10 @@ h5.small-title-2 {
         height: 90px !important;
     }
 
+    .navbar-logo-partners {
+        height: 80px;
+        transition: height 0.3s;
+    }
     .mode-container {
         display: none;
     }
