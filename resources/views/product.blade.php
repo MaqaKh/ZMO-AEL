@@ -74,7 +74,18 @@
                                     </span>
                                     <a class="service-heading" href="{{ url('/services') }}">{{$product->name}}</a>
                                     <p>
-                                        {{ $product->description }}
+
+
+                                        @if($currentLanguage == 'en')
+                                        {{ $product->description_en }}
+                                      @elseif($currentLanguage == 'ru')
+                                      {{ $product->description_ru }}
+                                      @elseif($currentLanguage == 'ge')
+                                      {{ $product->description_ge }}
+                                      @else
+                                      {{ $product->description_en }}
+                                      @endif
+
                                     </p>
                                 </div>
                             </div>
