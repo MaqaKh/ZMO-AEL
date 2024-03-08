@@ -154,6 +154,10 @@ RIGHT SIDEBAR TOGGLE SECTION
     transition: height 0.3s;
 }
 
+.navbar-logo-partners {
+    height: 100px;
+    transition: height 0.3s;
+}
 .min-height-150 {
     min-height: 160px;
     background-color: black;

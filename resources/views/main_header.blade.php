@@ -59,11 +59,11 @@
                                     @lang('messages.specialProducts') <span class="fa fa-angle-down"></span>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="expected.html"> @lang('messages.antifreeze')</a>
+                                    <a class="dropdown-item" href="/coming-soon"> @lang('messages.antifreeze')</a>
                                 </div>
                             </li>
                             <li class="nav-item {{ request()->is('gallery') ? 'active' : '' }}">
-                                <a class="nav-link" href="{{ url('/gallery') }}"
+                                <a class="nav-link" href="{{ url('/coming-soon') }}"
                                 >@lang('messages.gallery')</a>
                             </li>
                             <!--                        <li class="nav-item">-->
@@ -123,7 +123,7 @@
 
                         <ul class="nav navbar-nav ml-lg-auto">
                             <a class="navbar-brand" href="/">
-                                <img class="logoImg navbar-logo-main" alt="Your logo" title="Your logo"
+                                <img class="logoImg navbar-logo-partners" alt="Your logo" title="Your logo"
                                      src={{ asset('images/partnersN.png') }} />
                             </a>
                         </ul>

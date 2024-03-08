@@ -12,7 +12,7 @@
             <div class="col-12 text-center">
                 <img alt="Your logo" title="Your logo"
                      src="{{ asset('images/partners.png') }}"
-                     style=" max-height: 150px;"/>
+                     style=" max-height: 200px;"/>
             </div>
         </div>
         <div class="row sub-columns">
@@ -107,7 +107,7 @@
 
     </div>
     <!-- copyright -->
-    <div class="copyright-footer text-center">
+    <div class="copyright-footer text-center mt-5">
         <div class="container">
             <div class="columns">
                 <p>@2024 Zimmer. All rights reserved. Design by
