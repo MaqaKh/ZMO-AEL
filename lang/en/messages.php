@@ -21,4 +21,5 @@ return [
     'engine_oil' => 'Engine oil',
     'promotional_accesories' => 'Promotional accessories',
     'contacts' => 'Contacts',
+    'home-h1' => 'The Largest Business Expert!',
 ];

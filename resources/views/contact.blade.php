@@ -34,7 +34,7 @@
 </div>
 <!-- contact -->
 <section class="w3l-contact-info-main py-5" id="contact">
-    <div class="container py-md-5 py-4">
+    <div class="container">
         <div class="row align-items-center mb-5">
             <div class="col-md-6 section-heading">
                 <h5 class="small-title-2">Write Message</h5>
@@ -122,10 +122,10 @@
     </div>
 </section>
 
-<div class="map-contact">
-    <iframe class="map-w3layouts"
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.305645257226!2d49.8761218751878!3d40.37991805788023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307ce1e5959b69%3A0x6f2eb5b63b2f56d1!2sAMAY%20Shopping%20Center!5e0!3m2!1str!2saz!4v1706022232342!5m2!1str!2saz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
+{{--<div class="map-contact">--}}
+{{--    <iframe class="map-w3layouts"--}}
+{{--    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.305645257226!2d49.8761218751878!3d40.37991805788023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307ce1e5959b69%3A0x6f2eb5b63b2f56d1!2sAMAY%20Shopping%20Center!5e0!3m2!1str!2saz!4v1706022232342!5m2!1str!2saz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>--}}
+{{--</div>--}}
 <!-- //contact -->
 <div style="margin: 8px auto; display: block; text-align:center;">
 </div>

@@ -8358,6 +8358,7 @@ button.bg-dark:focus {
 }
 
 .fixed-top {
+    background-color: black;
   position: fixed;
   top: 0;
   right: 0;
@@ -12004,7 +12005,7 @@ header.nav-fixed {
   padding: 0px;
   border-bottom: none;
   z-index: 9 !important;
-  background-color: var(--bg-color);
+    background-color: black;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05);
   height: 70px;
   /* for z-index:10 to display gallery popup */
@@ -12050,7 +12051,7 @@ nav ul li a:hover {
 }
 
 .nav-fixed .navbar-expand-lg .navbar-nav .nav-link {
-  color: var(--heading-color);
+    color: white;
 }
 
 .nav-fixed .navbar-brand {

@@ -136,3 +136,8 @@
         margin-bottom: 0;
     }
   }
+
+.navbar-logo-partners {
+    height: 90px;
+    transition: height 0.3s;
+}

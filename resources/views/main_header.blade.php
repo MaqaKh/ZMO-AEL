@@ -60,19 +60,13 @@
                                     @lang('messages.specialProducts') <span class="fa fa-angle-down"></span>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="/coming-soon"> @lang('messages.antifreeze')</a>
+                                    <a class="dropdown-item" href="/cooming-soon"> @lang('messages.antifreeze')</a>
                                 </div>
                             </li>
                             <li class="nav-item {{ request()->is('gallery') ? 'active' : '' }}">
-                                <a class="nav-link" href="{{ url('/coming-soon') }}"
+                                <a class="nav-link" href="{{ url('/cooming-soon') }}"
                                 >@lang('messages.gallery')</a>
                             </li>
-                            <!--                        <li class="nav-item">-->
-                            <!--                            <a class="nav-link" href="contact.html">Promotional accessories</a>-->
-                            <!--                        </li>-->
-                            {{-- <li class="nav-item request()->is('product') ? 'active' : '' }}">
-                                <a class="nav-link" href="contact.html">Contact</a>
-                            </li> --}}
                             <li class="nav-item {{ request()->is('contact') ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ url('/contact') }}"
                                 >@lang('messages.contacts')</a>
@@ -104,22 +98,8 @@
                                     >GE</a>
 
                                     @endif
-                                   <!--- <a href="contact.html">EN</a>  -->
                                 </div>
                             </li>
-
-                            <!-- search button -->
-                            <!--  <div class="search-right ml-lg-3">
-                                  <form action="https://p.w3layouts.com/demos_new/template_demo/07-04-2021/execution-liberty-demo_Free/985771955/web/error.html" method="GET" class="search-box position-relative">
-                                      <div class="input-search">
-                                          <input type="search" placeholder="Enter Keyword" name="search" required="required"
-                                              autofocus="" class="search-popup">
-                                      </div>
-                                      <button type="submit" class="btn search-btn"><i class="fa fa-search"
-                                              aria-hidden="true"></i></button>
-                                  </form>
-                              </div>-->
-                            <!-- //search button -->
                         </ul>
 
                         <ul class="nav navbar-nav ml-lg-auto">

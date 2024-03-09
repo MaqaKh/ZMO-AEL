@@ -162,3 +162,8 @@ RIGHT SIDEBAR TOGGLE SECTION
     height: 50px; /* Height when scrolled */
     transition: height 0.3s;
 }
+
+.navbar-logo-partners {
+    height: 70px;
+    transition: height 0.3s;
+}
