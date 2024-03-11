@@ -36,12 +36,12 @@ class AdminProductController extends Controller
             'name' => 'required|string|max:255',
             'description_en' => 'required|string',
             'description_ru' => 'required|string',
-            'description_ge' => 'required|string',
             'price' => 'numeric',
             'code' => 'string|max:50',
             'is_active' => 'boolean',
-            'stock_status' => 'boolean',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'stock_status' => 'string|max:255',
+            'image' => 'image|mimes:jpeg,png,jpg,gif|max:5048',
+            'pdf' => 'mimes:pdf|max:10000',
             'category_id' => 'required|exists:main_categories,id',
             // Add more validation rules as needed
         ]);
@@ -198,18 +198,19 @@ class AdminProductController extends Controller
 
       // Retrieve the uploaded file before applying validation rules
 
-    //   $request->validate([
-    //     'name' => 'required|string|max:255',
-    //     'description_en' => 'required|string',
-    //     'description_ru' => 'required|string',
-    //     'price' => 'numeric',
-    //     'code' => 'string|max:50',
-    //     'is_active' => 'boolean',
-    //     'stock_status' => 'string|max:255',
-    //     'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:5048',
-    //     'category_id' => 'required|exists:main_categories,id',
-    //     // Add more validation rules as needed
-    // ]);
+      $request->validate([
+        'name' => 'required|string|max:255',
+        'description_en' => 'required|string',
+        'description_ru' => 'required|string',
+        'price' => 'numeric',
+        'code' => 'string|max:50',
+        'is_active' => 'boolean',
+        'stock_status' => 'string|max:255',
+        'image' => 'image|mimes:jpeg,png,jpg,gif|max:5048',
+        'pdf' => 'mimes:pdf|max:10000',
+        'category_id' => 'required|exists:main_categories,id',
+        // Add more validation rules as needed
+    ]);
       // Update image if provided
       if ($request->has('image')) {
         // Perform image update
