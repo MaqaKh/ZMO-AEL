@@ -103,6 +103,39 @@ class AdminProductController extends Controller
 
 
 
+            if ($request->hasFile('pdf')) {
+                // Delete old PDF if exists
+                // if ($product->pdf_path) {
+                //     Storage::delete($product->pdf_path);
+                // }
+        
+                $relativePath = str_replace(url('/'), '', $product->pdf);
+        
+                // Remove the 'storage' part
+                $relativePath = str_replace('/storage', '', $relativePath);
+        
+                $fullPath= 'public/' . $relativePath;
+        
+                if( Storage::exists($fullPath)){
+        
+                    Storage::delete($fullPath);
+                  }
+        
+                $pdfFile = $request->file('pdf');
+                $fileName = $pdfFile->getClientOriginalName();
+                //$filePath = 'pdfs/' . $fileName;
+                //return dd($filename);
+        
+                // Store the PDF in the storage folder
+                //$pdfUrl = $pdfFile->storeAs('pdfs', $filename, 'public');
+        
+                Storage::disk('public')->putFileAs('pdfs/', $pdfFile,$fileName);
+        
+                 $pdfUrl = Storage::disk('public')->url('pdfs/' . $fileName);
+        
+                // Save the path to the PDF in the product's pdf_path column
+                $product->pdf = $pdfUrl;
+            }
 
 
 
