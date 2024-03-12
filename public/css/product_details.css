@@ -167,3 +167,23 @@ RIGHT SIDEBAR TOGGLE SECTION
     height: 70px;
     transition: height 0.3s;
 }
+
+.post-img {
+    border: 1px solid #f6ecec;
+    border-radius: 15px;
+}
+
+.tech-pdf {
+    padding: 10px;
+    min-width: 100%;
+    background-color: #edefff;
+}
+
+.product-pack {
+    padding: 5px;
+    width: 40px;
+    text-align: center;
+    margin-right: 5%;
+    border: 1px solid #edefff;
+    border-radius: 5px;
+}
