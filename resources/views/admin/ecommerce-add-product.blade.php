@@ -66,6 +66,15 @@
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
 
+
+
+                    <div class="mb-3">
+                        <label for="pdf">Pdf</label>
+                        <input id="pdf" name="pdf" type="file" class="form-control" placeholder="PDf">
+                    </div>
+                    @error('pdf')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
                         </div>
 
                         <div class="col-sm-6">
@@ -119,6 +128,11 @@
                         @error('description_ge')
                         <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
+
+
+
+
+
 
                         </div>
                     </div>

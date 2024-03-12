@@ -49,6 +49,29 @@
                                 <option value="0" {{ old('stock_status', $products->stock_status) == '0' ? 'selected' : '' }}>Not available</option>
                             </select>
 
+                            <div class="mb-3">
+                                <label for="pdf">Pdf</label>
+                                <input id="pdf" name="pdf" type="file" class="form-control" placeholder="PDf">
+                            </div>
+
+                            @if($products->pdf)
+                            <embed src="{{$products->pdf }}" type="application/pdf" width="50%" height="400px">
+
+                                <p class="mb-2 mt-4">
+                                    <span class="fas fa-download" aria-hidden="true"></span>
+
+                                    <a href="{{ asset($products->pdf) }}"    target="_blank">Open PDF</a>
+
+
+                                </p>
+                                @else
+                            <p>No PDF available for this product</p>
+
+                        @endif
+
+                        <hr>
+
+
                             <label for="price">Product Image</label>
                             <div class="card-body">
 
@@ -106,25 +129,7 @@
                             </div>
 
 
-                            <div class="mb-3">
-                                <label for="pdf">Pdf</label>
-                                <input id="pdf" name="pdf" type="file" class="form-control" placeholder="PDf">
-                            </div>
 
-                            @if($products->pdf)
-                            <embed src="{{$products->pdf }}" type="application/pdf" width="50%" height="400px">
-
-                                <p class="mb-2 mt-4">
-                                    <span class="fas fa-download" aria-hidden="true"></span>
-
-                                    <a href="{{ asset($products->pdf) }}"    target="_blank">Open PDF</a>
-
-
-                                </p>
-                                @else
-                            <p>No PDF available for this product</p>
-
-                        @endif
 
 
 
