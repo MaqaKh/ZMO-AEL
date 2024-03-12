@@ -31,64 +31,53 @@ $currentLanguage = app()->getLocale(); // Get the current language
 <!-- single post -->
 <section class="blog-post-main">
     <div class="blog-content-inf py-5">
-        <div class="container-fluid py-md-5 py-4">
-            <div class="blog-posthny-info mx-auto">
+        <div class="container py-md-5 py-4">
+            <div class="row mx-auto">
 
-                <div class="row justify-content-center">
-                    <div class="col-md-5">
-                        <div class="single-post-image mb-4">
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="single-post-image post-img mb-4">
 
                             <img alt="blog-post-image" class="img-responsive"
                                  src="{{$product->image_path}}"/>
 
                         </div>
-                    </div>
-                    <div class="col-md-5 mb-3">
-                        <h3 class="title-style mb-sm-3 mb-2">{{$product->name}}</h3>
-                        <br>
-                        <br>
-                        @if($product->pdf)
-                            <p class="mb-2 mt-4 justify-content-end align-items-center">
-                            <span class="fas fa-download" aria-hidden="true"></span>
 
-                            <a href="{{ asset($product->pdf) }}"    target="_blank">Open PDF</a>
-                            @else
-                           <p>No PDF available</p>
-                            @endif
-                        </p>
-                        <p class="mb-4">
-                            @if($currentLanguage == 'en')
-                            Category: {{$product->category->name_en}}
-                            @elseif($currentLanguage == 'ru')
-                             Category: {{$product->category->name_ru}}
-                            @elseif($currentLanguage == 'ge')
-                            Category: {{$product->category->name_ge}}
-                            @else
-                            Category: {{$product->category->name_en}}
-                            @endif
-                        </p>
+                    </div>
+                    <div class="row mb-3">
+                        <a class="tech-pdf" style="min-width: 80%"> <img style="max-height:16px;"
+                                                                         src="{{asset('/images/icons/file-pdf-regular.svg')}}">
+                            Technical data sheet</a>
+                    </div>
+                    <div class="row mb-3">
+                        <p style="font-weight: 800">Available packs</p>
+
+                    </div>
+                    <div class="row">
+                        <span class="product-pack">1L</span><span class="product-pack">2L</span><span
+                            class="product-pack">3L</span>
                     </div>
                 </div>
+                <div class="col-md-8">
+                    <div class="row justify-content-center">
 
-
-
-
-                <div class="row justify-content-center mt-5">
-                    <div class="col-md-8">
                         <div>
                             {{-- {!! $product->description_ru !!} --}}
                             @if($currentLanguage == 'en')
-                            {!! $product->description_en !!}
-                         @elseif($currentLanguage == 'ru')
-                          {!! $product->description_ru !!}
-                         @elseif($currentLanguage == 'ge')
-                          {!! $product->description_ge !!}
-                          @else
-                          {!! $product->description_en !!}
-                          @endif
+                                {!! $product->description_en !!}
+                            @elseif($currentLanguage == 'ru')
+                                {!! $product->description_ru !!}
+                            @elseif($currentLanguage == 'ge')
+                                {!! $product->description_ge !!}
+                            @else
+                                {!! $product->description_en !!}
+                            @endif
                         </div>
+
                     </div>
                 </div>
+
+
             </div>
         </div>
     </div>
