@@ -75,6 +75,32 @@
                     @error('pdf')
                     <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
+                <hr>
+                <label for="price">Product Image</label>
+                <div class="card-body">
+
+                    <div class="fallback">
+                        <input name="image" type="file" multiple />
+                    </div>
+
+                    <div class="dz-message needsclick">
+                        <div class="mb-3">
+                            <i class="display-4 text-muted bx bxs-cloud-upload"></i>
+                        </div>
+
+                        <h4>Drop files here or click to upload.</h4>
+                    </div>
+                    <hr>
+
+            </div>
+
+                <div class="mb-3">
+                    <label for="description_ge">Product Description GE</label>
+                    <textarea class="form-control" name="description_ge" id="description_ge" rows="5" placeholder="Product Description Ge"></textarea>
+                </div>
+                @error('description_ge')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
                         </div>
 
                         <div class="col-sm-6">
@@ -121,13 +147,7 @@
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
 
-                        <div class="mb-3">
-                            <label for="description_ge">Product Description GE</label>
-                            <textarea class="form-control" name="description_ge" id="description_ge" rows="5" placeholder="Product Description Ge"></textarea>
-                        </div>
-                        @error('description_ge')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                    @enderror
+
 
 
 
@@ -142,27 +162,12 @@
             </div>
         </div>
 
-        <div class="card">
+        {{-- <div class="card">
             <div class="card-header">
                 <h4 class="card-title mb-0">Product Images</h4>
             </div>
-            <div class="card-body">
 
-                    <div class="fallback">
-                        <input name="image" type="file" multiple />
-                    </div>
-
-                    <div class="dz-message needsclick">
-                        <div class="mb-3">
-                            <i class="display-4 text-muted bx bxs-cloud-upload"></i>
-                        </div>
-
-                        <h4>Drop files here or click to upload.</h4>
-                    </div>
-
-            </div>
-
-        </div> <!-- end card-->
+        </div> <!-- end card--> --}}
         <div class="d-flex flex-wrap gap-2">
             <button type="submit" class="btn btn-primary waves-effect waves-light">Create Product</button>
             <a type="reset" class="btn btn-secondary waves-effect waves-light" href={{ route("admin.products.index") }}>Cancel</a>
