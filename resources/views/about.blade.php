@@ -61,6 +61,62 @@
 
 </div>
 
+<!-- skills -->
+<section class="w3l-skills py-5" id="skills">
+    <div class="container py-md-5 py-4">
+        <div class="row align-items-center">
+            {{--            <div class="col-lg-6 pr-lg-5">--}}
+            {{--                <img src={{asset('images/zimmer-about.png')}} alt="" class="img-responsive img-fluid">--}}
+
+            {{--            </div>--}}
+            <div class="col-lg-12 mt-lg-0 mt-5">
+                <h5 class="small-title-2">The best of the best!</h5>
+                <h3 class="title-style-2 mb-2">@lang('messages.about-main-text-header')</h3>
+                <p class="mt-4">@lang('messages.about-main-text')</p>
+                <!--                    <div class="skills-bars mt-5">-->
+                <!--                        <div class="progress-info">-->
+                <!--                            <h6 class="progress-tittle">Web Design-->
+                <!--                            </h6>-->
+                <!--                            <div class="progress">-->
+                <!--                                <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 80%"-->
+                <!--                                    aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">-->
+                <!--                                </div>-->
+                <!--                            </div>-->
+                <!--                        </div>-->
+                <!--                        <div class="progress-info">-->
+                <!--                            <h6 class="progress-tittle">Development-->
+
+                <!--                            </h6>-->
+                <!--                            <div class="progress">-->
+                <!--                                <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 95%"-->
+                <!--                                    aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">-->
+                <!--                                </div>-->
+                <!--                            </div>-->
+                <!--                        </div>-->
+                <!--                        <div class="progress-info">-->
+                <!--                            <h6 class="progress-tittle">Mobile Apps-->
+                <!--                            </h6>-->
+                <!--                            <div class="progress">-->
+                <!--                                <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 75%"-->
+                <!--                                    aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">-->
+                <!--                                </div>-->
+                <!--                            </div>-->
+                <!--                        </div>-->
+                <!--                        <div class="progress-info">-->
+                <!--                            <h6 class="progress-tittle">Marketing-->
+                <!--                            </h6>-->
+                <!--                            <div class="progress">-->
+                <!--                                <div class="progress-bar progress-bar-striped" role="progressbar" style="width:65%"-->
+                <!--                                    aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">-->
+                <!--                                </div>-->
+                <!--                            </div>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- //skills -->
 
  <!-- why section -->
  <section class="home-services py-5">
@@ -112,328 +168,7 @@
 <!---728x90--->
 
 </div>
-<!-- skills -->
-<section class="w3l-skills py-5" id="skills">
-    <div class="container py-md-5 py-4">
-        <div class="row align-items-center">
-            <div class="col-lg-6 pr-lg-5">
-                <img src={{asset('images/zimmer-about.png')}} alt="" class="img-responsive img-fluid">
 
-            </div>
-            <div class="col-lg-6 mt-lg-0 mt-5">
-                <h5 class="small-title-2">Our Community</h5>
-                <h3 class="title-style-2 mb-2">
-                    Talent Can Come From Anywhere</h3>
-                <p class="mt-4">Comprising a dedicated team of hundreds, we stand united in our commitment to serve
-                    you. Our expertise lies in crafting top-notch engine lubricants, ensuring the highest quality
-                    for your vehicles. With a relentless pursuit of innovation and a customer-centric approach, we
-                    aim to exceed expectations and contribute to the optimal performance and longevity of your
-                    engines.</p>
-                <!--                    <div class="skills-bars mt-5">-->
-                <!--                        <div class="progress-info">-->
-                <!--                            <h6 class="progress-tittle">Web Design-->
-                <!--                            </h6>-->
-                <!--                            <div class="progress">-->
-                <!--                                <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 80%"-->
-                <!--                                    aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">-->
-                <!--                                </div>-->
-                <!--                            </div>-->
-                <!--                        </div>-->
-                <!--                        <div class="progress-info">-->
-                <!--                            <h6 class="progress-tittle">Development-->
-
-                <!--                            </h6>-->
-                <!--                            <div class="progress">-->
-                <!--                                <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 95%"-->
-                <!--                                    aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">-->
-                <!--                                </div>-->
-                <!--                            </div>-->
-                <!--                        </div>-->
-                <!--                        <div class="progress-info">-->
-                <!--                            <h6 class="progress-tittle">Mobile Apps-->
-                <!--                            </h6>-->
-                <!--                            <div class="progress">-->
-                <!--                                <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 75%"-->
-                <!--                                    aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">-->
-                <!--                                </div>-->
-                <!--                            </div>-->
-                <!--                        </div>-->
-                <!--                        <div class="progress-info">-->
-                <!--                            <h6 class="progress-tittle">Marketing-->
-                <!--                            </h6>-->
-                <!--                            <div class="progress">-->
-                <!--                                <div class="progress-bar progress-bar-striped" role="progressbar" style="width:65%"-->
-                <!--                                    aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">-->
-                <!--                                </div>-->
-                <!--                            </div>-->
-                <!--                        </div>-->
-                <!--                    </div>-->
-            </div>
-        </div>
-    </div>
-</section>
-<!-- //skills -->
-
-<!-- testimonials section -->
-<!-- <section class="w3l-clients py-5" id="testimonials">
-    <div class="container py-md-5 py-4">
-        <div class="row align-items-center mb-5">
-            <div class="col-md-6 section-heading">
-                <h5 class="small-title-2">Oue Clients Testimonials</h5>
-                <h3 class="title-style-2">What People Say</h3>
-            </div>
-            <div class="col-md-6 section-heading mt-md-0 mt-2">
-                <p>
-                    Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque,
-                    eaque ipsa quae ab illo inventore.Sed ut perspiciatis unde omnis iste natus error sit.
-                </p>
-            </div>
-        </div>
-        <div id="owl-demo2" class="owl-carousel owl-theme pb-5">
-            <div class="item">
-                <div class="testimonial-content">
-                    <div class="testimonial">
-                        <blockquote>
-                            <q>Pellen tesque libero ut justo</q>
-                        </blockquote>
-                        <p>Lorem ipsum dolor sit amet elit. hic odio tenetur. ante ipsum primis in
-                            faucibus orci luctus.</p>
-                    </div>
-                    <div class="bottom-info mt-4">
-                        <a class="comment-img" href="#url"><img src="assets/images/testi1.jpg"
-                                class="img-responsive" alt="placeholder image"></a>
-                        <div class="people-info align-self">
-                            <h3>Johnson william</h3>
-                            <p class="identity">Example City</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="testimonial-content">
-                    <div class="testimonial">
-                        <blockquote>
-                            <q>Lorem ipsum dolor sit amet</q>
-                        </blockquote>
-                        <p>Lorem ipsum dolor sit amet elit. hic odio tenetur. ante ipsum primis in
-                            faucibus orci luctus.</p>
-                    </div>
-                    <div class="bottom-info mt-4">
-                        <a class="comment-img" href="#url"><img src="assets/images/testi2.jpg"
-                                class="img-responsive" alt="placeholder image"></a>
-                        <div class="people-info align-self">
-                            <h3>Alexander sakura</h3>
-                            <p class="identity">Example City</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="testimonial-content">
-                    <div class="testimonial">
-                        <blockquote>
-                            <q>Pellen tesque libero ut justo</q>
-                        </blockquote>
-                        <p>Lorem ipsum dolor sit amet elit. hic odio tenetur. ante ipsum primis in
-                            faucibus orci luctus.</p>
-                    </div>
-                    <div class="bottom-info mt-4">
-                        <a class="comment-img" href="#url"><img src="assets/images/testi3.jpg"
-                                class="img-responsive" alt="placeholder image"></a>
-                        <div class="people-info align-self">
-                            <h3>John wilson</h3>
-                            <p class="identity">Example City</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="testimonial-content">
-                    <div class="testimonial">
-                        <blockquote>
-                            <q>Lorem ipsum dolor sit amet</q>
-                        </blockquote>
-                        <p>Lorem ipsum dolor sit amet elit. hic odio tenetur. ante ipsum primis in
-                            faucibus orci luctus.</p>
-                    </div>
-                    <div class="bottom-info mt-4">
-                        <a class="comment-img" href="#url"><img src="assets/images/testi3.jpg"
-                                class="img-responsive" alt="placeholder image"></a>
-                        <div class="people-info align-self">
-                            <h3>Julia sakura</h3>
-                            <p class="identity">Example City</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="testimonial-content">
-                    <div class="testimonial">
-                        <blockquote>
-                            <q>Pellen tesque libero ut justo</q>
-                        </blockquote>
-                        <p>Lorem ipsum dolor sit amet elit. hic odio tenetur. ante ipsum primis in
-                            faucibus orci luctus.</p>
-                    </div>
-                    <div class="bottom-info mt-4">
-                        <a class="comment-img" href="#url"><img src="assets/images/testi1.jpg"
-                                class="img-responsive" alt="placeholder image"></a>
-                        <div class="people-info align-self">
-                            <h3>John wilson</h3>
-                            <p class="identity">Example City</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="testimonial-content">
-                    <div class="testimonial">
-                        <blockquote>
-                            <q>Lorem ipsum dolor sit amet.</q>
-                        </blockquote>
-                        <p>Lorem ipsum dolor sit amet elit. hic odio tenetur. ante ipsum primis in
-                            faucibus orci luctus.</p>
-                    </div>
-                    <div class="bottom-info mt-4">
-                        <a class="comment-img" href="#url"><img src="assets/images/testi2.jpg"
-                                class="img-responsive" alt="placeholder image"></a>
-                        <div class="people-info align-self">
-                            <h3>Julia sakura</h3>
-                            <p class="identity">Example City</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
--->
-<!-- //testimonials section -->
-
-<!-- team section -->
-<!--    <section class="w3l-team py-5">-->
-<!--        <div class="container py-md-5 py-4">-->
-<!--            <div class="row align-items-center mb-5">-->
-<!--                <div class="col-md-6 section-heading">-->
-<!--                    <h5 class="small-title-2">Our Teammates </h5>-->
-<!--                    <h3 class="title-style-2">Our Creative Team</h3>-->
-<!--                </div>-->
-<!--                <div class="col-md-6 section-heading mt-md-0 mt-2">-->
-<!--                    <p>-->
-<!--                        Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque,-->
-<!--                        eaque ipsa quae ab illo inventore.Sed ut perspiciatis unde omnis iste natus error sit.-->
-<!--                    </p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="row text-center">-->
-<!--                <div class="col-lg-3 col-sm-6">-->
-<!--                    <div class="team-block-single">-->
-<!--                        <div class="team-grids">-->
-<!--                            <a href="#team-single">-->
-<!--                                <img src="assets/images/team3.jpg" class="img-fluid" alt="">-->
-<!--                                <div class="team-info">-->
-<!--                                    <div class="social-icons-section">-->
-<!--                                        <a class="fac" href="#facebook">-->
-<!--                                            <span class="fab fa-facebook-ff"></span>-->
-<!--                                        </a>-->
-<!--                                        <a class="twitter mx-2" href="#twitter">-->
-<!--                                            <span class="fab fa-twitter"></span>-->
-<!--                                        </a>-->
-<!--                                        <a class="google" href="#google-plus">-->
-<!--                                            <span class="fab fa-google-plus-g"></span>-->
-<!--                                        </a>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </a>-->
-<!--                        </div>-->
-<!--                        <div class="team-bottom-block p-4">-->
-<!--                            <h5 class="member mb-1"><a href="#team">Olive Yew</a></h5>-->
-<!--                            <small>Web Developer</small>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="col-lg-3 col-sm-6 mt-sm-0 mt-4">-->
-<!--                    <div class="team-block-single">-->
-<!--                        <div class="team-grids">-->
-<!--                            <a href="#team-single">-->
-<!--                                <img src="assets/images/team2.jpg" class="img-fluid" alt="">-->
-<!--                                <div class="team-info">-->
-<!--                                    <div class="social-icons-section">-->
-<!--                                        <a class="fac" href="#facebook">-->
-<!--                                            <span class="fab fa-facebook-f"></span>-->
-<!--                                        </a>-->
-<!--                                        <a class="twitter mx-2" href="#twitter">-->
-<!--                                            <span class="fab fa-twitter"></span>-->
-<!--                                        </a>-->
-<!--                                        <a class="google" href="#google-plus">-->
-<!--                                            <span class="fab fa-google-plus-g"></span>-->
-<!--                                        </a>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </a>-->
-<!--                        </div>-->
-<!--                        <div class="team-bottom-block p-4">-->
-<!--                            <h5 class="member mb-1 active"><a href="#team">Aida Joe</a></h5>-->
-<!--                            <small>Marketing Head</small>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="col-lg-3 col-sm-6 mt-lg-0 mt-4">-->
-<!--                    <div class="team-block-single">-->
-<!--                        <div class="team-grids">-->
-<!--                            <a href="#team-single">-->
-<!--                                <img src="assets/images/team4.jpg" class="img-fluid" alt="">-->
-<!--                                <div class="team-info">-->
-<!--                                    <div class="social-icons-section">-->
-<!--                                        <a class="fac" href="#facebook">-->
-<!--                                            <span class="fab fa-facebook-f"></span>-->
-<!--                                        </a>-->
-<!--                                        <a class="twitter mx-2" href="#twitter">-->
-<!--                                            <span class="fab fa-twitter"></span>-->
-<!--                                        </a>-->
-<!--                                        <a class="google" href="#google-plus">-->
-<!--                                            <span class="fab fa-google-plus-g"></span>-->
-<!--                                        </a>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </a>-->
-<!--                        </div>-->
-<!--                        <div class="team-bottom-block p-4">-->
-<!--                            <h5 class="member mb-1"><a href="#team">Teri Dac</a></h5>-->
-<!--                            <small>Sales Manager</small>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="col-lg-3 col-sm-6 mt-lg-0 mt-4">-->
-<!--                    <div class="team-block-single">-->
-<!--                        <div class="team-grids">-->
-<!--                            <a href="#team-single">-->
-<!--                                <img src="assets/images/team1.jpg" class="img-fluid" alt="">-->
-<!--                                <div class="team-info">-->
-<!--                                    <div class="social-icons-section">-->
-<!--                                        <a class="fac" href="#facebook">-->
-<!--                                            <span class="fab fa-facebook-f"></span>-->
-<!--                                        </a>-->
-<!--                                        <a class="twitter mx-2" href="#twitter">-->
-<!--                                            <span class="fab fa-twitter"></span>-->
-<!--                                        </a>-->
-<!--                                        <a class="google" href="#google-plus">-->
-<!--                                            <span class="fab fa-google-plus-g"></span>-->
-<!--                                        </a>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </a>-->
-<!--                        </div>-->
-<!--                        <div class="team-bottom-block p-4">-->
-<!--                            <h5 class="member mb-1"><a href="#team">Anton Bne</a></h5>-->
-<!--                            <small>Event Organizer</small>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </section>-->
-<!-- //team setion -->
 </div>
 
 @endsection

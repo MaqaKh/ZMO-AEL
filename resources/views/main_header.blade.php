@@ -104,7 +104,7 @@
 
                         <ul class="nav navbar-nav ml-lg-auto">
                             <a class="navbar-brand" href="/prod">
-                                <img class="logoImg navbar-logo-partners" alt="Your logo" title="Your logo"
+                                <img class=" navbar-logo-partners" alt="Your logo" title="Your logo"
                                      src={{ asset('images/partnersN.png') }} />
                             </a>
                         </ul>
@@ -388,11 +388,14 @@
             if (scrolled) {
                 $('.logoImg').addClass('scrolled'); // Add scrolled class
                 $('.logoImg').removeClass('navbar-logo-main'); // Add scrolled class
+                $('.navbar-logo-partners').addClass('navbar-logo-partners-scrolled'); // Add scrolled class
                 $('.full-header').removeClass('min-height-150');
             } else {
                 $('.logoImg').addClass('navbar-logo-main');
                 $('.logoImg').removeClass('scrolled'); // Remove scrolled class
                 $('.full-header').addClass('min-height-150');
+                $('.navbar-logo-partners').removeClass('navbar-logo-partners-scrolled'); // Add scrolled class
+
             }
         });
 
