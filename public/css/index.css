@@ -155,9 +155,16 @@ RIGHT SIDEBAR TOGGLE SECTION
 }
 
 .navbar-logo-partners {
-    height: 90px;
+    height: 70px;
     transition: height 0.3s;
 }
+
+.navbar-logo-partners-scrolled {
+    height: 37px;
+    transition: height 0.3s;
+}
+
+
 .min-height-150 {
     min-height: 160px;
     background-color: black;
@@ -169,10 +176,17 @@ RIGHT SIDEBAR TOGGLE SECTION
 }
 
 .scrolled {
-    height: 60px; /* Height when scrolled */
+    height: 65px; /* Height when scrolled */
     transition: height 0.3s;
 }
 
 .mg-top-5 {
     margin-top: 5%;
+}
+
+
+.card-img-top {
+    object-fit: cover;
+    max-width: 100%;
+    width: 100%;
 }

@@ -1,22 +1,22 @@
 <!-- footer -->
-<footer class="w3l-footer-22 py-5">
+<footer class="w3l-footer-22 py-1">
     <div class="container ">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
                 <img alt="Your logo" title="Your logo"
                      src="{{ asset('images/zimmer-logo-full.png') }}"
-                     style=" max-height: 130px;"/>
+                     style=" max-height: 180px;"/>
             </div>
         </div>
         <div class="row justify-content-center">
             <div class="col-12 text-center">
                 <img alt="Your logo" title="Your logo"
                      src="{{ asset('images/partners.png') }}"
-                     style=" max-height: 200px;"/>
+                     style=" max-height: 150px; margin-top: -2%"/>
             </div>
         </div>
         <div class="row sub-columns">
-            <div class="col-lg-4 col-sm-6 sub-one-left">
+            <div class="col-lg-5 col-sm-6 sub-one-left">
                 <h6>About </h6>
                 <p>ZIMMER is a traditional German brand. Manufacturer of ZIMMER products to order, specializes in
                     the production of fuel additives, lubricants, gear oils, motor oils, specialty fluids, coolants
@@ -42,7 +42,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-3 col-sm-6 sub-two-right pl-lg-5 mt-sm-0 mt-5">
+            <div class="col-lg-4 col-sm-6 sub-two-right pl-lg-5 mt-sm-0 mt-5">
                 <h6>Our Products</h6>
                 <ul>
                     <li><a href="{{ url('/product') }}"><span class="fas fa-angle-right mr-2"></span>Engine Oil</a>
@@ -55,7 +55,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-lg-2 col-sm-6 sub-two-right mt-lg-0 mt-sm-5 mt-4">
+            <div class="col-lg-3 col-sm-6 sub-two-right mt-lg-0 mt-sm-5 mt-4">
                 <h6>Quick links</h6>
                 <ul>
                     <li><a href="{{ url('/') }}"><span class="fas fa-angle-right mr-2"></span>Home</a></li>
@@ -66,10 +66,10 @@
                     <li><a href="{{ url('/contact') }}"><span class="fas fa-angle-right mr-2"></span>Contact</a></li>
                 </ul>
             </div>
-            <div class="col-lg-3 col-sm-6 sub-two-right pl-lg-5 mt-lg-0 mt-sm-5 mt-4">
-                <img src={{asset('images/flags.png')}} alt="" class="img-responsive img-fluid"
-                     style="margin-top: -20%;"/>
-            </div>
+            {{--            <div class="col-lg-3 col-sm-6 sub-two-right pl-lg-5 mt-lg-0 mt-sm-5 mt-4">--}}
+            {{--                <img src={{asset('images/flags.png')}} alt="" class="img-responsive img-fluid"--}}
+            {{--                     style="margin-top: -20%;"/>--}}
+            {{--            </div>--}}
         </div>
         <div class="sub-contact mt-5 pt-lg-4">
             <div class="row">

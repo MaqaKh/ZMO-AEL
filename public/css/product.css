@@ -159,11 +159,16 @@ RIGHT SIDEBAR TOGGLE SECTION
 }
 
 .scrolled {
-    height: 50px; /* Height when scrolled */
+    height: 65px; /* Height when scrolled */
     transition: height 0.3s;
 }
 
 .navbar-logo-partners {
-    height: 70px;
+    height: 60px;
+    transition: height 0.3s;
+}
+
+.navbar-logo-partners-scrolled {
+    height: 37px;
     transition: height 0.3s;
 }

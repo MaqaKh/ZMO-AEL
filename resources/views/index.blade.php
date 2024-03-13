@@ -88,10 +88,10 @@ $currentLanguage = app()->getLocale(); // Get the current language
     <div class="container py-md-5 py-sm-4">
         <div class="row">
             <div class="col-lg-6 left-wthree-img mb-lg-0 mb-4 mg-top-5">
-                <img alt=" " class="img-fluid img-responsive" src={{asset('images/zimmer-intro.jfif')}}>
+                <img alt=" " class="img-fluid img-responsive" src={{asset('images/engine-oil-banner.gif')}}>
             </div>
             <div class="col-lg-6 about-right-faq align-self pl-lg-5">
-                <h3 class="title-style">The Largest Business Expert!</h3>
+                <h3 class="title-style">The Best of the Best!</h3>
                 <p class="mt-2">Unlock peak performance: Unleash the potential of your vehicle with ZIMMER's innovative,
                     German-engineered lubricants and car care products.</p>
                 <div class="mt-4 pt-md-2">
@@ -145,8 +145,8 @@ $currentLanguage = app()->getLocale(); // Get the current language
                 <div class="card" style="height: 450px; /* Set a fixed height for the card */">
                     <div class="card-header p-0 position-relative border-0">
                         <a href={{ route('product-details', ['id' => $product->id]) }}>
-                            <img alt="card-image" class="d-block img-responsive card-img-top"
-                                 src="{{$product->image_path}}" style="object-fit: cover; width: 100%; height: 100%;">
+                            <img alt="card-image" class="d-block card-img-top"
+                                 src="{{$product->image_path}}">
                         </a>
                     </div>
                     <div class="card-body service-details">

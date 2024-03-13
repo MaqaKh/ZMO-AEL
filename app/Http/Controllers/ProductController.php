@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
-
 use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -33,7 +32,7 @@ class ProductController extends Controller
         //return dd($categoryDescription);
         if ($category) {
             $products = $category->products()->paginate();
-            return view('product_filter', compact('products'));
+            return view('product_filter', compact('products', 'category'));
         } else {
             // Handle case where category with the given description does not exist
             // For example, return an error view or redirect back
