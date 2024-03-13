@@ -45,8 +45,8 @@ $currentLanguage = app()->getLocale(); // Get the current language
 
                     </div>
                     <div class="row mb-3">
-                        <a class="tech-pdf" style="min-width: 80%"> <img style="max-height:16px;"
-                                                                         src="{{asset('/images/icons/file-pdf-regular.svg')}}">
+                        <a class="tech-pdf" href="{{$product->pdf}}" target="_blank" style="min-width: 80%">
+                            <img style="max-height:16px;" src="{{asset('/images/icons/file-pdf-regular.svg')}}">
                             Technical data sheet</a>
                     </div>
                     <div class="row mb-3">
@@ -68,7 +68,6 @@ $currentLanguage = app()->getLocale(); // Get the current language
                     <div class="row justify-content-center">
 
                         <div>
-                            {{-- {!! $product->description_ru !!} --}}
                             @if($currentLanguage == 'en')
                                 {!! $product->description_en !!}
                             @elseif($currentLanguage == 'ru')
