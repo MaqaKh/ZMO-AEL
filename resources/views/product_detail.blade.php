@@ -54,9 +54,11 @@ $currentLanguage = app()->getLocale(); // Get the current language
 
                     </div>
                     <div class="row">
-                        <span class="product-pack">1L</span><span class="product-pack">2L</span><span
-                            class="product-pack">3L</span>
+
+                            <span class="product-pack">{{ $product->$pack_sizes }}</span>
+
                     </div>
+
                 </div>
                 <div class="col-md-8">
                     <div class="row justify-content-center">
