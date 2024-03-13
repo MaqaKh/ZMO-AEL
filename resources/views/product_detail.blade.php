@@ -55,7 +55,11 @@ $currentLanguage = app()->getLocale(); // Get the current language
                     </div>
                     <div class="row">
 
-                            <span class="product-pack">{{ $product->$pack_sizes }}</span>
+                        @if ($product->pack_sizes)
+                            @foreach (explode(',', $product->pack_sizes) as $pack_size)
+                                <span class="product-pack">{{ $pack_size }}</span>
+                            @endforeach
+                        @endif
 
                     </div>
 

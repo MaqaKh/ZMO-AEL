@@ -105,7 +105,7 @@
 
         <div class="row text-left">
 
-            @if ($currentLanguage == 'en' && $category->name_en == 'motor')
+            @if ($currentLanguage == 'en' && $category->id == 1)
                 <h2 class="mb-5"> ENGINE OIL: CLASS ILSAC GF-5
                 </h2>
                 <p class="mb-4">
@@ -167,7 +167,7 @@
                      class="d-block img-responsive"
                      src={{asset("images/motor-engine-oil-info.png")}}
                 >
-            @elseif ($currentLanguage == 'ru' && $category->name_en == 'motor')
+            @elseif ($currentLanguage == 'ru' && $category->id == 1)
                 <h2 class="mb-5"> МОТОРНОЕ МАСЛО: КЛАСС ILSAC GF-5
                 </h2>
                 <p class="mb-4">
