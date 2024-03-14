@@ -26,6 +26,12 @@ class ProductController extends Controller
 
         return view('coming_soon');
     }
+
+    public function gallery()
+    {
+        return view('gallery');
+    }
+
     public function filter($categoryDescription)
     {
         $category = Category::where('description_en', $categoryDescription)->first();

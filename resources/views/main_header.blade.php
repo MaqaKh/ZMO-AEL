@@ -35,9 +35,6 @@
                                     <a class="dropdown-item" href="{{ route('product.filter', ['category' => $category->description_en]) }}">{{$category->name_en}}</a>
 
                                     @endforeach
-                                    <!--                                <a class="dropdown-item" href="email-template.html">Email Template</a>-->
-                                    <!--                                <a class="dropdown-item" href="landing-single.html">Landing Page</a>-->
-                                    <!--                                <a class="dropdown-item" href="shortcodes.html">Shortcodes</a>-->
                                 </div>
                             </li>
                             <li class="nav-item">
@@ -64,7 +61,7 @@
                                 </div>
                             </li>
                             <li class="nav-item {{ request()->is('gallery') ? 'active' : '' }}">
-                                <a class="nav-link" href="{{ url('/cooming-soon') }}"
+                                <a class="nav-link" href="{{ url('/gallery') }}"
                                 >@lang('messages.gallery')</a>
                             </li>
                             <li class="nav-item {{ request()->is('contact') ? 'active' : '' }}">

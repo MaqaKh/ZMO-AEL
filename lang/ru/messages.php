@@ -16,6 +16,8 @@ return [
     'special' => 'Специальные',
     'gallery' => 'Галерея',
     'antifreeze' => 'Aнтифриз',
+    'engine-oil-menu' => 'Машинное масло',
+    'transmission-oil-menu' => 'Трансмиссионное масло',
     'specialProducts' => 'Специальные продукты',
     'transmission_oil'=>'Трансмиссионное масло',
     'engine_oil'=>'Машинное масло',

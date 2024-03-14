@@ -1,14 +1,12 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProductController;
-use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\Admin\AdminCategoryController;
+use App\Http\Controllers\Admin\AdminProductController;
+use App\Http\Controllers\ConstructionController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LanguageController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\Admin\AdminProductController;
-use App\Http\Controllers\Admin\AdminCategoryController;
-use App\Http\Controllers\ConstructionController;
+use App\Http\Controllers\ProductController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,6 +58,7 @@ Route::get('/services', function () {
 
 
 Route::get('/cooming-soon', [ProductController::class, 'cooming_soon'])->name('cooming-soon');
+Route::get('/gallery', [ProductController::class, 'gallery'])->name('gallery');
 Route::get('/product', [ProductController::class, 'index'])->name('product');
 Route::get('/product/{category}', [ProductController::class, 'filter'])->name('product.filter');
 

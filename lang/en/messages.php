@@ -11,6 +11,8 @@ return [
     'hydraulic' => 'Hydraulic',
     'industrial' => 'Industrial',
     'compressor' => 'Compressor',
+    'engine-oil-menu' => 'Engine Oil',
+    'transmission-oil-menu' => 'Transmission Oil',
     'marine' => 'Marine',
     'turbine' => 'Turbine',
     'special' => 'Special',
