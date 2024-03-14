@@ -29,13 +29,17 @@
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     @lang('messages.automotive') <span class="fa fa-angle-down"></span>
                                 </a>
+
+
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                                    @foreach($categories as $category)
+                                    @foreach($categories['mainCategories'] as $category)
                                     <a class="dropdown-item" href="{{ route('product.filter', ['category' => $category->description_en]) }}">{{$category->name_en}}</a>
 
                                     @endforeach
                                 </div>
+
+
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -52,14 +56,20 @@
                                 </div>
                             </li>
                             <li class="nav-item">
+
+
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     @lang('messages.specialProducts') <span class="fa fa-angle-down"></span>
                                 </a>
+                                @if(isset($categories['antifreezeCategory']))
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="/cooming-soon"> @lang('messages.antifreeze')</a>
+                                    <a class="dropdown-item" href="{{ route('product.filter', ['category' =>$categories['antifreezeCategory']->description_en]) }}">{{ $categories['antifreezeCategory']['name_en'] }}</a>
                                 </div>
+                                @endif
                             </li>
+
+
                             <li class="nav-item {{ request()->is('gallery') ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ url('/gallery') }}"
                                 >@lang('messages.gallery')</a>

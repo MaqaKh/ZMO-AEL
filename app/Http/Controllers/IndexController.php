@@ -9,10 +9,24 @@ class IndexController extends Controller
 {
     public function index()
     {
+        // Fetch all products with their categories
+        $products = Product::with('category')->paginate();
 
-        $products=Product::with('category')->paginate();
- 
-        return view('index',['products'=>$products]);
+        // Fetch related products for each product
+        foreach ($products as $product) {
+            // Example: Fetch related products based on the same category
+            $relatedProducts = Product::where('category_id', $product->category_id)
+                                      ->where('id', '!=', $product->id) // Exclude the current product
+                                      ->limit(3) // Limit to 3 related products
+                                      ->get();
+
+            // Assign related products to the current product
+            $product->relatedProducts = $relatedProducts;
+
+
+        }
+
+        return view('index', ['products' => $products]);
     }
 
     /**
