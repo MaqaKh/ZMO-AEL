@@ -1,4 +1,6 @@
-
+@php
+$currentLanguage = app()->getLocale(); // Get the current language
+@endphp
 <main_header>
     <header id="site-header" class="fixed-top full-header min-height-150">
         <div class="container-fluid">
@@ -34,7 +36,42 @@
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
                                     @foreach($categories['mainCategories'] as $category)
-                                    <a class="dropdown-item" href="{{ route('product.filter', ['category' => $category->description_en]) }}">{{$category->name_en}}</a>
+
+                                    @php
+                                    $categoryName = '';
+                                    switch ($currentLanguage) {
+                                        case 'en':
+                                            $categoryName = $category->name_en;
+                                            break;
+                                        case 'ru':
+                                            $categoryName = $category->name_ru;
+                                            break;
+                                        case 'ge':
+                                            $categoryName = $category->name_ge;
+                                            break;
+                                        // Add cases for other languages if needed
+                                        default:
+                                            $categoryName = $category->name_en; // Default to English
+                                    }
+
+                                    $categoryDescription = '';
+                                switch ($currentLanguage) {
+                                    case 'en':
+                                        $categoryDescription = $category->description_en;
+                                        break;
+                                    case 'ru':
+                                        $categoryDescription = $category->description_ru;
+                                        break;
+                                    case 'ru':
+                                    $categoryDescription = $category->description_ge;
+                                        break;
+                                    // Add cases for other languages if needed
+                                    default:
+                                        $categoryDescription = $category->description_en; // Default to English
+    }
+                                    @endphp
+
+                                    <a class="dropdown-item" href="{{ route('product.filter', ['category' =>$categoryDescription]) }}">{{$categoryName}}</a>
 
                                     @endforeach
                                 </div>
@@ -62,9 +99,42 @@
                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     @lang('messages.specialProducts') <span class="fa fa-angle-down"></span>
                                 </a>
+                                @php
+                                $categoryName = '';
+                                switch ($currentLanguage) {
+                                    case 'en':
+                                        $categoryName = $categories['antifreezeCategory']['name_en'];
+                                        break;
+                                    case 'ru':
+                                        $categoryName =$categories['antifreezeCategory']['name_ru'];
+                                        break;
+                                    case 'ge':
+                                        $categoryName = $categories['antifreezeCategory']['name_ge'];
+                                        break;
+                                    // Add cases for other languages if needed
+                                    default:
+                                        $categoryName = $category->name_en; // Default to English
+                                }
+
+                                $descriptionName = '';
+                                switch ($currentLanguage) {
+                                    case 'en':
+                                        $descriptionName = $categories['antifreezeCategory']->description_en;
+                                        break;
+                                    case 'ru':
+                                        $descriptionName =$categories['antifreezeCategory']->description_ru;
+                                        break;
+                                    case 'ge':
+                                        $descriptionName = $categories['antifreezeCategory']->description_ge;
+                                        break;
+                                    // Add cases for other languages if needed
+                                    default:
+                                        $descriptionName = $category->name_en; // Default to English
+                                }
+                                @endphp
                                 @if(isset($categories['antifreezeCategory']))
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('product.filter', ['category' =>$categories['antifreezeCategory']->description_en]) }}">{{ $categories['antifreezeCategory']['name_en'] }}</a>
+                                    <a class="dropdown-item" href="{{ route('product.filter', ['category' =>$descriptionName]) }}">{{ $categoryName }}</a>
                                 </div>
                                 @endif
                             </li>
