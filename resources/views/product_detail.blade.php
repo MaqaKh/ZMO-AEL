@@ -84,6 +84,46 @@ $currentLanguage = app()->getLocale(); // Get the current language
 
 
             </div>
+
+            {{--            Related Products should come here, only 3 of them           --}}
+
+            {{--            <div class="row">--}}
+            {{--                @foreach($products as $product)--}}
+            {{--                    <div class="col-lg-4 col-md-6 mt-lg-0 mt-4 mb-4">--}}
+            {{--                        <div class="card" style="height: 450px; /* Set a fixed height for the card */">--}}
+            {{--                            <div class="card-header p-0 position-relative border-0">--}}
+            {{--                                <a href={{ route('product-details', ['id' => $product->id]) }}>--}}
+            {{--                                    <img alt="card-image" class="d-block card-img-top"--}}
+            {{--                                         src="{{$product->image_path}}">--}}
+            {{--                                </a>--}}
+            {{--                            </div>--}}
+            {{--                            <div class="card-body service-details">--}}
+            {{--                        <span class="label-style label-style-3">--}}
+
+            {{--                            --}}{{-- {{$product->category->name}} --}}
+
+            {{--                            @if($currentLanguage == 'en')--}}
+            {{--                                {{$product->category->name_en}}--}}
+            {{--                            @elseif($currentLanguage == 'ru')--}}
+            {{--                                {{$product->category->name_ru}}--}}
+            {{--                            @elseif($currentLanguage == 'ge')--}}
+            {{--                                {{$product->category->name_ge}}--}}
+            {{--                            @else--}}
+            {{--                                {{$product->category->name_en}}--}}
+            {{--                            @endif--}}
+            {{--                        </span>--}}
+            {{--                                <a class="service-heading" href={{ route('product-details', ['id' => $product->id]) }}>{{$product->name}}</a>--}}
+            {{--                                <p>--}}
+            {{--                                    <!-- Your additional content here -->--}}
+            {{--                                </p>--}}
+            {{--                            </div>--}}
+            {{--                        </div>--}}
+            {{--                    </div>--}}
+            {{--                @endforeach--}}
+            {{--            </div>--}}
+
+
+
         </div>
     </div>
 
