@@ -14863,3 +14863,31 @@ h5.texti {
 .min-h-160 {
     min-height: 160px;
 }
+
+
+#lang-switcher {
+    cursor: default;
+    height: 30px;
+    padding: 0px 10px;
+    border: 0px;
+    background-color: transparent;
+    float: right;
+}
+
+#lang-switcher-list {
+    padding: 5px;
+    /*overflow-y: scroll;*/
+    max-height: 90vh;
+}
+
+#lang-switcher:hover {
+    background-color: #ddd;
+}
+
+.dropdown-item-lang {
+    display: block !important;
+}
+
+.dropdown-menu-lang {
+    min-width: 80px !important;
+}

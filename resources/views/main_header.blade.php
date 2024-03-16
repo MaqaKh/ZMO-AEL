@@ -149,32 +149,62 @@ $currentLanguage = app()->getLocale(); // Get the current language
                                 >@lang('messages.contacts')</a>
                             </li>
                             <li class="nav-item">
-                                <div class="nav-link language-container">
+                                <div class="nav-link">
 
-                                    @if(Session::get('locale') == 'en')
-                                    <a href="{{ route('lang.switch', 'ru') }}"
-                                    >RU</a> |
-                                    <a href="{{ route('lang.switch', 'ge') }}"
-                                    >GE</a>
+                                    <div class="dropdown">
+                                        <a data-target="#" href="http://example.com" data-toggle="dropdown"
+                                           role="button" aria-haspopup="true" aria-expanded="false"
+                                           previewlistener="true">
+                                            <span id="current-lang">
+                                                <?php if (session('locale') === 'us') : ?>
+                                                    <img src="https://cdn.parcellab.com/img/flags/us.png" class="flag"
+                                                         alt="Flag representing language">
+                                                    en
+                                                <?php elseif (session('locale') === 'ru') : ?>
+                                                    <img src="https://cdn.parcellab.com/img/flags/ru.png" class="flag"
+                                                         alt="Flag representing language">
+                                                    ru
+                                                <?php else : ?>
+                                                    <img src="https://cdn.parcellab.com/img/flags/de.png" class="flag"
+                                                         alt="Flag representing language">
+                                                    ge
+                                                <?php endif; ?>
+                                            </span>
+                                            <span class="caret"></span>
+                                        </a>
+                                        <ul id="lang-switcher-list" class="dropdown-menu">
+                                            <?php if (session('locale') === 'us') : ?>
+                                            <li class="dropdown-item-lang"><a href="{{ route('lang.switch', 'ge') }}"
+                                                                              previewlistener="true"><img
+                                                        src="https://cdn.parcellab.com/img/flags/de.png" class="flag"
+                                                        alt="Flag representing language"> ge</a></li>
+                                            <li class="dropdown-item-lang"><a href="{{ route('lang.switch', 'ru') }}"
+                                                                              previewlistener="true"><img
+                                                        src="https://cdn.parcellab.com/img/flags/ru.png" class="flag"
+                                                        alt="Flag representing language"> ru</a></li>
+                                            <?php elseif (session('locale') === 'ru') : ?>
+                                            <li class="dropdown-item-lang"><a href="{{ route('lang.switch', 'ge') }}"
+                                                                              previewlistener="true"><img
+                                                        src="https://cdn.parcellab.com/img/flags/de.png" class="flag"
+                                                        alt="Flag representing language"> ge</a></li>
+                                            <li class="dropdown-item-lang"><a href="{{ route('lang.switch', 'us') }}"
+                                                                              previewlistener="true"><img
+                                                        src="https://cdn.parcellab.com/img/flags/us.png" class="flag"
+                                                        alt="Flag representing language"> en</a></li>
+                                            <?php else : ?>
+                                            <li class="dropdown-item-lang"><a href="{{ route('lang.switch', 'ru') }}"
+                                                                              previewlistener="true"><img
+                                                        src="https://cdn.parcellab.com/img/flags/ru.png" class="flag"
+                                                        alt="Flag representing language"> ru</a></li>
+                                            <li class="dropdown-item-lang"><a href="{{ route('lang.switch', 'us') }}"
+                                                                              previewlistener="true"><img
+                                                        src="https://cdn.parcellab.com/img/flags/us.png" class="flag"
+                                                        alt="Flag representing language"> en</a></li>
+                                            <?php endif; ?>
+                                        </ul>
+                                    </div>
 
-                                    @elseif(Session::get('locale') == 'ru')
-                                    <a href="{{ route('lang.switch', 'en') }}"
-                                    >EN</a>
-                                    <a href="{{ route('lang.switch', 'ge') }}"
-                                    >GE</a>
 
-                                    @elseif(Session::get('locale') == 'ge')
-                                    <a href="{{ route('lang.switch', 'en') }}"
-                                    >EN</a>
-                                    <a href="{{ route('lang.switch', 'ru') }}"
-                                    >RU</a>
-                                    @else
-                                    <a href="{{ route('lang.switch', 'ru') }}"
-                                    >RU</a>|
-                                    <a href="{{ route('lang.switch', 'ge') }}"
-                                    >GE</a>
-
-                                    @endif
                                 </div>
                             </li>
                         </ul>
@@ -208,6 +238,29 @@ $currentLanguage = app()->getLocale(); // Get the current language
     </header>
 
     <script src="{{asset('js/theme-change.js')}}"></script>
+    <scirpt>
+        $('#germany').click(function () {
+        $('#germany').addClass('active');
+        $('#france, #unitedKingdom').removeClass('active');
+        $( "#lang2, #lang3" ).toggle( "slow", function() {
+        });
+        $('.select-lang').attr('style', 'height:30px');
+        })
+        $('#france').click(function () {
+        $('#france').addClass('active');
+        $('#germany, #unitedKingdom').removeClass('active');
+        $( "#lang1, #lang3" ).toggle( "slow", function() {
+        });
+        $('.select-lang').attr('style', 'height:30px');
+        })
+        $('#unitedKingdom').click(function () {
+        $('#unitedKingdom').addClass('active');
+        $('#germany, #france').removeClass('active');
+        $( "#lang1, #lang2" ).toggle( "slow", function() {
+        });
+        $('.select-lang').attr('style', 'height:30px');
+        })
+    </scirpt>
     <script>
         // Your JavaScript code for the header
         function autoType(elementClass, typingSpeed) {
