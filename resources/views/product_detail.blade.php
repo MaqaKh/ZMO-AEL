@@ -33,9 +33,9 @@
             <div class="container py-md-5 py-4">
                 <div class="row mx-auto">
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 border-rb-1px">
                         <div class="row">
-                            <div class="single-post-image post-img mb-4">
+                            <div class="single-post-image post-img mb-4 mr-4">
 
                                 <img alt="blog-post-image" class="img-responsive"
                                      src="{{$product->image_path}}"/>
@@ -43,7 +43,7 @@
                             </div>
 
                         </div>
-                        <div class="row mb-3">
+                        <div class="row mb-3 mr-1">
                             <a class="tech-pdf" href="{{$product->pdf}}" target="_blank">
                                 <img style="max-height:16px;" src="{{asset('/images/icons/file-pdf-regular.svg')}}">
                                 Technical data sheet</a>
@@ -63,7 +63,7 @@
                         </div>
 
                     </div>
-                    <div class="col-md-7 ml-5">
+                    <div class="col-md-7 ml-4">
                         <div class="row justify-content-center">
 
                             <div>
@@ -84,6 +84,7 @@
 
                 </div>
 
+                <hr style="margin-top:0px;">
 
                 <div class="row mt-5">
                     <h2 class="">Related Products</h2>

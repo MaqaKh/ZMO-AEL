@@ -190,6 +190,10 @@ RIGHT SIDEBAR TOGGLE SECTION
     width: 40px;
     text-align: center;
     margin-right: 5%;
-    border: 1px solid #edefff;
+    border: 1px solid #d7dbf4;
     border-radius: 5px;
+}
+
+.border-rb-1px {
+    border-right: 1px solid #d7dbf4;
 }
