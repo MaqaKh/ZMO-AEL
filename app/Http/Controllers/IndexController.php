@@ -10,7 +10,7 @@ class IndexController extends Controller
     public function index()
     {
         // Fetch all products with their categories
-        $products = Product::with('category')->paginate();
+        $products = Product::with('category')->orderBy('created_at')->paginate();
 
         // Fetch related products for each product
         foreach ($products as $product) {

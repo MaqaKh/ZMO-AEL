@@ -76,6 +76,14 @@ class ProductController extends Controller
             return view('error');
         }
 
+        $relatedProducts = Product::where('category_id', $product->category_id)
+            ->where('id', '!=', $product->id) // Exclude the current product
+            ->limit(3) // Limit to 3 related products
+            ->get();
+
+        // Assign related products to the current product
+        $product->relatedProducts = $relatedProducts;
+
         return view('product_detail', compact('product'));
     }
 
