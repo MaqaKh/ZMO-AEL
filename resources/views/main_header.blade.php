@@ -238,29 +238,6 @@ $currentLanguage = app()->getLocale(); // Get the current language
     </header>
 
     <script src="{{asset('js/theme-change.js')}}"></script>
-    <scirpt>
-        $('#germany').click(function () {
-        $('#germany').addClass('active');
-        $('#france, #unitedKingdom').removeClass('active');
-        $( "#lang2, #lang3" ).toggle( "slow", function() {
-        });
-        $('.select-lang').attr('style', 'height:30px');
-        })
-        $('#france').click(function () {
-        $('#france').addClass('active');
-        $('#germany, #unitedKingdom').removeClass('active');
-        $( "#lang1, #lang3" ).toggle( "slow", function() {
-        });
-        $('.select-lang').attr('style', 'height:30px');
-        })
-        $('#unitedKingdom').click(function () {
-        $('#unitedKingdom').addClass('active');
-        $('#germany, #france').removeClass('active');
-        $( "#lang1, #lang2" ).toggle( "slow", function() {
-        });
-        $('.select-lang').attr('style', 'height:30px');
-        })
-    </scirpt>
     <script>
         // Your JavaScript code for the header
         function autoType(elementClass, typingSpeed) {
