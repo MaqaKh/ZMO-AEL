@@ -34,5 +34,6 @@ return [
     'about_3_var_2_desc'=>"Use our products to achieve the best performance",
     'about_3_var_3_head'=>"Accessories",
     'about_3_var_3_desc'=>"Car accessories to easy and enjoy your ride",
+    'about_in_footer'=>"ZIMMER is a traditional German brand. Manufacturer of ZIMMER products to order, specializes in the production of fuel additives, lubricants, gear oils, motor oils, specialty fluids, coolants and car chemicals.",
 
 ];

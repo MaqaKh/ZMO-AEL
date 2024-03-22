@@ -17,10 +17,8 @@
         </div>
         <div class="row sub-columns">
             <div class="col-lg-5 col-sm-6 sub-one-left">
-                <h6>About </h6>
-                <p>ZIMMER is a traditional German brand. Manufacturer of ZIMMER products to order, specializes in
-                    the production of fuel additives, lubricants, gear oils, motor oils, specialty fluids, coolants
-                    and car chemicals. </p>
+                <h6>@lang('messages.about') </h6>
+                <p>@lang('messages.about_in_footer')</p>
                 <div class="columns-2">
                     <ul class="social">
                         <li><a href="#facebook" title="facebook"><span class="fab fa-facebook-f"
@@ -45,11 +43,11 @@
             <div class="col-lg-4 col-sm-6 sub-two-right pl-lg-5 mt-sm-0 mt-5">
                 <h6>Our Products</h6>
                 <ul>
-                    <li><a href="{{ url('/product') }}"><span class="fas fa-angle-right mr-2"></span>Engine Oil</a>
+                    <li><a href="{{ url('/product') }}"><span class="fas fa-angle-right mr-2"></span>@lang('messages.engine-oil-menu')</a>
                     </li>
-                    <li><a href="{{ url('/product') }}"><span class="fas fa-angle-right mr-2"></span>Transmission Oil</a>
+                    <li><a href="{{ url('/product') }}"><span class="fas fa-angle-right mr-2"></span>@lang('messages.transmission-oil-menu')</a>
                     </li>
-                    <li><a href="{{ url('/product') }}"><span class="fas fa-angle-right mr-2"></span>Accessories</a>
+                    <li><a href="{{ url('/product') }}"><span class="fas fa-angle-right mr-2"></span>@lang('messages.transmission-oil-menu')</a>
                     </li>
                     <li><a href="{{ url('/product') }}"><span class="fas fa-angle-right mr-2"></span>All Products</a>
                     </li>
@@ -59,11 +57,11 @@
                 <h6>Quick links</h6>
                 <ul>
                     <li><a href="{{ url('/') }}"><span class="fas fa-angle-right mr-2"></span>Home</a></li>
-                    <li><a href="{{ url('/about') }}"><span class="fas fa-angle-right mr-2"></span>About</a>
+                    <li><a href="{{ url('/about') }}"><span class="fas fa-angle-right mr-2"></span>@lang('messages.about')</a>
                     </li>
-                    <li><a href="{{ url('/product') }}"><span class="fas fa-angle-right mr-2"></span>Products</a>
+                    <li><a href="{{ url('/product') }}"><span class="fas fa-angle-right mr-2"></span>@lang('messages.products')</a>
                     </li>
-                    <li><a href="{{ url('/contact') }}"><span class="fas fa-angle-right mr-2"></span>Contact</a></li>
+                    <li><a href="{{ url('/contact') }}"><span class="fas fa-angle-right mr-2"></span>@lang('messages.contacts')</a></li>
                 </ul>
             </div>
             {{--            <div class="col-lg-3 col-sm-6 sub-two-right pl-lg-5 mt-lg-0 mt-sm-5 mt-4">--}}
