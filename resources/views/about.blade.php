@@ -122,8 +122,8 @@
  <section class="home-services py-5">
     <div class="container py-md-5 py-4">
         <div class="section-heading text-center mb-5">
-            <h5 class="small-title-2">Our Services </h5>
-            <h3 class="title-style-2">Why Choose Us</h3>
+            <h5 class="small-title-2">@lang('messages.about_3_header_1') </h5>
+            <h3 class="title-style-2">@lang('messages.about_3_header_2') </h3>
         </div>
         <div class="row justify-content-center">
             <div class="box-wrap col-lg-4 col-md-6">
@@ -132,9 +132,9 @@
                         <span class="fas fa-oil-can"></span>
                     </div>
                     <div class="info">
-                        <h4><a href="{{ url('/services') }}">Lubricants</a></h4>
+                        <h4><a href="{{ url('/services') }}">@lang('messages.about_3_var_1_head')</a></h4>
                     </div>
-                    <p class="mt-3">Quality lubricants for engine</p>
+                    <p class="mt-3">@lang('messages.about_3_var_1_desc')</p>
                 </div>
             </div>
             <div class="box-wrap col-lg-4 col-md-6 mt-md-0 mt-4">
@@ -143,9 +143,9 @@
                         <span class="fas fa-car"></span>
                     </div>
                     <div class="info">
-                        <h4><a href="{{ url('/services') }}">Car care</a></h4>
+                        <h4><a href="{{ url('/services') }}">@lang('messages.about_3_var_2_head')</a></h4>
                     </div>
-                    <p class="mt-3">Use our products to achieve the best performance</p>
+                    <p class="mt-3">@lang('messages.about_3_var_2_desc')</p>
                 </div>
             </div>
             <div class="box-wrap col-lg-4 col-md-6 mt-lg-0 mt-md-5 mt-4">
@@ -154,9 +154,9 @@
                         <span class="fas fa-lightbulb"></span>
                     </div>
                     <div class="info">
-                        <h4><a href="{{ url('/services') }}">Accessories</a></h4>
+                        <h4><a href="{{ url('/services') }}">@lang('messages.about_3_var_3_head')</a></h4>
                     </div>
-                    <p class="mt-3">Car accessories to easy and enjoy your ride</p>
+                    <p class="mt-3">@lang('messages.about_3_var_3_desc')</p>
                 </div>
             </div>
         </div>

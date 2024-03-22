@@ -22,5 +22,12 @@ return [
     'promotional_accesories' => 'Werbeartikel',
     'contacts' => 'Kontakt',
     'home-h1' => 'Der größte Business-Experte!',
-
+    'about_3_header_1' => "Unsere Dienstleistungen",
+    'about_3_header_2' =>"Warum uns wählen",
+    'about_3_var_1_head'=>"Schmierstoffe",
+    'about_3_var_1_desc'=>"Qualitätsschmierstoffe für den Motor",
+    'about_3_var_2_head'=>"Autopflege",
+    'about_3_var_2_desc'=>"Nutzen Sie unsere Produkte, um die beste Leistung zu erzielen",
+    'about_3_var_3_head'=>"Zubehör",
+    'about_3_var_3_desc'=>"Autozubehör für einfaches und angenehmes Fahren",
 ];
