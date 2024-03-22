@@ -41,7 +41,7 @@
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6 sub-two-right pl-lg-5 mt-sm-0 mt-5">
-                <h6>Our Products</h6>
+                <h6>@lang('messages.products')</h6>
                 <ul>
                     <li><a href="{{ url('/product') }}"><span class="fas fa-angle-right mr-2"></span>@lang('messages.engine-oil-menu')</a>
                     </li>
@@ -49,14 +49,14 @@
                     </li>
                     <li><a href="{{ url('/product') }}"><span class="fas fa-angle-right mr-2"></span>@lang('messages.transmission-oil-menu')</a>
                     </li>
-                    <li><a href="{{ url('/product') }}"><span class="fas fa-angle-right mr-2"></span>All Products</a>
+                    <li><a href="{{ url('/product') }}"><span class="fas fa-angle-right mr-2"></span>@lang('messages.all_products')</a>
                     </li>
                 </ul>
             </div>
             <div class="col-lg-3 col-sm-6 sub-two-right mt-lg-0 mt-sm-5 mt-4">
-                <h6>Quick links</h6>
+                <h6>@lang('messages.quick_link_footer')</h6>
                 <ul>
-                    <li><a href="{{ url('/') }}"><span class="fas fa-angle-right mr-2"></span>Home</a></li>
+                    <li><a href="{{ url('/') }}"><span class="fas fa-angle-right mr-2"></span>@lang('messages.home')</a></li>
                     <li><a href="{{ url('/about') }}"><span class="fas fa-angle-right mr-2"></span>@lang('messages.about')</a>
                     </li>
                     <li><a href="{{ url('/product') }}"><span class="fas fa-angle-right mr-2"></span>@lang('messages.products')</a>

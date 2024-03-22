@@ -6,6 +6,7 @@ return [
     'home' => 'Startseite',
     'about' => 'Über uns',
     'products' => 'Produkte',
+    'all_products' => "Alle Produkte",
     'automotive' => 'Automobil',
     'industry' => 'Industrie',
     'hydraulic' => 'Hydraulik',
@@ -19,6 +20,8 @@ return [
     'specialProducts' => 'Spezielle Produkte',
     'transmission_oil' => 'Getriebeöl',
     'engine_oil' => 'Motorenöl',
+    'engine-oil-menu' => "Motorenöl",
+    'transmission-oil-menu' => "Getriebeöl",
     'promotional_accesories' => 'Werbeartikel',
     'contacts' => 'Kontakt',
     'home-h1' => 'Der größte Business-Experte!',
@@ -31,4 +34,8 @@ return [
     'about_3_var_3_head'=>"Zubehör",
     'about_3_var_3_desc'=>"Autozubehör für einfaches und angenehmes Fahren",
     'about_in_footer' => "ZIMMER ist eine deutsche Traditionsmarke. Hersteller von ZIMMER-Sonderprodukten, spezialisiert auf die Herstellung von Kraftstoffadditiven, Schmiermitteln, Getriebeölen, Motorölen, Spezialflüssigkeiten, Kühlmitteln und Autochemikalien",
+    'quick_link_footer' =>"SCHNELLE LINKS",
+
+
+
 ];
