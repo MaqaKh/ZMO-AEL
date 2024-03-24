@@ -3,53 +3,56 @@
 
 @section('content')
 
-    <section class="w3l-text-6 py-5" id="about">
-        <div class="text-6-mian py-md-5 py-4">
-            <div class="container">
-                <div class="row top-cont-grid align-items-center">
-                    <div class="col-lg-6 left-img pr-lg-4 order-lg-first order-last">
-                        <div class="row mt-3">
-                            <div class="col-6 img-pad pr-2">
-                                <img src="{{asset("/images/team2.jpg")}}" alt="" class="img-responsive img-fluid"/>
-                            </div>
-                            <div class="col-6 img-pad-2 pl-2">
-                                <img src="{{asset("/images/team3.jpg")}}" alt="" class="img-responsive img-fluid"/>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-6 img-pad pr-2">
-                                <img src="{{asset("/images/team2.jpg")}}" alt="" class="img-responsive img-fluid"/>
-                            </div>
-                            <div class="col-6 img-pad-2 pl-2">
-                                <img src="{{asset("/images/team3.jpg")}}" alt="" class="img-responsive img-fluid"/>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 left-img pr-lg-4 order-lg-first order-last">
-                        <div class="row mt-3">
-                            <div class="col-6 img-pad pr-2">
-                                <img src="{{asset("/images/team2.jpg")}}" alt="" class="img-responsive img-fluid"/>
-                            </div>
-                            <div class="col-6 img-pad-2 pl-2">
-                                <img src="{{asset("/images/team3.jpg")}}" alt="" class="img-responsive img-fluid"/>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-6 img-pad pr-2">
-                                <img src="{{asset("/images/team1.jpg")}}" alt="" class="img-responsive img-fluid"/>
-                            </div>
-                            <div class="col-6 img-pad-2 pl-2">
-                                <img src="{{asset("/images/team2.jpg")}}" alt="" class="img-responsive img-fluid"/>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+    <div class="container mb-5" style="margin-top:10%;">
+        <div class="row mt-5 mb-5">
+            <a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-gallery="gallery"
+               class="col-md-4">
+                <img src="{{ asset('images/gallery/1.png') }}" class="img-fluid rounded">
+            </a>
+            <a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox" data-gallery="gallery"
+               class="col-md-4">
+                <img src="{{ asset('images/gallery/2.png') }}" class="img-fluid rounded">
+            </a>
+            <a href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox" data-gallery="gallery"
+               class="col-md-4">
+                <img src="{{ asset('images/gallery/7.png') }}" class="img-fluid rounded">
+            </a>
         </div>
-    </section>
+        <div class="row mt-5 mb-5">
+            <a href="https://unsplash.it/1200/768.jpg?image=254" data-toggle="lightbox" data-gallery="gallery"
+               class="col-md-4">
+                <img src="{{ asset('images/gallery/4.png') }}" class="img-fluid rounded">
+            </a>
+            <a href="https://unsplash.it/1200/768.jpg?image=255" data-toggle="lightbox" data-gallery="gallery"
+               class="col-md-4">
+                <img src="{{ asset('images/gallery/5.png') }}" class="img-fluid rounded">
+            </a>
+            <a href="https://unsplash.it/1200/768.jpg?image=256" data-toggle="lightbox" data-gallery="gallery"
+               class="col-md-4">
+                <img src="{{ asset('images/gallery/6.png') }}" class="img-fluid rounded">
+            </a>
+        </div>
+
+        <div class="row mt-5 mb-5">
+            <a href="https://unsplash.it/1200/768.jpg?image=254" data-toggle="lightbox" data-gallery="gallery"
+               class="col-md-4">
+                <img src="{{ asset('images/gallery/8.png') }}" class="img-fluid rounded">
+            </a>
+            <a href="https://unsplash.it/1200/768.jpg?image=255" data-toggle="lightbox" data-gallery="gallery"
+               class="col-md-4">
+                <img src="{{ asset('images/gallery/9.png') }}" class="img-fluid rounded">
+            </a>
+            <a href="https://unsplash.it/1200/768.jpg?image=256" data-toggle="lightbox" data-gallery="gallery"
+               class="col-md-4">
+                <img src="{{ asset('images/gallery/11.png') }}" class="img-fluid rounded">
+            </a>
+        </div>
+    </div>
+
+
 @endsection
 @section('styles')
-    <link rel="stylesheet" href="{{ asset('css/product.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/gallery.css') }}">
 
 @endsection
+
