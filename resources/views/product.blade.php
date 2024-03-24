@@ -8,10 +8,10 @@
 <section class="inner-banner">
     <div class="w3l-breadcrumb py-5">
         <div class="container py-xl-5 py-md-4 mt-5">
-            <h4 class="inner-text-title font-weight-bold mb-sm-2">Product</h4>
+            <h4 class="inner-text-title font-weight-bold mb-sm-2">@lang('messages.products')</h4>
             <ul class="breadcrumbs-custom-path">
-                <li><a href="{{ url('/') }}">Home</a></li>
-                <li class="active"><span aria-hidden="true" class="fa fa-chevron-right mx-2"></span>Products</li>
+                <li><a href="{{ url('/') }}">@lang('messages.home')</a></li>
+                <li class="active"><span aria-hidden="true" class="fa fa-chevron-right mx-2"></span>@lang('messages.products')</li>
             </ul>
         </div>
     </div>

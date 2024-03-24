@@ -9,10 +9,10 @@
 <section class="inner-banner">
     <div class="w3l-breadcrumb py-5">
         <div class="container py-xl-5 py-md-4 mt-5">
-            <h4 class="inner-text-title font-weight-bold mb-sm-2">About Us</h4>
+            <h4 class="inner-text-title font-weight-bold mb-sm-2">@lang('messages.about')</h4>
             <ul class="breadcrumbs-custom-path">
-                <li><a href="{{ url('/index') }}">Home</a></li>
-                <li class="active"><span class="fa fa-chevron-right mx-2" aria-hidden="true"></span>About Us</li>
+                <li><a href="{{ url('/index') }}">@lang('messages.home')</a></li>
+                <li class="active"><span class="fa fa-chevron-right mx-2" aria-hidden="true"></span>@lang('messages.about')</li>
             </ul>
         </div>
     </div>

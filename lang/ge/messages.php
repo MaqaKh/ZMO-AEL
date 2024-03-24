@@ -35,7 +35,18 @@ return [
     'about_3_var_3_desc'=>"Autozubehör für einfaches und angenehmes Fahren",
     'about_in_footer' => "ZIMMER ist eine deutsche Traditionsmarke. Hersteller von ZIMMER-Sonderprodukten, spezialisiert auf die Herstellung von Kraftstoffadditiven, Schmiermitteln, Getriebeölen, Motorölen, Spezialflüssigkeiten, Kühlmitteln und Autochemikalien",
     'quick_link_footer' =>"SCHNELLE LINKS",
-
+    'contact_head_1'=>"Nachricht schreiben",
+    'contact_head_2'=>"In Kontakt kommen",
+    'contact_desc'=>"ZIMMER ist eine deutsche Traditionsmarke. Hersteller von ZIMMER-Sonderprodukten, spezialisiert auf die Herstellung von Kraftstoffadditiven, Schmiermitteln, Getriebeölen, Motorölen, Spezialflüssigkeiten, Kühlmitteln und Autochemikalien",
+    'contact_visit'=>"Besuchen Sie uns:",
+    'contact_call'=>"Rufen Sie uns an:",
+    'contact_mail'=>"Mailen Sie uns:",
+    'form_name'=>"Name",
+    'form_email'=>"Email",
+    'form_subject'=>"Thema",
+    'form_message'=>"Nachricht schreiben"
+    'form_submit'=>"Formular abschicken",
+    
 
 
 ];
