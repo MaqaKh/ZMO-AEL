@@ -44,9 +44,8 @@ return [
     'form_name'=>"Name",
     'form_email'=>"Email",
     'form_subject'=>"Thema",
-    'form_message'=>"Nachricht schreiben"
+    'form_message' => "Nachricht schreiben",
     'form_submit'=>"Formular abschicken",
-    
 
 
 ];
